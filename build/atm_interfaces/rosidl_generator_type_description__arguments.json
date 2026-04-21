@@ -1,0 +1,33 @@
+{
+  "package_name": "atm_interfaces",
+  "output_dir": "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_type_description/atm_interfaces",
+  "idl_tuples": [
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:msg/Heartbeat.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:msg/MissionState.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:msg/MissionEvent.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:msg/FaultReport.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:msg/LineTarget.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:msg/StopDetection.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:msg/MasterStatus.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:msg/SlaveStatus.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:msg/SprayReport.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/ArmSystem.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/ResetFault.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/StartPump.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/StopPump.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/SetAdmissionReelMode.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/SetZoneSelection.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/GetSystemState.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:action/ExecuteMission.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:action/NavigateToStop.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:action/SprayAtStop.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:action/ReturnToBase.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:action/RunPurge.idl"
+  ],
+  "include_paths": [
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs"
+  ]
+}

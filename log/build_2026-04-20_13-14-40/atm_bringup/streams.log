@@ -1,0 +1,26 @@
+[1.780s] Invoking command in '/home/gonzalo/grodi_atm/build/atm_bringup': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_slave:/home/gonzalo/grodi_atm/install/atm_master:/home/gonzalo/grodi_atm/install/atm_link:/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_bringup/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_slave:/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_master:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_bringup/build --no-deps symlink_data
+[2.110s] running develop
+[2.323s] running egg_info
+[2.323s] creating atm_bringup.egg-info
+[2.343s] writing atm_bringup.egg-info/PKG-INFO
+[2.344s] writing dependency_links to atm_bringup.egg-info/dependency_links.txt
+[2.344s] writing requirements to atm_bringup.egg-info/requires.txt
+[2.344s] writing top-level names to atm_bringup.egg-info/top_level.txt
+[2.344s] writing manifest file 'atm_bringup.egg-info/SOURCES.txt'
+[2.386s] reading manifest file 'atm_bringup.egg-info/SOURCES.txt'
+[2.387s] writing manifest file 'atm_bringup.egg-info/SOURCES.txt'
+[2.410s] running build_ext
+[2.410s] Creating /home/gonzalo/grodi_atm/install/atm_bringup/lib/python3.12/site-packages/atm-bringup.egg-link (link to .)
+[2.410s] 
+[2.411s] Installed /home/gonzalo/grodi_atm/build/atm_bringup
+[2.411s] running symlink_data
+[2.411s] creating /home/gonzalo/grodi_atm/install/atm_bringup/share/ament_index
+[2.411s] creating /home/gonzalo/grodi_atm/install/atm_bringup/share/ament_index/resource_index
+[2.411s] creating /home/gonzalo/grodi_atm/install/atm_bringup/share/ament_index/resource_index/packages
+[2.411s] symbolically linking /home/gonzalo/grodi_atm/build/atm_bringup/resource/atm_bringup -> /home/gonzalo/grodi_atm/install/atm_bringup/share/ament_index/resource_index/packages
+[2.412s] symbolically linking /home/gonzalo/grodi_atm/build/atm_bringup/package.xml -> /home/gonzalo/grodi_atm/install/atm_bringup/share/atm_bringup
+[2.412s] creating /home/gonzalo/grodi_atm/install/atm_bringup/share/atm_bringup/launch
+[2.412s] symbolically linking /home/gonzalo/grodi_atm/build/atm_bringup/launch/system.launch.py -> /home/gonzalo/grodi_atm/install/atm_bringup/share/atm_bringup/launch
+[2.412s] creating /home/gonzalo/grodi_atm/install/atm_bringup/share/atm_bringup/config
+[2.413s] symbolically linking /home/gonzalo/grodi_atm/build/atm_bringup/config/system_params.yaml -> /home/gonzalo/grodi_atm/install/atm_bringup/share/atm_bringup/config
+[2.445s] Invoked command in '/home/gonzalo/grodi_atm/build/atm_bringup' returned '0': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_slave:/home/gonzalo/grodi_atm/install/atm_master:/home/gonzalo/grodi_atm/install/atm_link:/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_bringup/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_slave:/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_master:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_bringup/build --no-deps symlink_data

@@ -1,0 +1,22 @@
+[1.566s] Invoking command in '/home/gonzalo/grodi_atm/build/atm_master': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_link:/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_master/build --no-deps symlink_data
+[1.859s] running develop
+[2.044s] running egg_info
+[2.062s] writing atm_master.egg-info/PKG-INFO
+[2.062s] writing dependency_links to atm_master.egg-info/dependency_links.txt
+[2.062s] writing entry points to atm_master.egg-info/entry_points.txt
+[2.062s] writing requirements to atm_master.egg-info/requires.txt
+[2.063s] writing top-level names to atm_master.egg-info/top_level.txt
+[2.099s] reading manifest file 'atm_master.egg-info/SOURCES.txt'
+[2.100s] writing manifest file 'atm_master.egg-info/SOURCES.txt'
+[2.120s] running build_ext
+[2.120s] Creating /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm-master.egg-link (link to .)
+[2.121s] Installing admission_reel_controller_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+[2.121s] Installing master_health_publisher_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+[2.121s] Installing master_watchdog_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+[2.121s] Installing mission_event_logger_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+[2.122s] Installing mission_manager_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+[2.122s] Installing pump_controller_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+[2.122s] 
+[2.122s] Installed /home/gonzalo/grodi_atm/build/atm_master
+[2.122s] running symlink_data
+[2.148s] Invoked command in '/home/gonzalo/grodi_atm/build/atm_master' returned '0': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_link:/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_master/build --no-deps symlink_data

@@ -1,0 +1,267 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-0e4c9bfb54da9a438c70.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "atm_interfaces__py",
+					"jsonFile" : "directory-atm_interfaces__py-73b9b5d5a77a8d9e13f5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "atm_interfaces__rs",
+					"jsonFile" : "directory-atm_interfaces__rs-5b34f363bc3ac44ebab0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__rs",
+					"targetIndexes" : 
+					[
+						14
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "atm_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_atm_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_atm_interfaces_egg-fcb7b32691a2cc61fbd6.json",
+					"name" : "ament_cmake_python_build_atm_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_atm_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_atm_interfaces-2b830db123785f5c1d80.json",
+					"name" : "ament_cmake_python_symlink_atm_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces-6804918aa75eca558515.json",
+					"name" : "atm_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces__cpp-3e6ee5b0863bd628e7e5.json",
+					"name" : "atm_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "atm_interfaces__py::@9b3e1620f671a0ee8293",
+					"jsonFile" : "target-atm_interfaces__py-ec0dc3c1791ffa56eb0a.json",
+					"name" : "atm_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces__rosidl_generator_c-0aa0a89d4fed831c0571.json",
+					"name" : "atm_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces__rosidl_generator_py-59ff9b6b41cc5455c632.json",
+					"name" : "atm_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces__rosidl_generator_type_description-659403e9e87dcb77c5ee.json",
+					"name" : "atm_interfaces__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces__rosidl_typesupport_c-1d6b5d764a9b5d07f96e.json",
+					"name" : "atm_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces__rosidl_typesupport_cpp-96061e7aa6d1e6150063.json",
+					"name" : "atm_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces__rosidl_typesupport_fastrtps_c-21fcbfe39c5090bb7c30.json",
+					"name" : "atm_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces__rosidl_typesupport_fastrtps_cpp-0e15f8e842788b3ac645.json",
+					"name" : "atm_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces__rosidl_typesupport_introspection_c-34498a1850162c44c219.json",
+					"name" : "atm_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces__rosidl_typesupport_introspection_cpp-33cd15eebb28f6798760.json",
+					"name" : "atm_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "atm_interfaces__rs::@6aeca9fb9df16ff739eb",
+					"jsonFile" : "target-atm_interfaces__rs-d69d826269ac1a1febdb.json",
+					"name" : "atm_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces_s__rosidl_typesupport_c-ab4272155e36ca482d7f.json",
+					"name" : "atm_interfaces_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces_s__rosidl_typesupport_fastrtps_c-bef1bdd482a8073ed159.json",
+					"name" : "atm_interfaces_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces_s__rosidl_typesupport_introspection_c-c864a25ef03df31b0f78.json",
+					"name" : "atm_interfaces_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atm_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atm_interfaces_uninstall-e587633aa9447984813b.json",
+					"name" : "atm_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-7f044b87d77ef10ebeb8.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/gonzalo/grodi_atm/build/atm_interfaces",
+		"source" : "/home/gonzalo/grodi_atm/src/atm_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

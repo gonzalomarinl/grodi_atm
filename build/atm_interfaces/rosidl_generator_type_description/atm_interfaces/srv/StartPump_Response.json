@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "atm_interfaces/srv/StartPump_Response",
+      "fields": [
+        {
+          "name": "success",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "message",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "atm_interfaces/srv/StartPump_Response",
+      "hash_string": "RIHS01_4f3f5a3f0c2bc4b865999329c65380736c4848a6e2257766407a9ea46390c455"
+    }
+  ]
+}

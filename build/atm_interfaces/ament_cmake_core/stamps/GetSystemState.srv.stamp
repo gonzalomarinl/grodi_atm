@@ -1,0 +1,7 @@
+bool verbose
+---
+bool success
+string master_state
+string slave_state
+string mission_id
+string detail

@@ -1,0 +1,46 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "atm_interfaces/action/NavigateToStop_Goal",
+      "fields": [
+        {
+          "name": "mission_id",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "line_id",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "stop_index",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "atm_interfaces/action/NavigateToStop_Goal",
+      "hash_string": "RIHS01_c4cfcbd8b2d946ac8e219f29484963819f60b4d5a18751d0fc9297c246cabf66"
+    }
+  ]
+}

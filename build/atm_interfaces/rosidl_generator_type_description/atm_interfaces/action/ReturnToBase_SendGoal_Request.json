@@ -1,0 +1,85 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Request",
+      "fields": [
+        {
+          "name": "goal_id",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "unique_identifier_msgs/msg/UUID"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "goal",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "atm_interfaces/action/ReturnToBase_Goal"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_Goal",
+        "fields": [
+          {
+            "name": "mission_id",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "reason",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "unique_identifier_msgs/msg/UUID",
+        "fields": [
+          {
+            "name": "uuid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Request",
+      "hash_string": "RIHS01_9eb134b9680ce97d54c76e05aa10390bec5cd904c10c6de0f3a6f345bfa90073"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_Goal",
+      "hash_string": "RIHS01_93a2349b6d788630732eade6e6d2ebd7170e23202f26bac9246c4127c9d326ea"
+    },
+    {
+      "type_name": "unique_identifier_msgs/msg/UUID",
+      "hash_string": "RIHS01_1b8e8aca958cbea28fe6ef60bf6c19b683c97a9ef60bb34752067d0f2f7ab437"
+    }
+  ]
+}

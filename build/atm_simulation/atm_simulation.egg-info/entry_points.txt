@@ -1,0 +1,4 @@
+[console_scripts]
+atomizer_demo_sequence_node = atm_simulation.atomizer_demo_sequence_node:main
+atomizer_operator_console_node = atm_simulation.atomizer_operator_console_node:main
+gazebo_atomizer_controller_node = atm_simulation.gazebo_atomizer_controller_node:main

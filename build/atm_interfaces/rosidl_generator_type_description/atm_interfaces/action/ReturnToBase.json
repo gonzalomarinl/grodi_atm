@@ -1,0 +1,542 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "atm_interfaces/action/ReturnToBase",
+      "fields": [
+        {
+          "name": "goal",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "atm_interfaces/action/ReturnToBase_Goal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "atm_interfaces/action/ReturnToBase_Result"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "atm_interfaces/action/ReturnToBase_Feedback"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "send_goal_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "atm_interfaces/action/ReturnToBase_SendGoal"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "get_result_service",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "atm_interfaces/action/ReturnToBase_GetResult"
+          },
+          "default_value": ""
+        },
+        {
+          "name": "feedback_message",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "atm_interfaces/action/ReturnToBase_FeedbackMessage"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_Feedback",
+        "fields": [
+          {
+            "name": "phase",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_FeedbackMessage",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "feedback",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_Feedback"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_GetResult",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_GetResult_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_GetResult_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_GetResult_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_GetResult_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_GetResult_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_GetResult_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_GetResult_Response",
+        "fields": [
+          {
+            "name": "status",
+            "type": {
+              "type_id": 2,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "result",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_Result"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_Goal",
+        "fields": [
+          {
+            "name": "mission_id",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "reason",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_Result",
+        "fields": [
+          {
+            "name": "success",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "message",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_SendGoal",
+        "fields": [
+          {
+            "name": "request_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Response"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "event_message",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Event"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Event",
+        "fields": [
+          {
+            "name": "info",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "service_msgs/msg/ServiceEventInfo"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "request",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Request"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "response",
+            "type": {
+              "type_id": 97,
+              "capacity": 1,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Response"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Request",
+        "fields": [
+          {
+            "name": "goal_id",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "unique_identifier_msgs/msg/UUID"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "goal",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "atm_interfaces/action/ReturnToBase_Goal"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Response",
+        "fields": [
+          {
+            "name": "accepted",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "builtin_interfaces/msg/Time",
+        "fields": [
+          {
+            "name": "sec",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "service_msgs/msg/ServiceEventInfo",
+        "fields": [
+          {
+            "name": "event_type",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "stamp",
+            "type": {
+              "type_id": 1,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": "builtin_interfaces/msg/Time"
+            },
+            "default_value": ""
+          },
+          {
+            "name": "client_gid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "sequence_number",
+            "type": {
+              "type_id": 8,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      },
+      {
+        "type_name": "unique_identifier_msgs/msg/UUID",
+        "fields": [
+          {
+            "name": "uuid",
+            "type": {
+              "type_id": 51,
+              "capacity": 16,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase",
+      "hash_string": "RIHS01_6533619d6e1edc04e1d9776a6a5024f1a300e4b1373cd4dd0d60ce674c625507"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_Feedback",
+      "hash_string": "RIHS01_ab745085d79ed3640e0c8775e9e0b799a9a1f9cd896abe4233288023fc87fa6f"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_FeedbackMessage",
+      "hash_string": "RIHS01_c21fc7b0b038fcd94b20083c39e909e67846f8a49403049c0c60f0a94a8b2bac"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_GetResult",
+      "hash_string": "RIHS01_9f60a7cafcfc24b163e49182ef4094e61364c8bd3b92cf0c797c98fb0b23ce5f"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_GetResult_Event",
+      "hash_string": "RIHS01_df36556c9ed2fb24410620f9c2fe7e601f060eb00b4d0a102c554763627431db"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_GetResult_Request",
+      "hash_string": "RIHS01_34b068c590b6968aeaf278374dc88b02a6e47e92165ccd354bb12990b7480b35"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_GetResult_Response",
+      "hash_string": "RIHS01_d0cc60f18bdbc8b26e7c7d70bec9d57d961eca68483b24ae17c9cee61bbcea0c"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_Goal",
+      "hash_string": "RIHS01_93a2349b6d788630732eade6e6d2ebd7170e23202f26bac9246c4127c9d326ea"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_Result",
+      "hash_string": "RIHS01_8351e640311e964e669b0ef6ce9bd63c8d73e768d1f84631fee9b7de3f8e163b"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_SendGoal",
+      "hash_string": "RIHS01_eabae01043499fcd905214c2994c390c1f6e358d07b0ba7611a29e4a168121ee"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Event",
+      "hash_string": "RIHS01_4f4844c97dd2e7110edc956b8e29c1806fcb57b1bee41973b56d40b25c968a94"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Request",
+      "hash_string": "RIHS01_9eb134b9680ce97d54c76e05aa10390bec5cd904c10c6de0f3a6f345bfa90073"
+    },
+    {
+      "type_name": "atm_interfaces/action/ReturnToBase_SendGoal_Response",
+      "hash_string": "RIHS01_3e9dacfe17f0efa80b4a65ede764b34ac895acee20ceaec60050a69d42d4f5f3"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
+    },
+    {
+      "type_name": "service_msgs/msg/ServiceEventInfo",
+      "hash_string": "RIHS01_41bcbbe07a75c9b52bc96bfd5c24d7f0fc0a08c0cb7921b3373c5732345a6f45"
+    },
+    {
+      "type_name": "unique_identifier_msgs/msg/UUID",
+      "hash_string": "RIHS01_1b8e8aca958cbea28fe6ef60bf6c19b683c97a9ef60bb34752067d0f2f7ab437"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from atm_interfaces/action/RunPurge.action
+// generated code does not contain a copyright notice
+
+
+module atm_interfaces {
+  module action {
+    struct RunPurge_Goal {
+      string mission_id;
+
+      float duration_sec;
+    };
+    struct RunPurge_Result {
+      boolean success;
+
+      string message;
+    };
+    struct RunPurge_Feedback {
+      float elapsed_sec;
+    };
+  };
+};

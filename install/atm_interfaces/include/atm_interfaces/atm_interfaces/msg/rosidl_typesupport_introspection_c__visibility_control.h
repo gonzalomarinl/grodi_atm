@@ -1,0 +1,1 @@
+/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_typesupport_introspection_c/atm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h

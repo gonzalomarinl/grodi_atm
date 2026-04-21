@@ -1,0 +1,5 @@
+string mode
+float32 speed
+---
+bool success
+string message

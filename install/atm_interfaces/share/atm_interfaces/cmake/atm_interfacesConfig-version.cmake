@@ -1,0 +1,1 @@
+/home/gonzalo/grodi_atm/build/atm_interfaces/ament_cmake_core/atm_interfacesConfig-version.cmake

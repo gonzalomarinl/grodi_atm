@@ -1,0 +1,26 @@
+{
+  "package_name": "atm_interfaces",
+  "non_idl_tuples": [
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:msg/Heartbeat.msg",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:msg/MissionState.msg",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:msg/MissionEvent.msg",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:msg/FaultReport.msg",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:msg/LineTarget.msg",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:msg/StopDetection.msg",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:msg/MasterStatus.msg",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:msg/SlaveStatus.msg",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:msg/SprayReport.msg",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/ArmSystem.srv",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/ResetFault.srv",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/StartPump.srv",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/StopPump.srv",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/SetAdmissionReelMode.srv",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/SetZoneSelection.srv",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/GetSystemState.srv",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:action/ExecuteMission.action",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:action/NavigateToStop.action",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:action/SprayAtStop.action",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:action/ReturnToBase.action",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:action/RunPurge.action"
+  ]
+}

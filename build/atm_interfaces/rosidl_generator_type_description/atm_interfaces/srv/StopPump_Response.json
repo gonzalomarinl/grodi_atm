@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "atm_interfaces/srv/StopPump_Response",
+      "fields": [
+        {
+          "name": "success",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "message",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "atm_interfaces/srv/StopPump_Response",
+      "hash_string": "RIHS01_bfc00aac9e297bd94a7918d71c36eeb68ca4ceeb07f17281869edfe22a76ff06"
+    }
+  ]
+}

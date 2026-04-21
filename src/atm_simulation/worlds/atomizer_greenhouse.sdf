@@ -1,0 +1,481 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <world name="atomizer_greenhouse">
+    <gravity>0 0 -9.8</gravity>
+
+    <light name="sun_light" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 20 0 0 0</pose>
+      <diffuse>0.95 0.95 0.95 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.3 0.1 -0.95</direction>
+    </light>
+
+    <model name="ground_plane_model">
+      <static>true</static>
+      <link name="ground_link">
+        <collision name="ground_collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>80 80</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="ground_visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>80 80</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.58 0.58 0.55 1</ambient>
+            <diffuse>0.58 0.58 0.55 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <scene>
+      <ambient>0.85 0.85 0.85 1</ambient>
+      <background>0.92 0.96 0.98 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+
+    <model name="greenhouse_limits_north">
+      <static>true</static>
+      <pose>0 10.6 1.2 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>17.0 0.2 2.4</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>17.0 0.2 2.4</size></box></geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="greenhouse_limits_south">
+      <static>true</static>
+      <pose>0 -10.6 1.2 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>17.0 0.2 2.4</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>17.0 0.2 2.4</size></box></geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="greenhouse_limits_west">
+      <static>true</static>
+      <pose>-8.5 0 1.2 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 21.2 2.4</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 21.2 2.4</size></box></geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="greenhouse_limits_east">
+      <static>true</static>
+      <pose>8.5 0 1.2 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 21.2 2.4</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 21.2 2.4</size></box></geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="ground_service_zone">
+      <static>true</static>
+      <pose>-6.6 -6.2 0.01 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>3.0 3.6 0.02</size></box></geometry>
+          <material>
+            <ambient>0.18 0.18 0.2 1</ambient>
+            <diffuse>0.18 0.18 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Lineo 1 -->
+    <model name="lineo_1">
+      <static>true</static>
+      <pose>-4.8 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="soil_strip">
+          <pose>0 0 0.01 0 0 0</pose>
+          <geometry><box><size>0.7 18.0 0.02</size></box></geometry>
+          <material>
+            <ambient>0.42 0.26 0.14 1</ambient>
+            <diffuse>0.42 0.26 0.14 1</diffuse>
+          </material>
+        </visual>
+        <visual name="plant_a">
+          <pose>0 -7.5 0.55 0 0 0</pose>
+          <geometry><sphere><radius>0.42</radius></sphere></geometry>
+          <material><ambient>0.14 0.42 0.16 1</ambient><diffuse>0.14 0.42 0.16 1</diffuse></material>
+        </visual>
+        <visual name="plant_b">
+          <pose>0 -5.0 0.6 0 0 0</pose>
+          <geometry><sphere><radius>0.45</radius></sphere></geometry>
+          <material><ambient>0.16 0.48 0.18 1</ambient><diffuse>0.16 0.48 0.18 1</diffuse></material>
+        </visual>
+        <visual name="plant_c">
+          <pose>0 -2.5 0.58 0 0 0</pose>
+          <geometry><sphere><radius>0.43</radius></sphere></geometry>
+          <material><ambient>0.14 0.45 0.18 1</ambient><diffuse>0.14 0.45 0.18 1</diffuse></material>
+        </visual>
+        <visual name="plant_d">
+          <pose>0 0 0.62 0 0 0</pose>
+          <geometry><sphere><radius>0.46</radius></sphere></geometry>
+          <material><ambient>0.17 0.5 0.19 1</ambient><diffuse>0.17 0.5 0.19 1</diffuse></material>
+        </visual>
+        <visual name="plant_e">
+          <pose>0 2.5 0.59 0 0 0</pose>
+          <geometry><sphere><radius>0.44</radius></sphere></geometry>
+          <material><ambient>0.14 0.44 0.17 1</ambient><diffuse>0.14 0.44 0.17 1</diffuse></material>
+        </visual>
+        <visual name="plant_f">
+          <pose>0 5.0 0.63 0 0 0</pose>
+          <geometry><sphere><radius>0.47</radius></sphere></geometry>
+          <material><ambient>0.15 0.5 0.18 1</ambient><diffuse>0.15 0.5 0.18 1</diffuse></material>
+        </visual>
+        <visual name="plant_g">
+          <pose>0 7.5 0.57 0 0 0</pose>
+          <geometry><sphere><radius>0.41</radius></sphere></geometry>
+          <material><ambient>0.13 0.41 0.16 1</ambient><diffuse>0.13 0.41 0.16 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Lineo 2 -->
+    <model name="lineo_2">
+      <static>true</static>
+      <pose>-2.4 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="soil_strip">
+          <pose>0 0 0.01 0 0 0</pose>
+          <geometry><box><size>0.7 18.0 0.02</size></box></geometry>
+          <material><ambient>0.42 0.26 0.14 1</ambient><diffuse>0.42 0.26 0.14 1</diffuse></material>
+        </visual>
+        <visual name="plant_a"><pose>0 -7.5 0.55 0 0 0</pose><geometry><sphere><radius>0.41</radius></sphere></geometry><material><ambient>0.15 0.43 0.16 1</ambient><diffuse>0.15 0.43 0.16 1</diffuse></material></visual>
+        <visual name="plant_b"><pose>0 -5.0 0.62 0 0 0</pose><geometry><sphere><radius>0.46</radius></sphere></geometry><material><ambient>0.16 0.48 0.19 1</ambient><diffuse>0.16 0.48 0.19 1</diffuse></material></visual>
+        <visual name="plant_c"><pose>0 -2.5 0.59 0 0 0</pose><geometry><sphere><radius>0.43</radius></sphere></geometry><material><ambient>0.14 0.45 0.18 1</ambient><diffuse>0.14 0.45 0.18 1</diffuse></material></visual>
+        <visual name="plant_d"><pose>0 0 0.61 0 0 0</pose><geometry><sphere><radius>0.44</radius></sphere></geometry><material><ambient>0.17 0.49 0.2 1</ambient><diffuse>0.17 0.49 0.2 1</diffuse></material></visual>
+        <visual name="plant_e"><pose>0 2.5 0.56 0 0 0</pose><geometry><sphere><radius>0.42</radius></sphere></geometry><material><ambient>0.14 0.44 0.17 1</ambient><diffuse>0.14 0.44 0.17 1</diffuse></material></visual>
+        <visual name="plant_f"><pose>0 5.0 0.64 0 0 0</pose><geometry><sphere><radius>0.47</radius></sphere></geometry><material><ambient>0.16 0.5 0.19 1</ambient><diffuse>0.16 0.5 0.19 1</diffuse></material></visual>
+        <visual name="plant_g"><pose>0 7.5 0.57 0 0 0</pose><geometry><sphere><radius>0.4</radius></sphere></geometry><material><ambient>0.13 0.41 0.16 1</ambient><diffuse>0.13 0.41 0.16 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <!-- Lineo 3 -->
+    <model name="lineo_3">
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="soil_strip">
+          <pose>0 0 0.01 0 0 0</pose>
+          <geometry><box><size>0.7 18.0 0.02</size></box></geometry>
+          <material><ambient>0.42 0.26 0.14 1</ambient><diffuse>0.42 0.26 0.14 1</diffuse></material>
+        </visual>
+        <visual name="plant_a"><pose>0 -7.5 0.54 0 0 0</pose><geometry><sphere><radius>0.42</radius></sphere></geometry><material><ambient>0.14 0.42 0.16 1</ambient><diffuse>0.14 0.42 0.16 1</diffuse></material></visual>
+        <visual name="plant_b"><pose>0 -5.0 0.63 0 0 0</pose><geometry><sphere><radius>0.47</radius></sphere></geometry><material><ambient>0.16 0.49 0.19 1</ambient><diffuse>0.16 0.49 0.19 1</diffuse></material></visual>
+        <visual name="plant_c"><pose>0 -2.5 0.57 0 0 0</pose><geometry><sphere><radius>0.43</radius></sphere></geometry><material><ambient>0.14 0.44 0.18 1</ambient><diffuse>0.14 0.44 0.18 1</diffuse></material></visual>
+        <visual name="plant_d"><pose>0 0 0.62 0 0 0</pose><geometry><sphere><radius>0.45</radius></sphere></geometry><material><ambient>0.17 0.51 0.2 1</ambient><diffuse>0.17 0.51 0.2 1</diffuse></material></visual>
+        <visual name="plant_e"><pose>0 2.5 0.58 0 0 0</pose><geometry><sphere><radius>0.44</radius></sphere></geometry><material><ambient>0.14 0.44 0.17 1</ambient><diffuse>0.14 0.44 0.17 1</diffuse></material></visual>
+        <visual name="plant_f"><pose>0 5.0 0.63 0 0 0</pose><geometry><sphere><radius>0.47</radius></sphere></geometry><material><ambient>0.16 0.5 0.19 1</ambient><diffuse>0.16 0.5 0.19 1</diffuse></material></visual>
+        <visual name="plant_g"><pose>0 7.5 0.55 0 0 0</pose><geometry><sphere><radius>0.4</radius></sphere></geometry><material><ambient>0.13 0.4 0.15 1</ambient><diffuse>0.13 0.4 0.15 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <!-- Lineo 4 -->
+    <model name="lineo_4">
+      <static>true</static>
+      <pose>2.4 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="soil_strip">
+          <pose>0 0 0.01 0 0 0</pose>
+          <geometry><box><size>0.7 18.0 0.02</size></box></geometry>
+          <material><ambient>0.42 0.26 0.14 1</ambient><diffuse>0.42 0.26 0.14 1</diffuse></material>
+        </visual>
+        <visual name="plant_a"><pose>0 -7.5 0.55 0 0 0</pose><geometry><sphere><radius>0.41</radius></sphere></geometry><material><ambient>0.14 0.43 0.16 1</ambient><diffuse>0.14 0.43 0.16 1</diffuse></material></visual>
+        <visual name="plant_b"><pose>0 -5.0 0.62 0 0 0</pose><geometry><sphere><radius>0.45</radius></sphere></geometry><material><ambient>0.16 0.48 0.19 1</ambient><diffuse>0.16 0.48 0.19 1</diffuse></material></visual>
+        <visual name="plant_c"><pose>0 -2.5 0.58 0 0 0</pose><geometry><sphere><radius>0.43</radius></sphere></geometry><material><ambient>0.14 0.45 0.18 1</ambient><diffuse>0.14 0.45 0.18 1</diffuse></material></visual>
+        <visual name="plant_d"><pose>0 0 0.61 0 0 0</pose><geometry><sphere><radius>0.44</radius></sphere></geometry><material><ambient>0.17 0.49 0.2 1</ambient><diffuse>0.17 0.49 0.2 1</diffuse></material></visual>
+        <visual name="plant_e"><pose>0 2.5 0.57 0 0 0</pose><geometry><sphere><radius>0.43</radius></sphere></geometry><material><ambient>0.14 0.44 0.17 1</ambient><diffuse>0.14 0.44 0.17 1</diffuse></material></visual>
+        <visual name="plant_f"><pose>0 5.0 0.63 0 0 0</pose><geometry><sphere><radius>0.47</radius></sphere></geometry><material><ambient>0.16 0.5 0.19 1</ambient><diffuse>0.16 0.5 0.19 1</diffuse></material></visual>
+        <visual name="plant_g"><pose>0 7.5 0.56 0 0 0</pose><geometry><sphere><radius>0.41</radius></sphere></geometry><material><ambient>0.13 0.41 0.16 1</ambient><diffuse>0.13 0.41 0.16 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <!-- Lineo 5 -->
+    <model name="lineo_5">
+      <static>true</static>
+      <pose>4.8 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="soil_strip">
+          <pose>0 0 0.01 0 0 0</pose>
+          <geometry><box><size>0.7 18.0 0.02</size></box></geometry>
+          <material><ambient>0.42 0.26 0.14 1</ambient><diffuse>0.42 0.26 0.14 1</diffuse></material>
+        </visual>
+        <visual name="plant_a"><pose>0 -7.5 0.54 0 0 0</pose><geometry><sphere><radius>0.4</radius></sphere></geometry><material><ambient>0.14 0.42 0.16 1</ambient><diffuse>0.14 0.42 0.16 1</diffuse></material></visual>
+        <visual name="plant_b"><pose>0 -5.0 0.61 0 0 0</pose><geometry><sphere><radius>0.45</radius></sphere></geometry><material><ambient>0.16 0.48 0.19 1</ambient><diffuse>0.16 0.48 0.19 1</diffuse></material></visual>
+        <visual name="plant_c"><pose>0 -2.5 0.59 0 0 0</pose><geometry><sphere><radius>0.44</radius></sphere></geometry><material><ambient>0.14 0.45 0.18 1</ambient><diffuse>0.14 0.45 0.18 1</diffuse></material></visual>
+        <visual name="plant_d"><pose>0 0 0.62 0 0 0</pose><geometry><sphere><radius>0.46</radius></sphere></geometry><material><ambient>0.17 0.5 0.2 1</ambient><diffuse>0.17 0.5 0.2 1</diffuse></material></visual>
+        <visual name="plant_e"><pose>0 2.5 0.58 0 0 0</pose><geometry><sphere><radius>0.44</radius></sphere></geometry><material><ambient>0.14 0.44 0.17 1</ambient><diffuse>0.14 0.44 0.17 1</diffuse></material></visual>
+        <visual name="plant_f"><pose>0 5.0 0.64 0 0 0</pose><geometry><sphere><radius>0.47</radius></sphere></geometry><material><ambient>0.16 0.5 0.19 1</ambient><diffuse>0.16 0.5 0.19 1</diffuse></material></visual>
+        <visual name="plant_g"><pose>0 7.5 0.56 0 0 0</pose><geometry><sphere><radius>0.41</radius></sphere></geometry><material><ambient>0.13 0.41 0.16 1</ambient><diffuse>0.13 0.41 0.16 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <!-- Estructura del rail elevado -->
+    <model name="overhead_rail_structure">
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="post_west_1">
+          <pose>-6.8 -8.5 2.1 0 0 0</pose>
+          <geometry><box><size>0.18 0.18 4.2</size></box></geometry>
+          <material><ambient>0.55 0.58 0.62 1</ambient><diffuse>0.55 0.58 0.62 1</diffuse></material>
+        </visual>
+        <visual name="post_west_2">
+          <pose>-6.8 8.5 2.1 0 0 0</pose>
+          <geometry><box><size>0.18 0.18 4.2</size></box></geometry>
+          <material><ambient>0.55 0.58 0.62 1</ambient><diffuse>0.55 0.58 0.62 1</diffuse></material>
+        </visual>
+        <visual name="post_east_1">
+          <pose>6.8 -8.5 2.1 0 0 0</pose>
+          <geometry><box><size>0.18 0.18 4.2</size></box></geometry>
+          <material><ambient>0.55 0.58 0.62 1</ambient><diffuse>0.55 0.58 0.62 1</diffuse></material>
+        </visual>
+        <visual name="post_east_2">
+          <pose>6.8 8.5 2.1 0 0 0</pose>
+          <geometry><box><size>0.18 0.18 4.2</size></box></geometry>
+          <material><ambient>0.55 0.58 0.62 1</ambient><diffuse>0.55 0.58 0.62 1</diffuse></material>
+        </visual>
+        <visual name="rail_beam">
+          <pose>0 0 4.15 0 0 0</pose>
+          <geometry><box><size>13.8 0.25 0.16</size></box></geometry>
+          <material><ambient>0.3 0.34 0.38 1</ambient><diffuse>0.3 0.34 0.38 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Bobina de suelo con articulación de giro -->
+    <model name="ground_reel">
+      <pose>-6.3 -6.0 0 0 0 0</pose>
+      <link name="base_link">
+        <collision name="base_collision">
+          <pose>0 0 0.3 0 0 0</pose>
+          <geometry><box><size>1.4 1.2 0.6</size></box></geometry>
+        </collision>
+        <visual name="base_visual">
+          <pose>0 0 0.3 0 0 0</pose>
+          <geometry><box><size>1.4 1.2 0.6</size></box></geometry>
+          <material><ambient>0.22 0.24 0.28 1</ambient><diffuse>0.22 0.24 0.28 1</diffuse></material>
+        </visual>
+        <visual name="support_left">
+          <pose>0 0.35 1.05 0 0 0</pose>
+          <geometry><box><size>0.12 0.12 1.6</size></box></geometry>
+          <material><ambient>0.35 0.37 0.42 1</ambient><diffuse>0.35 0.37 0.42 1</diffuse></material>
+        </visual>
+        <visual name="support_right">
+          <pose>0 -0.35 1.05 0 0 0</pose>
+          <geometry><box><size>0.12 0.12 1.6</size></box></geometry>
+          <material><ambient>0.35 0.37 0.42 1</ambient><diffuse>0.35 0.37 0.42 1</diffuse></material>
+        </visual>
+      </link>
+      <link name="reel_link">
+        <pose>0 0 1.25 0 1.5708 0</pose>
+        <inertial>
+          <mass>6.0</mass>
+          <inertia>
+            <ixx>0.15</ixx><iyy>0.15</iyy><izz>0.15</izz>
+            <ixy>0.0</ixy><ixz>0.0</ixz><iyz>0.0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="reel_collision">
+          <geometry><cylinder><radius>0.45</radius><length>0.42</length></cylinder></geometry>
+        </collision>
+        <visual name="reel_visual">
+          <geometry><cylinder><radius>0.45</radius><length>0.42</length></cylinder></geometry>
+          <material><ambient>0.1 0.42 0.75 1</ambient><diffuse>0.1 0.42 0.75 1</diffuse></material>
+        </visual>
+        <visual name="reel_core">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry><cylinder><radius>0.16</radius><length>0.5</length></cylinder></geometry>
+          <material><ambient>0.9 0.9 0.92 1</ambient><diffuse>0.9 0.9 0.92 1</diffuse></material>
+        </visual>
+      </link>
+      <joint name="reel_joint" type="revolute">
+        <parent>base_link</parent>
+        <child>reel_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1000</lower>
+            <upper>1000</upper>
+          </limit>
+          <dynamics>
+            <damping>0.2</damping>
+          </dynamics>
+        </axis>
+      </joint>
+    </model>
+
+    <!-- Robot atomizador suspendido sobre el rail -->
+    <model name="atomizer_robot">
+      <static>true</static>
+      <pose>-4.8 0 4.0 0 0 0</pose>
+      <link name="body_link">
+        <visual name="trolley_body">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry><box><size>0.9 0.55 0.35</size></box></geometry>
+          <material><ambient>0.92 0.74 0.12 1</ambient><diffuse>0.92 0.74 0.12 1</diffuse></material>
+        </visual>
+        <visual name="rail_wheels_bar">
+          <pose>0 0 0.22 0 0 0</pose>
+          <geometry><box><size>0.65 0.18 0.08</size></box></geometry>
+          <material><ambient>0.25 0.25 0.28 1</ambient><diffuse>0.25 0.25 0.28 1</diffuse></material>
+        </visual>
+        <visual name="vertical_column">
+          <pose>0 0 -0.95 0 0 0</pose>
+          <geometry><cylinder><radius>0.07</radius><length>1.9</length></cylinder></geometry>
+          <material><ambient>0.8 0.82 0.86 1</ambient><diffuse>0.8 0.82 0.86 1</diffuse></material>
+        </visual>
+        <visual name="lower_mount">
+          <pose>0 0 -1.78 0 0 0</pose>
+          <geometry><box><size>0.2 0.14 0.12</size></box></geometry>
+          <material><ambient>0.7 0.72 0.76 1</ambient><diffuse>0.7 0.72 0.76 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="atomizer_head">
+      <static>true</static>
+      <pose>-4.8 0 2.05 0 0 0</pose>
+      <link name="head_link">
+        <visual name="head_visual">
+          <geometry><box><size>0.58 0.24 0.18</size></box></geometry>
+          <material><ambient>0.14 0.56 0.82 1</ambient><diffuse>0.14 0.56 0.82 1</diffuse></material>
+        </visual>
+        <visual name="nozzle_left">
+          <pose>0 -0.09 -0.12 0 0 0</pose>
+          <geometry><cylinder><radius>0.025</radius><length>0.12</length></cylinder></geometry>
+          <material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material>
+        </visual>
+        <visual name="nozzle_right">
+          <pose>0 0.09 -0.12 0 0 0</pose>
+          <geometry><cylinder><radius>0.025</radius><length>0.12</length></cylinder></geometry>
+          <material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="spray_plume">
+      <static>true</static>
+      <pose>-4.8 0 -3.0 0 0 0</pose>
+      <link name="plume_link">
+        <visual name="plume_visual">
+          <pose>0 0 -0.5 0 0 0</pose>
+          <geometry><cone><radius>0.32</radius><length>1.1</length></cone></geometry>
+          <material>
+            <ambient>0.3 0.8 1.0 0.25</ambient>
+            <diffuse>0.3 0.8 1.0 0.25</diffuse>
+          </material>
+          <transparency>0.55</transparency>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Representación visual inicial de la manguera entre bobina y robot -->
+    <model name="feed_hose_visual">
+      <static>true</static>
+      <pose>-5.55 -3.0 2.55 0 -0.68 0.88</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>12.0 0.05 0.05</size></box></geometry>
+          <material><ambient>0.08 0.08 0.08 1</ambient><diffuse>0.08 0.08 0.08 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Referencias de parada sobre la zona de trabajo -->
+    <model name="stop_marker_1">
+      <static>true</static>
+      <pose>-4.8 8.8 0.02 0 0 0</pose>
+      <link name="link">
+        <visual name="visual"><geometry><box><size>0.9 0.25 0.04</size></box></geometry><material><ambient>0.9 0.3 0.1 1</ambient><diffuse>0.9 0.3 0.1 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="stop_marker_2">
+      <static>true</static>
+      <pose>-2.4 8.8 0.02 0 0 0</pose>
+      <link name="link">
+        <visual name="visual"><geometry><box><size>0.9 0.25 0.04</size></box></geometry><material><ambient>0.9 0.3 0.1 1</ambient><diffuse>0.9 0.3 0.1 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="stop_marker_3">
+      <static>true</static>
+      <pose>0 8.8 0.02 0 0 0</pose>
+      <link name="link">
+        <visual name="visual"><geometry><box><size>0.9 0.25 0.04</size></box></geometry><material><ambient>0.9 0.3 0.1 1</ambient><diffuse>0.9 0.3 0.1 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="stop_marker_4">
+      <static>true</static>
+      <pose>2.4 8.8 0.02 0 0 0</pose>
+      <link name="link">
+        <visual name="visual"><geometry><box><size>0.9 0.25 0.04</size></box></geometry><material><ambient>0.9 0.3 0.1 1</ambient><diffuse>0.9 0.3 0.1 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="stop_marker_5">
+      <static>true</static>
+      <pose>4.8 8.8 0.02 0 0 0</pose>
+      <link name="link">
+        <visual name="visual"><geometry><box><size>0.9 0.25 0.04</size></box></geometry><material><ambient>0.9 0.3 0.1 1</ambient><diffuse>0.9 0.3 0.1 1</diffuse></material></visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

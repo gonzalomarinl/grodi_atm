@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing atm_link.egg-info/PKG-INFO
+writing dependency_links to atm_link.egg-info/dependency_links.txt
+writing entry points to atm_link.egg-info/entry_points.txt
+writing requirements to atm_link.egg-info/requires.txt
+writing top-level names to atm_link.egg-info/top_level.txt
+reading manifest file 'atm_link.egg-info/SOURCES.txt'
+writing manifest file 'atm_link.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm-link.egg-link (link to .)
+Installing master_lora_bridge_node script to /home/gonzalo/grodi_atm/install/atm_link/lib/atm_link
+Installing slave_lora_bridge_node script to /home/gonzalo/grodi_atm/install/atm_link/lib/atm_link
+
+Installed /home/gonzalo/grodi_atm/build/atm_link
+running symlink_data

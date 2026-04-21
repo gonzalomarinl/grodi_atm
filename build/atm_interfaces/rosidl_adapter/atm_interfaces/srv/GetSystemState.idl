@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from atm_interfaces/srv/GetSystemState.srv
+// generated code does not contain a copyright notice
+
+
+module atm_interfaces {
+  module srv {
+    struct GetSystemState_Request {
+      boolean verbose;
+    };
+    struct GetSystemState_Response {
+      boolean success;
+
+      string master_state;
+
+      string slave_state;
+
+      string mission_id;
+
+      string detail;
+    };
+  };
+};

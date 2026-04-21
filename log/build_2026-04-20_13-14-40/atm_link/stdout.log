@@ -1,0 +1,24 @@
+running develop
+running egg_info
+creating atm_link.egg-info
+writing atm_link.egg-info/PKG-INFO
+writing dependency_links to atm_link.egg-info/dependency_links.txt
+writing requirements to atm_link.egg-info/requires.txt
+writing top-level names to atm_link.egg-info/top_level.txt
+writing manifest file 'atm_link.egg-info/SOURCES.txt'
+reading manifest file 'atm_link.egg-info/SOURCES.txt'
+writing manifest file 'atm_link.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm-link.egg-link (link to .)
+
+Installed /home/gonzalo/grodi_atm/build/atm_link
+running symlink_data
+creating /home/gonzalo/grodi_atm/install/atm_link/share/ament_index
+creating /home/gonzalo/grodi_atm/install/atm_link/share/ament_index/resource_index
+creating /home/gonzalo/grodi_atm/install/atm_link/share/ament_index/resource_index/packages
+symbolically linking /home/gonzalo/grodi_atm/build/atm_link/resource/atm_link -> /home/gonzalo/grodi_atm/install/atm_link/share/ament_index/resource_index/packages
+symbolically linking /home/gonzalo/grodi_atm/build/atm_link/package.xml -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link
+creating /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/launch
+symbolically linking /home/gonzalo/grodi_atm/build/atm_link/launch/link.launch.py -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/launch
+creating /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/config
+symbolically linking /home/gonzalo/grodi_atm/build/atm_link/config/link_params.yaml -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/config

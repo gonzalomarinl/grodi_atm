@@ -1,0 +1,30 @@
+running develop
+running egg_info
+creating atm_master.egg-info
+writing atm_master.egg-info/PKG-INFO
+writing dependency_links to atm_master.egg-info/dependency_links.txt
+writing entry points to atm_master.egg-info/entry_points.txt
+writing requirements to atm_master.egg-info/requires.txt
+writing top-level names to atm_master.egg-info/top_level.txt
+writing manifest file 'atm_master.egg-info/SOURCES.txt'
+reading manifest file 'atm_master.egg-info/SOURCES.txt'
+writing manifest file 'atm_master.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm-master.egg-link (link to .)
+Installing admission_reel_controller_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+Installing master_watchdog_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+Installing mission_event_logger_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+Installing mission_manager_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+Installing pump_controller_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+
+Installed /home/gonzalo/grodi_atm/build/atm_master
+running symlink_data
+creating /home/gonzalo/grodi_atm/install/atm_master/share/ament_index
+creating /home/gonzalo/grodi_atm/install/atm_master/share/ament_index/resource_index
+creating /home/gonzalo/grodi_atm/install/atm_master/share/ament_index/resource_index/packages
+symbolically linking /home/gonzalo/grodi_atm/build/atm_master/resource/atm_master -> /home/gonzalo/grodi_atm/install/atm_master/share/ament_index/resource_index/packages
+symbolically linking /home/gonzalo/grodi_atm/build/atm_master/package.xml -> /home/gonzalo/grodi_atm/install/atm_master/share/atm_master
+creating /home/gonzalo/grodi_atm/install/atm_master/share/atm_master/launch
+symbolically linking /home/gonzalo/grodi_atm/build/atm_master/launch/master.launch.py -> /home/gonzalo/grodi_atm/install/atm_master/share/atm_master/launch
+creating /home/gonzalo/grodi_atm/install/atm_master/share/atm_master/config
+symbolically linking /home/gonzalo/grodi_atm/build/atm_master/config/master_params.yaml -> /home/gonzalo/grodi_atm/install/atm_master/share/atm_master/config

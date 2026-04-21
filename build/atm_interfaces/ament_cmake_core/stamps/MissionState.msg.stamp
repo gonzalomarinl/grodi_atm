@@ -1,0 +1,7 @@
+string mission_id
+string mission_type
+string state
+uint32 current_stop_index
+string current_line_id
+bool comms_degraded
+builtin_interfaces/Time stamp

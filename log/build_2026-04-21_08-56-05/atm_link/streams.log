@@ -1,0 +1,22 @@
+[3.393s] Invoking command in '/home/gonzalo/grodi_atm/build/atm_link': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_link/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_link/build --no-deps symlink_data --force
+[4.058s] running develop
+[4.542s] running egg_info
+[4.589s] writing atm_link.egg-info/PKG-INFO
+[4.589s] writing dependency_links to atm_link.egg-info/dependency_links.txt
+[4.590s] writing entry points to atm_link.egg-info/entry_points.txt
+[4.591s] writing requirements to atm_link.egg-info/requires.txt
+[4.592s] writing top-level names to atm_link.egg-info/top_level.txt
+[4.683s] reading manifest file 'atm_link.egg-info/SOURCES.txt'
+[4.687s] writing manifest file 'atm_link.egg-info/SOURCES.txt'
+[4.734s] running build_ext
+[4.735s] Creating /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm-link.egg-link (link to .)
+[4.736s] Installing master_lora_bridge_node script to /home/gonzalo/grodi_atm/install/atm_link/lib/atm_link
+[4.737s] Installing slave_lora_bridge_node script to /home/gonzalo/grodi_atm/install/atm_link/lib/atm_link
+[4.738s] 
+[4.739s] Installed /home/gonzalo/grodi_atm/build/atm_link
+[4.740s] running symlink_data
+[4.740s] symbolically linking /home/gonzalo/grodi_atm/build/atm_link/resource/atm_link -> /home/gonzalo/grodi_atm/install/atm_link/share/ament_index/resource_index/packages
+[4.742s] symbolically linking /home/gonzalo/grodi_atm/build/atm_link/package.xml -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link
+[4.743s] symbolically linking /home/gonzalo/grodi_atm/build/atm_link/launch/link.launch.py -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/launch
+[4.744s] symbolically linking /home/gonzalo/grodi_atm/build/atm_link/config/link_params.yaml -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/config
+[4.809s] Invoked command in '/home/gonzalo/grodi_atm/build/atm_link' returned '0': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_link/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_link/build --no-deps symlink_data --force

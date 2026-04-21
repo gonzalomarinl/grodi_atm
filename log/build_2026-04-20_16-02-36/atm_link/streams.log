@@ -1,0 +1,51 @@
+[1.085s] Invoking command in '/home/gonzalo/grodi_atm/build/atm_link': PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_link/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_bringup:/home/gonzalo/grodi_atm/install/atm_bringup/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_slave:/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_simulation:/home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_master:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_logging:/home/gonzalo/grodi_atm/install/atm_logging/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/gonzalo/grodi_atm/build/atm_link/build
+[1.404s] running develop
+[1.615s] Removing /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm-link.egg-link (link to .)
+[1.640s] Invoked command in '/home/gonzalo/grodi_atm/build/atm_link' returned '0': PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_link/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_bringup:/home/gonzalo/grodi_atm/install/atm_bringup/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_slave:/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_simulation:/home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_master:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_logging:/home/gonzalo/grodi_atm/install/atm_logging/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/gonzalo/grodi_atm/build/atm_link/build
+[1.641s] Invoking command in '/home/gonzalo/grodi_atm/src/atm_link': PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_link/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_bringup:/home/gonzalo/grodi_atm/install/atm_bringup/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_slave:/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_simulation:/home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_master:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_logging:/home/gonzalo/grodi_atm/install/atm_logging/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/atm_link build --build-base /home/gonzalo/grodi_atm/build/atm_link/build install --record /home/gonzalo/grodi_atm/build/atm_link/install.log --single-version-externally-managed install_data --force
+[1.905s] running egg_info
+[1.925s] writing ../../build/atm_link/atm_link.egg-info/PKG-INFO
+[1.925s] writing dependency_links to ../../build/atm_link/atm_link.egg-info/dependency_links.txt
+[1.925s] writing entry points to ../../build/atm_link/atm_link.egg-info/entry_points.txt
+[1.925s] writing requirements to ../../build/atm_link/atm_link.egg-info/requires.txt
+[1.925s] writing top-level names to ../../build/atm_link/atm_link.egg-info/top_level.txt
+[1.965s] reading manifest file '../../build/atm_link/atm_link.egg-info/SOURCES.txt'
+[1.966s] writing manifest file '../../build/atm_link/atm_link.egg-info/SOURCES.txt'
+[1.966s] running build
+[1.967s] running build_py
+[1.967s] creating /home/gonzalo/grodi_atm/build/atm_link/build
+[1.967s] creating /home/gonzalo/grodi_atm/build/atm_link/build/lib
+[1.967s] creating /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+[1.968s] copying atm_link/transport.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+[1.968s] copying atm_link/__init__.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+[1.968s] copying atm_link/slave_lora_bridge_node.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+[1.969s] copying atm_link/master_lora_bridge_node.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+[1.969s] copying atm_link/codec.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+[1.970s] copying atm_link/protocol.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+[1.970s] running install
+[1.976s] running install_lib
+[1.996s] creating /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+[1.997s] copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/transport.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+[1.997s] copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/__init__.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+[1.997s] copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/slave_lora_bridge_node.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+[1.997s] copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/master_lora_bridge_node.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+[1.997s] copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/codec.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+[1.998s] copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/protocol.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+[1.998s] byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/transport.py to transport.cpython-312.pyc
+[1.999s] byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/__init__.py to __init__.cpython-312.pyc
+[1.999s] byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/slave_lora_bridge_node.py to slave_lora_bridge_node.cpython-312.pyc
+[2.000s] byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/master_lora_bridge_node.py to master_lora_bridge_node.cpython-312.pyc
+[2.001s] byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/codec.py to codec.cpython-312.pyc
+[2.002s] byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/protocol.py to protocol.cpython-312.pyc
+[2.002s] running install_data
+[2.002s] copying resource/atm_link -> /home/gonzalo/grodi_atm/install/atm_link/share/ament_index/resource_index/packages
+[2.002s] copying package.xml -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link
+[2.003s] copying launch/link.launch.py -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/launch
+[2.004s] copying config/link_params.yaml -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/config
+[2.005s] running install_egg_info
+[2.026s] Copying ../../build/atm_link/atm_link.egg-info to /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link-0.0.0-py3.12.egg-info
+[2.027s] running install_scripts
+[2.182s] Installing master_lora_bridge_node script to /home/gonzalo/grodi_atm/install/atm_link/lib/atm_link
+[2.182s] Installing slave_lora_bridge_node script to /home/gonzalo/grodi_atm/install/atm_link/lib/atm_link
+[2.183s] writing list of installed files to '/home/gonzalo/grodi_atm/build/atm_link/install.log'
+[2.220s] Invoked command in '/home/gonzalo/grodi_atm/src/atm_link' returned '0': PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_link/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_bringup:/home/gonzalo/grodi_atm/install/atm_bringup/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_slave:/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_simulation:/home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_master:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_logging:/home/gonzalo/grodi_atm/install/atm_logging/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/atm_link build --build-base /home/gonzalo/grodi_atm/build/atm_link/build install --record /home/gonzalo/grodi_atm/build/atm_link/install.log --single-version-externally-managed install_data --force

@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "atm_interfaces/srv/StartPump_Request",
+      "fields": [
+        {
+          "name": "enable",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "atm_interfaces/srv/StartPump_Request",
+      "hash_string": "RIHS01_99dc61eabfb94c40f5770fbcf5821dbdbcfe15ca9da5942e1047308663b45abc"
+    }
+  ]
+}

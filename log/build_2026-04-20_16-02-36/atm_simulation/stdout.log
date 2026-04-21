@@ -1,0 +1,39 @@
+running develop
+Removing /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm-simulation.egg-link (link to .)
+running egg_info
+writing ../../build/atm_simulation/atm_simulation.egg-info/PKG-INFO
+writing dependency_links to ../../build/atm_simulation/atm_simulation.egg-info/dependency_links.txt
+writing entry points to ../../build/atm_simulation/atm_simulation.egg-info/entry_points.txt
+writing requirements to ../../build/atm_simulation/atm_simulation.egg-info/requires.txt
+writing top-level names to ../../build/atm_simulation/atm_simulation.egg-info/top_level.txt
+reading manifest file '../../build/atm_simulation/atm_simulation.egg-info/SOURCES.txt'
+writing manifest file '../../build/atm_simulation/atm_simulation.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/gonzalo/grodi_atm/build/atm_simulation/build
+creating /home/gonzalo/grodi_atm/build/atm_simulation/build/lib
+creating /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation
+copying atm_simulation/__init__.py -> /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation
+copying atm_simulation/gazebo_atomizer_controller_node.py -> /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation
+copying atm_simulation/atomizer_demo_sequence_node.py -> /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation
+running install
+running install_lib
+creating /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation
+copying /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation/__init__.py -> /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation
+copying /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation/gazebo_atomizer_controller_node.py -> /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation
+copying /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation/atomizer_demo_sequence_node.py -> /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation
+byte-compiling /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation/gazebo_atomizer_controller_node.py to gazebo_atomizer_controller_node.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation/atomizer_demo_sequence_node.py to atomizer_demo_sequence_node.cpython-312.pyc
+running install_data
+copying resource/atm_simulation -> /home/gonzalo/grodi_atm/install/atm_simulation/share/ament_index/resource_index/packages
+copying package.xml -> /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation
+copying launch/atomizer_world.launch.py -> /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation/launch
+copying launch/atomizer_demo.launch.py -> /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation/launch
+copying worlds/atomizer_greenhouse.sdf -> /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation/worlds
+running install_egg_info
+Copying ../../build/atm_simulation/atm_simulation.egg-info to /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation-0.0.0-py3.12.egg-info
+running install_scripts
+Installing atomizer_demo_sequence_node script to /home/gonzalo/grodi_atm/install/atm_simulation/lib/atm_simulation
+Installing gazebo_atomizer_controller_node script to /home/gonzalo/grodi_atm/install/atm_simulation/lib/atm_simulation
+writing list of installed files to '/home/gonzalo/grodi_atm/build/atm_simulation/install.log'

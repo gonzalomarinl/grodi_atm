@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing atm_simulation.egg-info/PKG-INFO
+writing dependency_links to atm_simulation.egg-info/dependency_links.txt
+writing entry points to atm_simulation.egg-info/entry_points.txt
+writing requirements to atm_simulation.egg-info/requires.txt
+writing top-level names to atm_simulation.egg-info/top_level.txt
+reading manifest file 'atm_simulation.egg-info/SOURCES.txt'
+writing manifest file 'atm_simulation.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm-simulation.egg-link (link to .)
+Installing atomizer_demo_sequence_node script to /home/gonzalo/grodi_atm/install/atm_simulation/lib/atm_simulation
+Installing gazebo_atomizer_controller_node script to /home/gonzalo/grodi_atm/install/atm_simulation/lib/atm_simulation
+
+Installed /home/gonzalo/grodi_atm/build/atm_simulation
+running symlink_data

@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from atm_interfaces/msg/SprayReport.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module atm_interfaces {
+  module msg {
+    struct SprayReport {
+      string mission_id;
+
+      string line_id;
+
+      uint32 stop_index;
+
+      boolean success;
+
+      float duration_sec;
+
+      builtin_interfaces::msg::Time stamp;
+    };
+  };
+};

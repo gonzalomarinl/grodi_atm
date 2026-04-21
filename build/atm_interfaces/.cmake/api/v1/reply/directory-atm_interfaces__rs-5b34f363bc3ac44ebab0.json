@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "atm_interfaces__rs",
+		"source" : "/home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__rs"
+	}
+}

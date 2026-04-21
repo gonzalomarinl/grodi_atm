@@ -1,0 +1,47 @@
+running develop
+Removing /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm-link.egg-link (link to .)
+running egg_info
+writing ../../build/atm_link/atm_link.egg-info/PKG-INFO
+writing dependency_links to ../../build/atm_link/atm_link.egg-info/dependency_links.txt
+writing entry points to ../../build/atm_link/atm_link.egg-info/entry_points.txt
+writing requirements to ../../build/atm_link/atm_link.egg-info/requires.txt
+writing top-level names to ../../build/atm_link/atm_link.egg-info/top_level.txt
+reading manifest file '../../build/atm_link/atm_link.egg-info/SOURCES.txt'
+writing manifest file '../../build/atm_link/atm_link.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/gonzalo/grodi_atm/build/atm_link/build
+creating /home/gonzalo/grodi_atm/build/atm_link/build/lib
+creating /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+copying atm_link/transport.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+copying atm_link/__init__.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+copying atm_link/slave_lora_bridge_node.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+copying atm_link/master_lora_bridge_node.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+copying atm_link/codec.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+copying atm_link/protocol.py -> /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link
+running install
+running install_lib
+creating /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/transport.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/__init__.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/slave_lora_bridge_node.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/master_lora_bridge_node.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/codec.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+copying /home/gonzalo/grodi_atm/build/atm_link/build/lib/atm_link/protocol.py -> /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link
+byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/transport.py to transport.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/slave_lora_bridge_node.py to slave_lora_bridge_node.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/master_lora_bridge_node.py to master_lora_bridge_node.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/codec.py to codec.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link/protocol.py to protocol.cpython-312.pyc
+running install_data
+copying resource/atm_link -> /home/gonzalo/grodi_atm/install/atm_link/share/ament_index/resource_index/packages
+copying package.xml -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link
+copying launch/link.launch.py -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/launch
+copying config/link_params.yaml -> /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/config
+running install_egg_info
+Copying ../../build/atm_link/atm_link.egg-info to /home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages/atm_link-0.0.0-py3.12.egg-info
+running install_scripts
+Installing master_lora_bridge_node script to /home/gonzalo/grodi_atm/install/atm_link/lib/atm_link
+Installing slave_lora_bridge_node script to /home/gonzalo/grodi_atm/install/atm_link/lib/atm_link
+writing list of installed files to '/home/gonzalo/grodi_atm/build/atm_link/install.log'

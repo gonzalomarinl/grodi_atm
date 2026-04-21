@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "atm_interfaces/srv/GetSystemState_Request",
+      "fields": [
+        {
+          "name": "verbose",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "atm_interfaces/srv/GetSystemState_Request",
+      "hash_string": "RIHS01_11da9b2780867e4cb66b5c8809bdf35dbbd267eb6e9145ac4585b49232b15741"
+    }
+  ]
+}

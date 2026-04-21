@@ -1,0 +1,11 @@
+string mission_id
+string line_id
+uint32 stop_index
+---
+bool success
+bool stop_found
+string message
+---
+string navigation_state
+string current_line_id
+float32 vision_confidence

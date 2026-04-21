@@ -1,0 +1,360 @@
+[0.582s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'atm_interfaces', 'atm_link', 'atm_master', 'atm_slave']
+[0.582s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['atm_interfaces', 'atm_link', 'atm_master', 'atm_slave'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ba913604fe0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ba913604d10>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ba913604d10>>)
+[0.759s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.759s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.759s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.760s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.760s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.760s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.760s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/gonzalo/grodi_atm'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ignore', 'ignore_ament_install']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore_ament_install'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_pkg']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_pkg'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_meta']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_meta'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ros']
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ros'
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['cmake', 'python']
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'cmake'
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python'
+[0.859s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['python_setup_py']
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python_setup_py'
+[0.860s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.861s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.861s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.861s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.861s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.864s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.864s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.864s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_bringup) by extension 'ignore'
+[0.864s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_bringup) by extension 'ignore_ament_install'
+[0.864s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_bringup) by extensions ['colcon_pkg']
+[0.864s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_bringup) by extension 'colcon_pkg'
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_bringup) by extensions ['colcon_meta']
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_bringup) by extension 'colcon_meta'
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_bringup) by extensions ['ros']
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_bringup) by extension 'ros'
+[0.875s] DEBUG:colcon.colcon_core.package_identification:Package 'src/atm_bringup' with type 'ros.ament_python' and name 'atm_bringup'
+[0.875s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.876s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_interfaces) by extension 'ignore'
+[0.876s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_interfaces) by extension 'ignore_ament_install'
+[0.876s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_interfaces) by extensions ['colcon_pkg']
+[0.876s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_interfaces) by extension 'colcon_pkg'
+[0.876s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_interfaces) by extensions ['colcon_meta']
+[0.876s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_interfaces) by extension 'colcon_meta'
+[0.876s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_interfaces) by extensions ['ros']
+[0.877s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_interfaces) by extension 'ros'
+[0.878s] DEBUG:colcon.colcon_core.package_identification:Package 'src/atm_interfaces' with type 'ros.ament_cmake' and name 'atm_interfaces'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_link) by extensions ['ignore', 'ignore_ament_install']
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_link) by extension 'ignore'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_link) by extension 'ignore_ament_install'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_link) by extensions ['colcon_pkg']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_link) by extension 'colcon_pkg'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_link) by extensions ['colcon_meta']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_link) by extension 'colcon_meta'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_link) by extensions ['ros']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_link) by extension 'ros'
+[0.881s] DEBUG:colcon.colcon_core.package_identification:Package 'src/atm_link' with type 'ros.ament_python' and name 'atm_link'
+[0.881s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_logging) by extensions ['ignore', 'ignore_ament_install']
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_logging) by extension 'ignore'
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_logging) by extension 'ignore_ament_install'
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_logging) by extensions ['colcon_pkg']
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_logging) by extension 'colcon_pkg'
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_logging) by extensions ['colcon_meta']
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_logging) by extension 'colcon_meta'
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_logging) by extensions ['ros']
+[0.883s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_logging) by extension 'ros'
+[0.885s] DEBUG:colcon.colcon_core.package_identification:Package 'src/atm_logging' with type 'ros.ament_python' and name 'atm_logging'
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_master) by extensions ['ignore', 'ignore_ament_install']
+[0.885s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_master) by extension 'ignore'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_master) by extension 'ignore_ament_install'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_master) by extensions ['colcon_pkg']
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_master) by extension 'colcon_pkg'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_master) by extensions ['colcon_meta']
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_master) by extension 'colcon_meta'
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_master) by extensions ['ros']
+[0.886s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_master) by extension 'ros'
+[0.888s] DEBUG:colcon.colcon_core.package_identification:Package 'src/atm_master' with type 'ros.ament_python' and name 'atm_master'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_simulation) by extensions ['ignore', 'ignore_ament_install']
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_simulation) by extension 'ignore'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_simulation) by extension 'ignore_ament_install'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_simulation) by extensions ['colcon_pkg']
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_simulation) by extension 'colcon_pkg'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_simulation) by extensions ['colcon_meta']
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_simulation) by extension 'colcon_meta'
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_simulation) by extensions ['ros']
+[0.888s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_simulation) by extension 'ros'
+[0.890s] DEBUG:colcon.colcon_core.package_identification:Package 'src/atm_simulation' with type 'ros.ament_python' and name 'atm_simulation'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_slave) by extensions ['ignore', 'ignore_ament_install']
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_slave) by extension 'ignore'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_slave) by extension 'ignore_ament_install'
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_slave) by extensions ['colcon_pkg']
+[0.890s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_slave) by extension 'colcon_pkg'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_slave) by extensions ['colcon_meta']
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_slave) by extension 'colcon_meta'
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_slave) by extensions ['ros']
+[0.891s] Level 1:colcon.colcon_core.package_identification:_identify(src/atm_slave) by extension 'ros'
+[0.892s] DEBUG:colcon.colcon_core.package_identification:Package 'src/atm_slave' with type 'ros.ament_python' and name 'atm_slave'
+[0.892s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.893s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.893s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.893s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.893s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.966s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'atm_simulation' in 'src/atm_simulation'
+[0.967s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'atm_logging' in 'src/atm_logging'
+[0.967s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'atm_bringup' in 'src/atm_bringup'
+[0.967s] Level 5:colcon.colcon_core.verb:set package 'atm_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.967s] Level 5:colcon.colcon_core.verb:set package 'atm_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.968s] DEBUG:colcon.colcon_core.verb:Building package 'atm_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gonzalo/grodi_atm/build/atm_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gonzalo/grodi_atm/install/atm_interfaces', 'merge_install': False, 'path': '/home/gonzalo/grodi_atm/src/atm_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_link' build argument 'cmake_args' from command line to 'None'
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_link' build argument 'cmake_target' from command line to 'None'
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_link' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_link' build argument 'cmake_clean_cache' from command line to 'False'
+[0.968s] Level 5:colcon.colcon_core.verb:set package 'atm_link' build argument 'cmake_clean_first' from command line to 'False'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_link' build argument 'cmake_force_configure' from command line to 'False'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_link' build argument 'ament_cmake_args' from command line to 'None'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_link' build argument 'catkin_cmake_args' from command line to 'None'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_link' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.969s] DEBUG:colcon.colcon_core.verb:Building package 'atm_link' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gonzalo/grodi_atm/build/atm_link', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gonzalo/grodi_atm/install/atm_link', 'merge_install': False, 'path': '/home/gonzalo/grodi_atm/src/atm_link', 'symlink_install': True, 'test_result_base': None}
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_master' build argument 'cmake_args' from command line to 'None'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_master' build argument 'cmake_target' from command line to 'None'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_master' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_master' build argument 'cmake_clean_cache' from command line to 'False'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_master' build argument 'cmake_clean_first' from command line to 'False'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_master' build argument 'cmake_force_configure' from command line to 'False'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_master' build argument 'ament_cmake_args' from command line to 'None'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_master' build argument 'catkin_cmake_args' from command line to 'None'
+[0.969s] Level 5:colcon.colcon_core.verb:set package 'atm_master' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.970s] DEBUG:colcon.colcon_core.verb:Building package 'atm_master' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gonzalo/grodi_atm/build/atm_master', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gonzalo/grodi_atm/install/atm_master', 'merge_install': False, 'path': '/home/gonzalo/grodi_atm/src/atm_master', 'symlink_install': True, 'test_result_base': None}
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'atm_slave' build argument 'cmake_args' from command line to 'None'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'atm_slave' build argument 'cmake_target' from command line to 'None'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'atm_slave' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'atm_slave' build argument 'cmake_clean_cache' from command line to 'False'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'atm_slave' build argument 'cmake_clean_first' from command line to 'False'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'atm_slave' build argument 'cmake_force_configure' from command line to 'False'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'atm_slave' build argument 'ament_cmake_args' from command line to 'None'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'atm_slave' build argument 'catkin_cmake_args' from command line to 'None'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'atm_slave' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.970s] DEBUG:colcon.colcon_core.verb:Building package 'atm_slave' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gonzalo/grodi_atm/build/atm_slave', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gonzalo/grodi_atm/install/atm_slave', 'merge_install': False, 'path': '/home/gonzalo/grodi_atm/src/atm_slave', 'symlink_install': True, 'test_result_base': None}
+[0.971s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.973s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.973s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gonzalo/grodi_atm/src/atm_interfaces' with build type 'ament_cmake'
+[0.973s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gonzalo/grodi_atm/src/atm_interfaces'
+[0.985s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.985s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.014s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gonzalo/grodi_atm/build/atm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/gonzalo/grodi_atm/src/atm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gonzalo/grodi_atm/install/atm_interfaces
+[5.131s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gonzalo/grodi_atm/build/atm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/gonzalo/grodi_atm/src/atm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gonzalo/grodi_atm/install/atm_interfaces
+[5.132s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gonzalo/grodi_atm/build/atm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/gonzalo/grodi_atm/build/atm_interfaces -- -j12 -l12
+[51.059s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gonzalo/grodi_atm/build/atm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/gonzalo/grodi_atm/build/atm_interfaces -- -j12 -l12
+[51.085s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gonzalo/grodi_atm/build/atm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/gonzalo/grodi_atm/build/atm_interfaces
+[52.003s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(atm_interfaces)
+[52.004s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gonzalo/grodi_atm/build/atm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/gonzalo/grodi_atm/build/atm_interfaces
+[52.020s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces' for CMake module files
+[52.023s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces' for CMake config files
+[52.041s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_interfaces', 'cmake_prefix_path')
+[52.042s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/cmake_prefix_path.dsv'
+[52.043s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/cmake_prefix_path.sh'
+[52.045s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces/lib'
+[52.046s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_interfaces', 'ld_library_path_lib')
+[52.046s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/ld_library_path_lib.dsv'
+[52.046s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/ld_library_path_lib.sh'
+[52.047s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces/bin'
+[52.047s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/pkgconfig/atm_interfaces.pc'
+[52.053s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages'
+[52.054s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_interfaces', 'pythonpath')
+[52.054s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/pythonpath.dsv'
+[52.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/pythonpath.sh'
+[52.057s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces/bin'
+[52.058s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/package.dsv'
+[52.059s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/package.sh'
+[52.061s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/package.bash'
+[52.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/package.zsh'
+[52.064s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gonzalo/grodi_atm/install/atm_interfaces/share/colcon-core/packages/atm_interfaces)
+[52.065s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(atm_interfaces)
+[52.065s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces' for CMake module files
+[52.068s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces' for CMake config files
+[52.074s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_interfaces', 'cmake_prefix_path')
+[52.075s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/cmake_prefix_path.dsv'
+[52.076s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/cmake_prefix_path.sh'
+[52.077s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces/lib'
+[52.077s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_interfaces', 'ld_library_path_lib')
+[52.077s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/ld_library_path_lib.dsv'
+[52.078s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/ld_library_path_lib.sh'
+[52.078s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces/bin'
+[52.079s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/pkgconfig/atm_interfaces.pc'
+[52.079s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages'
+[52.079s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_interfaces', 'pythonpath')
+[52.080s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/pythonpath.dsv'
+[52.080s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/hook/pythonpath.sh'
+[52.082s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_interfaces/bin'
+[52.083s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/package.dsv'
+[52.084s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/package.sh'
+[52.086s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/package.bash'
+[52.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/package.zsh'
+[52.088s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gonzalo/grodi_atm/install/atm_interfaces/share/colcon-core/packages/atm_interfaces)
+[52.089s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gonzalo/grodi_atm/src/atm_link' with build type 'ament_python'
+[52.090s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_link', 'ament_prefix_path')
+[52.090s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_link/share/atm_link/hook/ament_prefix_path.dsv'
+[52.093s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_link/share/atm_link/hook/ament_prefix_path.sh'
+[52.095s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[53.088s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gonzalo/grodi_atm/src/atm_link'
+[53.089s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[55.479s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_link/share/ament_index/resource_index/packages/atm_link
+[55.479s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/package.xml
+[55.479s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/launch/link.launch.py
+[55.479s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_link/share/atm_link/config/link_params.yaml
+[55.480s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_link/lib/atm_link/master_lora_bridge_node
+[55.480s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_link/lib/atm_link/slave_lora_bridge_node
+[55.487s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gonzalo/grodi_atm/build/atm_link': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_link/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_link/build --no-deps symlink_data --force
+[56.901s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_link', 'pythonpath_develop')
+[56.902s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/build/atm_link/share/atm_link/hook/pythonpath_develop.dsv'
+[56.904s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gonzalo/grodi_atm/build/atm_link' returned '0': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_link/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_link/build --no-deps symlink_data --force
+[56.904s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/build/atm_link/share/atm_link/hook/pythonpath_develop.sh'
+[56.905s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_link' for CMake module files
+[56.906s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_link' for CMake config files
+[56.912s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_link/lib'
+[56.913s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_link/bin'
+[56.913s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_link/lib/pkgconfig/atm_link.pc'
+[56.913s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages'
+[56.914s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_link', 'pythonpath')
+[56.914s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_link/share/atm_link/hook/pythonpath.dsv'
+[56.915s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_link/share/atm_link/hook/pythonpath.sh'
+[56.917s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_link/bin'
+[56.918s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(atm_link)
+[56.918s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gonzalo/grodi_atm/install/atm_link/share/atm_link/package.dsv'
+[56.919s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_link/share/atm_link/package.sh'
+[56.920s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_link/share/atm_link/package.bash'
+[56.921s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_link/share/atm_link/package.zsh'
+[56.922s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gonzalo/grodi_atm/install/atm_link/share/colcon-core/packages/atm_link)
+[56.922s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gonzalo/grodi_atm/src/atm_master' with build type 'ament_python'
+[56.923s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_master', 'ament_prefix_path')
+[56.923s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_master/share/atm_master/hook/ament_prefix_path.dsv'
+[56.926s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_master/share/atm_master/hook/ament_prefix_path.sh'
+[56.927s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[56.934s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gonzalo/grodi_atm/src/atm_slave' with build type 'ament_python'
+[56.935s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_slave', 'ament_prefix_path')
+[56.936s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/hook/ament_prefix_path.dsv'
+[56.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/hook/ament_prefix_path.sh'
+[56.938s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[57.944s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gonzalo/grodi_atm/src/atm_slave'
+[57.945s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[58.470s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gonzalo/grodi_atm/src/atm_master'
+[58.470s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[59.894s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_slave/share/ament_index/resource_index/packages/atm_slave
+[59.895s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/package.xml
+[59.895s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/launch/slave.launch.py
+[59.895s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/config/slave_params.yaml
+[59.896s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_slave/lib/atm_slave/navigation_executor_node
+[59.896s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_slave/lib/atm_slave/slave_health_publisher_node
+[59.896s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_slave/lib/atm_slave/slave_state_manager_node
+[59.896s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_slave/lib/atm_slave/spray_controller_node
+[59.896s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_slave/lib/atm_slave/vertical_atomizer_controller_node
+[59.904s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gonzalo/grodi_atm/build/atm_slave': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_link:/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_slave/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_slave/build --no-deps symlink_data --force
+[60.394s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_master/share/ament_index/resource_index/packages/atm_master
+[60.394s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_master/share/atm_master/package.xml
+[60.394s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_master/share/atm_master/launch/master.launch.py
+[60.394s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_master/share/atm_master/config/master_params.yaml
+[60.396s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master/admission_reel_controller_node
+[60.396s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master/master_health_publisher_node
+[60.396s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master/master_watchdog_node
+[60.396s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master/mission_event_logger_node
+[60.396s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master/mission_manager_node
+[60.396s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master/pump_controller_node
+[60.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gonzalo/grodi_atm/build/atm_master': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_link:/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_master/build --no-deps symlink_data --force
+[61.422s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_slave', 'pythonpath_develop')
+[61.423s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/build/atm_slave/share/atm_slave/hook/pythonpath_develop.dsv'
+[61.425s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gonzalo/grodi_atm/build/atm_slave' returned '0': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_link:/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_slave/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_slave/build --no-deps symlink_data --force
+[61.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/build/atm_slave/share/atm_slave/hook/pythonpath_develop.sh'
+[61.426s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_slave' for CMake module files
+[61.428s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_slave' for CMake config files
+[61.435s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_slave/lib'
+[61.436s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_slave/bin'
+[61.436s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_slave/lib/pkgconfig/atm_slave.pc'
+[61.436s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages'
+[61.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_slave', 'pythonpath')
+[61.437s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/hook/pythonpath.dsv'
+[61.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/hook/pythonpath.sh'
+[61.438s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_slave/bin'
+[61.438s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(atm_slave)
+[61.438s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/package.dsv'
+[61.439s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/package.sh'
+[61.440s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/package.bash'
+[61.441s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/package.zsh'
+[61.442s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gonzalo/grodi_atm/install/atm_slave/share/colcon-core/packages/atm_slave)
+[61.957s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_master', 'pythonpath_develop')
+[61.957s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/build/atm_master/share/atm_master/hook/pythonpath_develop.dsv'
+[61.958s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gonzalo/grodi_atm/build/atm_master' returned '0': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_link:/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_master/build --no-deps symlink_data --force
+[61.960s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/build/atm_master/share/atm_master/hook/pythonpath_develop.sh'
+[61.960s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_master' for CMake module files
+[61.961s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_master' for CMake config files
+[61.968s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_master/lib'
+[61.969s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_master/bin'
+[61.969s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_master/lib/pkgconfig/atm_master.pc'
+[61.969s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages'
+[61.969s] Level 1:colcon.colcon_core.shell:create_environment_hook('atm_master', 'pythonpath')
+[61.970s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gonzalo/grodi_atm/install/atm_master/share/atm_master/hook/pythonpath.dsv'
+[61.970s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gonzalo/grodi_atm/install/atm_master/share/atm_master/hook/pythonpath.sh'
+[61.972s] Level 1:colcon.colcon_core.environment:checking '/home/gonzalo/grodi_atm/install/atm_master/bin'
+[61.972s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(atm_master)
+[61.973s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gonzalo/grodi_atm/install/atm_master/share/atm_master/package.dsv'
+[61.973s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_master/share/atm_master/package.sh'
+[61.974s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_master/share/atm_master/package.bash'
+[61.974s] INFO:colcon.colcon_core.shell:Creating package script '/home/gonzalo/grodi_atm/install/atm_master/share/atm_master/package.zsh'
+[61.975s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gonzalo/grodi_atm/install/atm_master/share/colcon-core/packages/atm_master)
+[61.976s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[61.977s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[61.978s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[61.978s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[62.104s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[62.104s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[62.104s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[62.104s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[62.117s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[62.117s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[62.118s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gonzalo/grodi_atm/install/local_setup.sh'
+[62.119s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gonzalo/grodi_atm/install/_local_setup_util_sh.py'
+[62.122s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gonzalo/grodi_atm/install/setup.sh'
+[62.124s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gonzalo/grodi_atm/install/local_setup.bash'
+[62.126s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gonzalo/grodi_atm/install/setup.bash'
+[62.129s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gonzalo/grodi_atm/install/local_setup.zsh'
+[62.130s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gonzalo/grodi_atm/install/setup.zsh'

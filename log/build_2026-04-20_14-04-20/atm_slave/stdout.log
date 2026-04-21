@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing atm_slave.egg-info/PKG-INFO
+writing dependency_links to atm_slave.egg-info/dependency_links.txt
+writing entry points to atm_slave.egg-info/entry_points.txt
+writing requirements to atm_slave.egg-info/requires.txt
+writing top-level names to atm_slave.egg-info/top_level.txt
+reading manifest file 'atm_slave.egg-info/SOURCES.txt'
+writing manifest file 'atm_slave.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages/atm-slave.egg-link (link to .)
+Installing navigation_executor_node script to /home/gonzalo/grodi_atm/install/atm_slave/lib/atm_slave
+Installing slave_health_publisher_node script to /home/gonzalo/grodi_atm/install/atm_slave/lib/atm_slave
+Installing slave_state_manager_node script to /home/gonzalo/grodi_atm/install/atm_slave/lib/atm_slave
+Installing spray_controller_node script to /home/gonzalo/grodi_atm/install/atm_slave/lib/atm_slave
+Installing vertical_atomizer_controller_node script to /home/gonzalo/grodi_atm/install/atm_slave/lib/atm_slave
+
+Installed /home/gonzalo/grodi_atm/build/atm_slave
+running symlink_data

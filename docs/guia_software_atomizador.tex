@@ -1,0 +1,321 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!50!black,
+    urlcolor=blue!50!black
+}
+
+\setlist[itemize]{noitemsep, topsep=3pt}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+\title{\textbf{Gu\'ia T\'ecnica del Software}\\Robot Atomizador sobre Ra\'il}
+\author{GRODITECH}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Objetivo del documento}
+Este documento resume c\'omo se ha estructurado y programado la base software del nuevo robot atomizador. La idea es que sirva como gu\'ia interna para:
+
+\begin{itemize}
+    \item entender la arquitectura general del sistema,
+    \item localizar r\'apidamente cada paquete ROS 2,
+    \item ver qu\'e hace cada nodo,
+    \item conocer qu\'e mensajes viajan entre maestra y esclava,
+    \item y tener una referencia clara antes de conectar hardware real.
+\end{itemize}
+
+El sistema est\'a dise\~nado para funcionar con \textbf{2 Raspberry Pi 4}:
+
+\begin{itemize}
+    \item \textbf{Maestra}: bomba, manguera de admisi\'on, supervisi\'on global, misi\'on, trazabilidad y watchdog.
+    \item \textbf{Esclava}: desplazamiento por ra\'il, detecci\'on de paradas, bajada/subida del atomizador, fumigaci\'on y vuelta a base.
+\end{itemize}
+
+\section{Resumen de arquitectura}
+\subsection{Idea principal}
+La arquitectura se ha separado en paquetes peque\~nos y claros para evitar un proceso monol\'itico tipo \texttt{main.py} y dejar el sistema preparado para crecer sin rehacerlo.
+
+\begin{itemize}
+    \item Cada Raspberry ejecuta \textbf{ROS 2 localmente}.
+    \item La comunicaci\'on entre placas se hace mediante \textbf{mensajes peque\~nos} a trav\'es de un \textbf{bridge} pensado para LoRa.
+    \item La \textbf{maestra} mantiene la m\'aquina de estados global.
+    \item La \textbf{esclava} mantiene una l\'ogica local suficiente para ejecutar la misi\'on y volver a base.
+    \item Los \textbf{watchdogs} viven fuera de ROS 2, siguiendo la filosof\'ia usada en Vega11/Vega22.
+\end{itemize}
+
+\subsection{Paquetes actuales del workspace}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\ttfamily}l X}
+\toprule
+Paquete & Funci\'on \\
+\midrule
+atm\_interfaces & Contratos comunes: \texttt{msg}, \texttt{srv} y \texttt{action}. \\
+atm\_master & Nodos de la Raspberry maestra. \\
+atm\_slave & Nodos de la Raspberry esclava. \\
+atm\_link & Bridge compacto entre maestra y esclava. \\
+atm\_bringup & \texttt{launch}, scripts auxiliares y plantillas \texttt{systemd}. \\
+atm\_logging & Reservado para trazabilidad m\'as separada si en el futuro hace falta. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Estructura del sistema}
+\subsection{Raspberry maestra}
+La maestra es el cerebro global de la misi\'on. Su responsabilidad principal es decidir cu\'ando empieza una misi\'on, qu\'e objetivos se cargan, c\'omo evoluciona el estado global y cu\'ando se debe cerrar el ciclo.
+
+\subsection{Raspberry esclava}
+La esclava se ocupa de ejecutar en campo lo que sucede realmente en el robot: desplazarse, confirmar paradas, bajar el atomizador, fumigar, subirlo y regresar a base.
+
+\subsection{Bridge de enlace}
+Aunque ambas placas usen ROS 2, el enlace entre ellas no se trata como si fuese una red DDS normal. En su lugar se ha creado un bridge ligero que traduce mensajes ROS 2 a tramas peque\~nas. Durante desarrollo se ha probado con transporte local por ficheros JSONL; en producci\'on se sustituir\'a por el driver real LoRa.
+
+\section{Nodos implementados}
+\subsection{Nodos de la maestra}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\ttfamily}l X}
+\toprule
+Nodo & Funci\'on \\
+\midrule
+mission\_manager\_node & M\'aquina de estados global. Ejecuta la acci\'on \texttt{/mission/execute}. \\
+pump\_controller\_node & Control l\'ogico de bomba. \\
+admission\_reel\_controller\_node & Control l\'ogico de enrollado/desenrollado de admisi\'on. \\
+master\_watchdog\_node & Publica heartbeat maestro. \\
+mission\_event\_logger\_node & Registro local de eventos de misi\'on. \\
+master\_health\_publisher\_node & Publica el estado resumido a JSON para el sentinel. \\
+master\_lora\_bridge\_node & Enlace ROS 2 local $\leftrightarrow$ bridge compacto. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Nodos de la esclava}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\ttfamily}l X}
+\toprule
+Nodo & Funci\'on \\
+\midrule
+slave\_state\_manager\_node & Coordinador local de misi\'on en la esclava. \\
+navigation\_executor\_node & Navegaci\'on l\'ogica a paradas y vuelta a base. \\
+vertical\_atomizer\_controller\_node & Subida y bajada l\'ogica del atomizador. \\
+spray\_controller\_node & Secuencia de fumigaci\'on: bajar, fumigar en ascenso, subir. \\
+slave\_health\_publisher\_node & Snapshot local de salud para el sentinel. \\
+slave\_lora\_bridge\_node & Enlace ROS 2 local $\leftrightarrow$ bridge compacto. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Interfaces ROS 2}
+\subsection{Mensajes principales}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\ttfamily}l X}
+\toprule
+Mensaje & Uso principal \\
+\midrule
+Heartbeat & Salud peri\'odica entre nodos y m\'aquinas. \\
+MissionState & Estado global de la misi\'on. \\
+MissionEvent & Eventos trazables: inicio, parada, fumigaci\'on, retorno, etc. \\
+FaultReport & Errores y causas de aborto. \\
+LineTarget & Objetivo de parada o l\'ineo a tratar. \\
+SlaveStatus & Estado resumido de la esclava. \\
+MasterStatus & Estado resumido de la maestra. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Servicios}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\ttfamily}l X}
+\toprule
+Servicio & Uso \\
+\midrule
+/mission/arm\_system & Armar o desarmar el sistema. \\
+/mission/reset\_fault & Reset l\'ogico de fallo. \\
+/mission/get\_system\_state & Consulta resumida del estado actual. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Acciones}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\ttfamily}l X}
+\toprule
+Acci\'on & Uso \\
+\midrule
+/mission/execute & Ejecutar una misi\'on completa desde la maestra. \\
+slave/navigate\_to\_stop & Navegar hasta una parada. \\
+slave/spray\_at\_stop & Secuencia de actuaci\'on sobre una parada. \\
+slave/return\_to\_base & Vuelta a base. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Topics m\'as importantes}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\ttfamily}l X}
+\toprule
+Topic & Significado \\
+\midrule
+mission/state & Estado global de la misi\'on. \\
+mission/events & Eventos trazables del flujo de trabajo. \\
+system/faults & Publicaci\'on de fallos. \\
+slave/status & Estado local de la esclava. \\
+link/master\_heartbeat & Heartbeat de la maestra. \\
+link/slave\_heartbeat & Heartbeat de la esclava. \\
+link/outgoing/mission\_target & Objetivos que la maestra entrega al bridge. \\
+link/incoming/slave\_status & Estado recibido desde la esclava. \\
+slave/incoming/mission\_state & Estado global recibido por la esclava. \\
+slave/incoming/mission\_target & Objetivos recibidos por la esclava. \\
+slave/commands/vertical & \'Ordenes de bajar o subir el atomizador. \\
+slave/events/vertical & Confirmaciones de bajada o subida. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{M\'aquinas de estados}
+\subsection{Estados globales en la maestra}
+\begin{itemize}
+    \item \texttt{BOOT}
+    \item \texttt{IDLE}
+    \item \texttt{READY}
+    \item \texttt{MISSION\_LOADED}
+    \item \texttt{EXECUTING}
+    \item \texttt{RETURNING\_HOME}
+    \item \texttt{PURGING}
+    \item \texttt{COMPLETED}
+    \item \texttt{FAULT}
+    \item \texttt{EMERGENCY\_STOP}
+    \item \texttt{DEGRADED\_COMMS}
+\end{itemize}
+
+\subsection{Estados locales en la esclava}
+\begin{itemize}
+    \item \texttt{AT\_BASE}
+    \item \texttt{MOVING}
+    \item \texttt{STOP\_CONFIRMED}
+    \item \texttt{LOWERING\_ATOMIZER}
+    \item \texttt{SPRAYING\_ASCENT}
+    \item \texttt{RETURNING}
+    \item \texttt{LOCAL\_FAULT}
+\end{itemize}
+
+\section{Diagrama de flujo resumido}
+\begin{center}
+\begin{tikzpicture}[
+    node distance=7mm and 9mm,
+    block/.style={draw, rounded corners, align=center, minimum width=28mm, minimum height=9mm, fill=blue!5},
+    decision/.style={draw, diamond, aspect=2, align=center, fill=yellow!10},
+    topic/.style={draw, rounded corners, align=center, minimum width=36mm, minimum height=7mm, fill=green!8},
+    line/.style={-Latex, thick}
+]
+
+\node[block] (arm) {Maestra\\\texttt{/mission/arm\_system}};
+\node[block, below=of arm] (execute) {Maestra\\\texttt{/mission/execute}};
+\node[topic, below=of execute] (state) {\texttt{mission/state}\\\texttt{link/outgoing/mission\_target}};
+\node[block, below=of state] (bridge) {atm\_link\\Bridge compacto};
+\node[topic, below=of bridge] (incoming) {\texttt{slave/incoming/mission\_state}\\\texttt{slave/incoming/mission\_target}};
+\node[block, below=of incoming] (slave) {Slave state manager};
+\node[block, below left=12mm and 14mm of slave] (nav) {\texttt{NavigateToStop}};
+\node[block, below=of slave] (spray) {\texttt{SprayAtStop}};
+\node[block, below right=12mm and 14mm of slave] (ret) {\texttt{ReturnToBase}};
+\node[topic, below=of spray] (vertical) {\texttt{slave/commands/vertical}\\\texttt{slave/events/vertical}};
+\node[topic, below=of ret] (status) {\texttt{slave/status}\\\texttt{mission/events}\\\texttt{system/faults}};
+\node[block, right=25mm of bridge] (watchdog) {Sentinel +\\health JSON};
+
+\draw[line] (arm) -- (execute);
+\draw[line] (execute) -- (state);
+\draw[line] (state) -- (bridge);
+\draw[line] (bridge) -- (incoming);
+\draw[line] (incoming) -- (slave);
+\draw[line] (slave) -- (nav);
+\draw[line] (slave) -- (spray);
+\draw[line] (slave) -- (ret);
+\draw[line] (spray) -- (vertical);
+\draw[line] (ret) -- (status);
+\draw[line] (status.east) -| (bridge.east);
+\draw[line] (bridge) -- (watchdog);
+\draw[line] (status.east) -- ++(8mm,0) |- (watchdog.south);
+
+\end{tikzpicture}
+\end{center}
+
+\section{Watchdog y supervisi\'on}
+Siguiendo la referencia de Vega11/Vega22, la supervisi\'on se ha planteado en dos capas:
+
+\begin{itemize}
+    \item \textbf{ROS 2}: publica heartbeats, estado de misi\'on y snapshots de salud.
+    \item \textbf{Sentinel externo}: proceso Python mantenido por \texttt{systemd}, encargado de reinicios escalonados y decisiones de recuperaci\'on.
+\end{itemize}
+
+Los snapshots se escriben en:
+\begin{itemize}
+    \item \texttt{/run/atm/master\_health.json} y \texttt{/run/atm/slave\_health.json} en despliegue real.
+    \item \texttt{/tmp/atm/...} en desarrollo cuando no hay permisos sobre \texttt{/run/atm}.
+\end{itemize}
+
+\section{Validaci\'on l\'ogica realizada}
+Antes de conectar hardware real se ha ejecutado una prueba l\'ogica completa del sistema. Esta prueba ha validado:
+
+\begin{itemize}
+    \item arranque de maestra y esclava,
+    \item armado del sistema,
+    \item env\'io de misi\'on general,
+    \item entrega de objetivos a trav\'es del bridge,
+    \item navegaci\'on l\'ogica a dos paradas,
+    \item secuencia de fumigaci\'on en ambas,
+    \item vuelta a base,
+    \item cierre de misi\'on en estado \texttt{COMPLETED}.
+\end{itemize}
+
+Durante esta validaci\'on se detectaron y corrigieron dos puntos importantes:
+
+\begin{itemize}
+    \item fallback de snapshots de salud a \texttt{/tmp/atm} en entorno de desarrollo,
+    \item espera robusta de eventos verticales en \texttt{spray\_controller\_node}.
+\end{itemize}
+
+\section{Qu\'e falta para pasar a hardware}
+La base software ya est\'a lista para sustituir l\'ogica simulada por implementaciones reales. Los siguientes bloques a conectar ser\'ian:
+
+\begin{itemize}
+    \item driver real del enlace LoRa,
+    \item control real de bomba y admisi\'on,
+    \item movimiento real sobre ra\'il,
+    \item finales de carrera y encoders,
+    \item actuador vertical real,
+    \item visi\'on para detecci\'on de paradas y l\'ineos.
+\end{itemize}
+
+\section{Conclusi\'on}
+La estructura actual deja una base clara, mantenible y preparada para crecer. La separaci\'on entre \texttt{atm\_master}, \texttt{atm\_slave} y \texttt{atm\_link} evita mezclar responsabilidades, facilita las pruebas y permite conectar hardware real por etapas sin rehacer la arquitectura.
+
+En resumen, el sistema ya dispone de:
+
+\begin{itemize}
+    \item arquitectura ROS 2 definida,
+    \item contratos de comunicaci\'on cerrados,
+    \item m\'aquina de estados global y local,
+    \item watchdogs preparados para despliegue,
+    \item y una prueba l\'ogica de extremo a extremo superada.
+\end{itemize}
+
+\end{document}

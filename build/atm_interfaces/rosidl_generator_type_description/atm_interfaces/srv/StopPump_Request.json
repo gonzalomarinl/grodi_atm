@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "atm_interfaces/srv/StopPump_Request",
+      "fields": [
+        {
+          "name": "stop",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "atm_interfaces/srv/StopPump_Request",
+      "hash_string": "RIHS01_6378270af90bd94f539cde1a81feb26e3870ed517082a019a0f50c3fc82df695"
+    }
+  ]
+}

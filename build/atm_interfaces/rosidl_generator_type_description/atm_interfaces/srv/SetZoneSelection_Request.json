@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "atm_interfaces/srv/SetZoneSelection_Request",
+      "fields": [
+        {
+          "name": "mission_id",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "line_id",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "atm_interfaces/srv/SetZoneSelection_Request",
+      "hash_string": "RIHS01_f2fd7eccecf4eecccb3a7cb0cf83c481455a6872ed95392c5625db9a45ef4e1e"
+    }
+  ]
+}

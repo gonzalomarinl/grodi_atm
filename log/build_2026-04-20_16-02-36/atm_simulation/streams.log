@@ -1,0 +1,43 @@
+[0.804s] Invoking command in '/home/gonzalo/grodi_atm/build/atm_simulation': PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/gonzalo/grodi_atm/build/atm_simulation/build
+[1.105s] running develop
+[1.316s] Removing /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm-simulation.egg-link (link to .)
+[1.345s] Invoked command in '/home/gonzalo/grodi_atm/build/atm_simulation' returned '0': PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/gonzalo/grodi_atm/build/atm_simulation/build
+[1.346s] Invoking command in '/home/gonzalo/grodi_atm/src/atm_simulation': PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/atm_simulation build --build-base /home/gonzalo/grodi_atm/build/atm_simulation/build install --record /home/gonzalo/grodi_atm/build/atm_simulation/install.log --single-version-externally-managed install_data --force
+[1.618s] running egg_info
+[1.637s] writing ../../build/atm_simulation/atm_simulation.egg-info/PKG-INFO
+[1.637s] writing dependency_links to ../../build/atm_simulation/atm_simulation.egg-info/dependency_links.txt
+[1.638s] writing entry points to ../../build/atm_simulation/atm_simulation.egg-info/entry_points.txt
+[1.638s] writing requirements to ../../build/atm_simulation/atm_simulation.egg-info/requires.txt
+[1.638s] writing top-level names to ../../build/atm_simulation/atm_simulation.egg-info/top_level.txt
+[1.678s] reading manifest file '../../build/atm_simulation/atm_simulation.egg-info/SOURCES.txt'
+[1.679s] writing manifest file '../../build/atm_simulation/atm_simulation.egg-info/SOURCES.txt'
+[1.679s] running build
+[1.679s] running build_py
+[1.679s] creating /home/gonzalo/grodi_atm/build/atm_simulation/build
+[1.680s] creating /home/gonzalo/grodi_atm/build/atm_simulation/build/lib
+[1.680s] creating /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation
+[1.680s] copying atm_simulation/__init__.py -> /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation
+[1.680s] copying atm_simulation/gazebo_atomizer_controller_node.py -> /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation
+[1.680s] copying atm_simulation/atomizer_demo_sequence_node.py -> /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation
+[1.681s] running install
+[1.688s] running install_lib
+[1.707s] creating /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation
+[1.707s] copying /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation/__init__.py -> /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation
+[1.707s] copying /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation/gazebo_atomizer_controller_node.py -> /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation
+[1.707s] copying /home/gonzalo/grodi_atm/build/atm_simulation/build/lib/atm_simulation/atomizer_demo_sequence_node.py -> /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation
+[1.708s] byte-compiling /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation/__init__.py to __init__.cpython-312.pyc
+[1.708s] byte-compiling /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation/gazebo_atomizer_controller_node.py to gazebo_atomizer_controller_node.cpython-312.pyc
+[1.711s] byte-compiling /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation/atomizer_demo_sequence_node.py to atomizer_demo_sequence_node.cpython-312.pyc
+[1.712s] running install_data
+[1.712s] copying resource/atm_simulation -> /home/gonzalo/grodi_atm/install/atm_simulation/share/ament_index/resource_index/packages
+[1.712s] copying package.xml -> /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation
+[1.713s] copying launch/atomizer_world.launch.py -> /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation/launch
+[1.713s] copying launch/atomizer_demo.launch.py -> /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation/launch
+[1.713s] copying worlds/atomizer_greenhouse.sdf -> /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation/worlds
+[1.713s] running install_egg_info
+[1.739s] Copying ../../build/atm_simulation/atm_simulation.egg-info to /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm_simulation-0.0.0-py3.12.egg-info
+[1.740s] running install_scripts
+[1.910s] Installing atomizer_demo_sequence_node script to /home/gonzalo/grodi_atm/install/atm_simulation/lib/atm_simulation
+[1.910s] Installing gazebo_atomizer_controller_node script to /home/gonzalo/grodi_atm/install/atm_simulation/lib/atm_simulation
+[1.910s] writing list of installed files to '/home/gonzalo/grodi_atm/build/atm_simulation/install.log'
+[1.944s] Invoked command in '/home/gonzalo/grodi_atm/src/atm_simulation' returned '0': PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/atm_simulation build --build-base /home/gonzalo/grodi_atm/build/atm_simulation/build install --record /home/gonzalo/grodi_atm/build/atm_simulation/install.log --single-version-externally-managed install_data --force

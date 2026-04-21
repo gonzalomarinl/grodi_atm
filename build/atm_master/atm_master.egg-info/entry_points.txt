@@ -1,0 +1,8 @@
+[console_scripts]
+admission_reel_controller_node = atm_master.admission_reel_controller_node:main
+master_health_publisher_node = atm_master.master_health_publisher_node:main
+master_watchdog_node = atm_master.master_watchdog_node:main
+mission_event_logger_node = atm_master.mission_event_logger_node:main
+mission_manager_node = atm_master.mission_manager_node:main
+pump_controller_node = atm_master.pump_controller_node:main
+server_mission_loader_node = atm_master.server_mission_loader_node:main

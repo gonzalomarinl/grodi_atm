@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from atm_interfaces/action/ReturnToBase.action
+// generated code does not contain a copyright notice
+
+
+module atm_interfaces {
+  module action {
+    struct ReturnToBase_Goal {
+      string mission_id;
+
+      string reason;
+    };
+    struct ReturnToBase_Result {
+      boolean success;
+
+      string message;
+    };
+    struct ReturnToBase_Feedback {
+      string phase;
+    };
+  };
+};

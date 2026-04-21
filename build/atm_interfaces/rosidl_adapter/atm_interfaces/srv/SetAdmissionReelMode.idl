@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from atm_interfaces/srv/SetAdmissionReelMode.srv
+// generated code does not contain a copyright notice
+
+
+module atm_interfaces {
+  module srv {
+    struct SetAdmissionReelMode_Request {
+      string mode;
+
+      float speed;
+    };
+    struct SetAdmissionReelMode_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

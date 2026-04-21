@@ -1,0 +1,38 @@
+mission_manager:
+  ros__parameters:
+    machine_id: master
+    default_mission_type: GENERAL_STOP_MISSION
+    startup_state: IDLE
+    reel_unroll_speed: 1.0
+    reel_roll_speed: 1.0
+
+pump_controller:
+  ros__parameters:
+    startup_enabled: false
+
+admission_reel_controller:
+  ros__parameters: {}
+
+master_watchdog:
+  ros__parameters:
+    machine_id: master
+    publish_period_sec: 1.0
+    timeout_sec: 5.0
+
+mission_event_logger:
+  ros__parameters:
+    log_path: /tmp/atm_mission_events.log
+
+master_health_publisher:
+  ros__parameters:
+    machine_id: master
+    health_path: /run/atm/master_health.json
+    write_period_sec: 0.5
+
+server_mission_loader:
+  ros__parameters:
+    zone_id: zone_a
+    robot_id: atm_001
+    mission_source_path: /tmp/atm_pending_mission.json
+    poll_period_sec: 10.0
+    auto_poll: true

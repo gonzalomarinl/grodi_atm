@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from atm_interfaces/msg/Heartbeat.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module atm_interfaces {
+  module msg {
+    struct Heartbeat {
+      string node_name;
+
+      string machine_id;
+
+      builtin_interfaces::msg::Time stamp;
+
+      uint32 seq;
+
+      boolean ok;
+
+      string state;
+    };
+  };
+};

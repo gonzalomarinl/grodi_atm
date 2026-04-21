@@ -1,0 +1,3 @@
+[console_scripts]
+master_lora_bridge_node = atm_link.master_lora_bridge_node:main
+slave_lora_bridge_node = atm_link.slave_lora_bridge_node:main

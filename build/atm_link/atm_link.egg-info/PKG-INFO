@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: atm-link
+Version: 0.0.0
+Summary: Puente de comunicaciones compacto entre ROS 2 local y enlace LoRa.
+Maintainer: gonzalo
+Maintainer-email: gonzalo@todo.todo
+License: MIT
+Provides-Extra: test

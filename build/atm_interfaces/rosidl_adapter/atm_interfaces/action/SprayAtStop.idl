@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from atm_interfaces/action/SprayAtStop.action
+// generated code does not contain a copyright notice
+
+
+module atm_interfaces {
+  module action {
+    struct SprayAtStop_Goal {
+      string mission_id;
+
+      string line_id;
+
+      uint32 stop_index;
+    };
+    struct SprayAtStop_Result {
+      boolean success;
+
+      string message;
+    };
+    struct SprayAtStop_Feedback {
+      string phase;
+    };
+  };
+};

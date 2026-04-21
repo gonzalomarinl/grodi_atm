@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from atm_interfaces/action/ExecuteMission.action
+// generated code does not contain a copyright notice
+
+
+module atm_interfaces {
+  module action {
+    struct ExecuteMission_Goal {
+      string mission_id;
+
+      string mission_type;
+
+      sequence<string> line_ids;
+
+      sequence<string> target_line_ids;
+
+      sequence<uint32> stop_indices;
+    };
+    struct ExecuteMission_Result {
+      boolean success;
+
+      string final_state;
+
+      string message;
+    };
+    struct ExecuteMission_Feedback {
+      string current_phase;
+
+      uint32 current_stop_index;
+
+      string current_line_id;
+    };
+  };
+};

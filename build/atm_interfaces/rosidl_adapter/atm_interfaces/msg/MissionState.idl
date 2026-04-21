@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from atm_interfaces/msg/MissionState.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module atm_interfaces {
+  module msg {
+    struct MissionState {
+      string mission_id;
+
+      string mission_type;
+
+      string state;
+
+      uint32 current_stop_index;
+
+      string current_line_id;
+
+      boolean comms_degraded;
+
+      builtin_interfaces::msg::Time stamp;
+    };
+  };
+};

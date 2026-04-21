@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from atm_interfaces/msg/LineTarget.msg
+// generated code does not contain a copyright notice
+
+
+module atm_interfaces {
+  module msg {
+    struct LineTarget {
+      string mission_id;
+
+      string gap_id;
+
+      string line_id;
+
+      uint32 stop_index;
+
+      string mode;
+
+      boolean selected_by_vega;
+
+      string notes;
+    };
+  };
+};

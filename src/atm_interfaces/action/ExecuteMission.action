@@ -1,0 +1,13 @@
+string mission_id
+string mission_type
+string[] line_ids
+string[] target_line_ids
+uint32[] stop_indices
+---
+bool success
+string final_state
+string message
+---
+string current_phase
+uint32 current_stop_index
+string current_line_id

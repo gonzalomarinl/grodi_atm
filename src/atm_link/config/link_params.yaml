@@ -1,0 +1,18 @@
+/**:
+  ros__parameters: {}
+
+master_lora_bridge:
+  ros__parameters:
+    machine_id: master
+    tx_path: /tmp/atm_lora_master_to_slave.jsonl
+    rx_path: /tmp/atm_lora_slave_to_master.jsonl
+    poll_period_sec: 0.2
+    heartbeat_period_sec: 1.0
+
+slave_lora_bridge:
+  ros__parameters:
+    machine_id: slave
+    tx_path: /tmp/atm_lora_slave_to_master.jsonl
+    rx_path: /tmp/atm_lora_master_to_slave.jsonl
+    poll_period_sec: 0.2
+    heartbeat_period_sec: 1.0

@@ -1,0 +1,7 @@
+builtin_interfaces/Time stamp
+bool detected
+string detected_class
+string estimated_gap_id
+string estimated_line_id
+float32 confidence
+bool mission_match

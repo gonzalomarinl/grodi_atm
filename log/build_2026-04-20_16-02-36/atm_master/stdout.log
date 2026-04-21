@@ -1,0 +1,57 @@
+running develop
+Removing /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm-master.egg-link (link to .)
+running egg_info
+writing ../../build/atm_master/atm_master.egg-info/PKG-INFO
+writing dependency_links to ../../build/atm_master/atm_master.egg-info/dependency_links.txt
+writing entry points to ../../build/atm_master/atm_master.egg-info/entry_points.txt
+writing requirements to ../../build/atm_master/atm_master.egg-info/requires.txt
+writing top-level names to ../../build/atm_master/atm_master.egg-info/top_level.txt
+reading manifest file '../../build/atm_master/atm_master.egg-info/SOURCES.txt'
+writing manifest file '../../build/atm_master/atm_master.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/gonzalo/grodi_atm/build/atm_master/build
+creating /home/gonzalo/grodi_atm/build/atm_master/build/lib
+creating /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master
+copying atm_master/__init__.py -> /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master
+copying atm_master/mission_event_logger_node.py -> /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master
+copying atm_master/admission_reel_controller_node.py -> /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master
+copying atm_master/mission_manager_node.py -> /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master
+copying atm_master/master_health_publisher_node.py -> /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master
+copying atm_master/pump_controller_node.py -> /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master
+copying atm_master/common.py -> /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master
+copying atm_master/master_watchdog_node.py -> /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master
+running install
+running install_lib
+creating /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master
+copying /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master/__init__.py -> /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master
+copying /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master/mission_event_logger_node.py -> /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master
+copying /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master/admission_reel_controller_node.py -> /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master
+copying /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master/mission_manager_node.py -> /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master
+copying /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master/master_health_publisher_node.py -> /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master
+copying /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master/pump_controller_node.py -> /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master
+copying /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master/common.py -> /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master
+copying /home/gonzalo/grodi_atm/build/atm_master/build/lib/atm_master/master_watchdog_node.py -> /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master
+byte-compiling /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master/mission_event_logger_node.py to mission_event_logger_node.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master/admission_reel_controller_node.py to admission_reel_controller_node.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master/mission_manager_node.py to mission_manager_node.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master/master_health_publisher_node.py to master_health_publisher_node.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master/pump_controller_node.py to pump_controller_node.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master/common.py to common.cpython-312.pyc
+byte-compiling /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master/master_watchdog_node.py to master_watchdog_node.cpython-312.pyc
+running install_data
+copying resource/atm_master -> /home/gonzalo/grodi_atm/install/atm_master/share/ament_index/resource_index/packages
+copying package.xml -> /home/gonzalo/grodi_atm/install/atm_master/share/atm_master
+copying launch/master.launch.py -> /home/gonzalo/grodi_atm/install/atm_master/share/atm_master/launch
+copying config/master_params.yaml -> /home/gonzalo/grodi_atm/install/atm_master/share/atm_master/config
+running install_egg_info
+Copying ../../build/atm_master/atm_master.egg-info to /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm_master-0.0.0-py3.12.egg-info
+running install_scripts
+Installing admission_reel_controller_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+Installing master_health_publisher_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+Installing master_watchdog_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+Installing mission_event_logger_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+Installing mission_manager_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+Installing pump_controller_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master
+writing list of installed files to '/home/gonzalo/grodi_atm/build/atm_master/install.log'

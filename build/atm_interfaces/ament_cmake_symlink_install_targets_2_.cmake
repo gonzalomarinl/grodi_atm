@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/atm_interfaces_s__rosidl_typesupport_c.so" "TARGETS" "atm_interfaces_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.12/site-packages/atm_interfaces")

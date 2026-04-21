@@ -1,0 +1,26 @@
+[2.334s] Invoking command in '/home/gonzalo/grodi_atm/build/atm_slave': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_slave/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_slave/build --no-deps symlink_data
+[2.795s] running develop
+[3.109s] running egg_info
+[3.110s] creating atm_slave.egg-info
+[3.136s] writing atm_slave.egg-info/PKG-INFO
+[3.137s] writing dependency_links to atm_slave.egg-info/dependency_links.txt
+[3.137s] writing requirements to atm_slave.egg-info/requires.txt
+[3.137s] writing top-level names to atm_slave.egg-info/top_level.txt
+[3.138s] writing manifest file 'atm_slave.egg-info/SOURCES.txt'
+[3.185s] reading manifest file 'atm_slave.egg-info/SOURCES.txt'
+[3.186s] writing manifest file 'atm_slave.egg-info/SOURCES.txt'
+[3.211s] running build_ext
+[3.211s] Creating /home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages/atm-slave.egg-link (link to .)
+[3.212s] 
+[3.212s] Installed /home/gonzalo/grodi_atm/build/atm_slave
+[3.212s] running symlink_data
+[3.212s] creating /home/gonzalo/grodi_atm/install/atm_slave/share/ament_index
+[3.213s] creating /home/gonzalo/grodi_atm/install/atm_slave/share/ament_index/resource_index
+[3.213s] creating /home/gonzalo/grodi_atm/install/atm_slave/share/ament_index/resource_index/packages
+[3.214s] symbolically linking /home/gonzalo/grodi_atm/build/atm_slave/resource/atm_slave -> /home/gonzalo/grodi_atm/install/atm_slave/share/ament_index/resource_index/packages
+[3.214s] symbolically linking /home/gonzalo/grodi_atm/build/atm_slave/package.xml -> /home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave
+[3.214s] creating /home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/launch
+[3.214s] symbolically linking /home/gonzalo/grodi_atm/build/atm_slave/launch/slave.launch.py -> /home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/launch
+[3.214s] creating /home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/config
+[3.215s] symbolically linking /home/gonzalo/grodi_atm/build/atm_slave/config/slave_params.yaml -> /home/gonzalo/grodi_atm/install/atm_slave/share/atm_slave/config
+[3.279s] Invoked command in '/home/gonzalo/grodi_atm/build/atm_slave' returned '0': AMENT_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gonzalo/grodi_atm/install/atm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gonzalo/grodi_atm/build/atm_slave/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gonzalo/grodi_atm/build/atm_slave/build --no-deps symlink_data

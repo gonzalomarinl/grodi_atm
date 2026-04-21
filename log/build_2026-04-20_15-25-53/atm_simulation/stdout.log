@@ -1,0 +1,24 @@
+running develop
+running egg_info
+creating atm_simulation.egg-info
+writing atm_simulation.egg-info/PKG-INFO
+writing dependency_links to atm_simulation.egg-info/dependency_links.txt
+writing requirements to atm_simulation.egg-info/requires.txt
+writing top-level names to atm_simulation.egg-info/top_level.txt
+writing manifest file 'atm_simulation.egg-info/SOURCES.txt'
+reading manifest file 'atm_simulation.egg-info/SOURCES.txt'
+writing manifest file 'atm_simulation.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/gonzalo/grodi_atm/install/atm_simulation/lib/python3.12/site-packages/atm-simulation.egg-link (link to .)
+
+Installed /home/gonzalo/grodi_atm/build/atm_simulation
+running symlink_data
+creating /home/gonzalo/grodi_atm/install/atm_simulation/share/ament_index
+creating /home/gonzalo/grodi_atm/install/atm_simulation/share/ament_index/resource_index
+creating /home/gonzalo/grodi_atm/install/atm_simulation/share/ament_index/resource_index/packages
+symbolically linking /home/gonzalo/grodi_atm/build/atm_simulation/resource/atm_simulation -> /home/gonzalo/grodi_atm/install/atm_simulation/share/ament_index/resource_index/packages
+symbolically linking /home/gonzalo/grodi_atm/build/atm_simulation/package.xml -> /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation
+creating /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation/launch
+symbolically linking /home/gonzalo/grodi_atm/build/atm_simulation/launch/atomizer_world.launch.py -> /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation/launch
+creating /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation/worlds
+symbolically linking /home/gonzalo/grodi_atm/build/atm_simulation/worlds/atomizer_greenhouse.sdf -> /home/gonzalo/grodi_atm/install/atm_simulation/share/atm_simulation/worlds

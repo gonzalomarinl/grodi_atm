@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from atm_interfaces/srv/ResetFault.srv
+// generated code does not contain a copyright notice
+
+
+module atm_interfaces {
+  module srv {
+    struct ResetFault_Request {
+      string source;
+
+      string reason;
+    };
+    struct ResetFault_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

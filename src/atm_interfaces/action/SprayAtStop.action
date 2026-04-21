@@ -1,0 +1,8 @@
+string mission_id
+string line_id
+uint32 stop_index
+---
+bool success
+string message
+---
+string phase

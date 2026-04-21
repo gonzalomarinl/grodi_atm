@@ -1,0 +1,4 @@
+source;share/atm_interfaces/local_setup.bash
+source;share/atm_interfaces/local_setup.dsv
+source;share/atm_interfaces/local_setup.sh
+source;share/atm_interfaces/local_setup.zsh

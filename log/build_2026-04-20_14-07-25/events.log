@@ -1,0 +1,92 @@
+[0.000000] (-) TimerEvent: {}
+[0.000076] (-) JobUnselected: {'identifier': 'atm_interfaces'}
+[0.000105] (-) JobUnselected: {'identifier': 'atm_link'}
+[0.000119] (-) JobUnselected: {'identifier': 'atm_logging'}
+[0.000129] (-) JobUnselected: {'identifier': 'atm_slave'}
+[0.000139] (atm_master) JobQueued: {'identifier': 'atm_master', 'dependencies': OrderedDict({'atm_interfaces': '/home/gonzalo/grodi_atm/install/atm_interfaces', 'atm_link': '/home/gonzalo/grodi_atm/install/atm_link'})}
+[0.000156] (atm_bringup) JobQueued: {'identifier': 'atm_bringup', 'dependencies': OrderedDict({'atm_interfaces': '/home/gonzalo/grodi_atm/install/atm_interfaces', 'atm_link': '/home/gonzalo/grodi_atm/install/atm_link', 'atm_master': '/home/gonzalo/grodi_atm/install/atm_master', 'atm_slave': '/home/gonzalo/grodi_atm/install/atm_slave'})}
+[0.001048] (atm_master) JobStarted: {'identifier': 'atm_master'}
+[0.099785] (-) TimerEvent: {}
+[0.199998] (-) TimerEvent: {}
+[0.300238] (-) TimerEvent: {}
+[0.400434] (-) TimerEvent: {}
+[0.500596] (-) TimerEvent: {}
+[0.600759] (-) TimerEvent: {}
+[0.701001] (-) TimerEvent: {}
+[0.801193] (-) TimerEvent: {}
+[0.901343] (-) TimerEvent: {}
+[1.001504] (-) TimerEvent: {}
+[1.101715] (-) TimerEvent: {}
+[1.201893] (-) TimerEvent: {}
+[1.302097] (-) TimerEvent: {}
+[1.402318] (-) TimerEvent: {}
+[1.502510] (-) TimerEvent: {}
+[1.565542] (atm_master) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/gonzalo/grodi_atm/build/atm_master/build', '--no-deps', 'symlink_data'], 'cwd': '/home/gonzalo/grodi_atm/build/atm_master', 'env': {'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'gonzalo', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/home/gonzalo/grodi_atm/install/atm_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gonzalo', 'OLDPWD': '/mnt/c/Users/Gonzalo/Desktop/GrodiTech', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gonzalo', 'NAME': 'DESKTOP-GLIFSAL', 'WSL_INTEROP': '/run/WSL/28641_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/Gonzalo/.codex/tmp/arg0/codex-arg0OFt5NU:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Eclipse Adoptium/jdk-25.0.2.10-hotspot/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Aldec/Active-HDL-Student-Edition/bin:/mnt/c/Program Files/Wolfram Research/WolframScript/:/mnt/c/Users/Gonzalo/AppData/Local/Microsoft/WindowsApps:/mnt/c/adb:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/AutoFirmaJA/AutoFirmaJA:/mnt/c/Program Files/MATLAB/R2023b/runtime/win64:/mnt/c/Program Files/MATLAB/R2023b/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Gonzalo/.local/bin:/mnt/c/Users/Gonzalo/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Gonzalo/AppData/Local/OpenAI/Codex/bin:/mnt/c/Program Files/WindowsApps/OpenAI.Codex_26.415.4716.0_x64__2p2nqsd0c76g0/app/resources:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'AMENT_PREFIX_PATH': '/home/gonzalo/grodi_atm/install/atm_link:/home/gonzalo/grodi_atm/install/atm_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/gonzalo/grodi_atm/build/atm_master', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/gonzalo/grodi_atm/build/atm_master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/gonzalo/grodi_atm/install/atm_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'WSLENV': ''}, 'shell': False}
+[1.602623] (-) TimerEvent: {}
+[1.702817] (-) TimerEvent: {}
+[1.803003] (-) TimerEvent: {}
+[1.860116] (atm_master) StdoutLine: {'line': b'running develop\n'}
+[1.903110] (-) TimerEvent: {}
+[2.003294] (-) TimerEvent: {}
+[2.045097] (atm_master) StdoutLine: {'line': b'running egg_info\n'}
+[2.062665] (atm_master) StdoutLine: {'line': b'writing atm_master.egg-info/PKG-INFO\n'}
+[2.063274] (atm_master) StdoutLine: {'line': b'writing dependency_links to atm_master.egg-info/dependency_links.txt\n'}
+[2.063419] (atm_master) StdoutLine: {'line': b'writing entry points to atm_master.egg-info/entry_points.txt\n'}
+[2.063485] (atm_master) StdoutLine: {'line': b'writing requirements to atm_master.egg-info/requires.txt\n'}
+[2.063540] (atm_master) StdoutLine: {'line': b'writing top-level names to atm_master.egg-info/top_level.txt\n'}
+[2.100315] (atm_master) StdoutLine: {'line': b"reading manifest file 'atm_master.egg-info/SOURCES.txt'\n"}
+[2.101140] (atm_master) StdoutLine: {'line': b"writing manifest file 'atm_master.egg-info/SOURCES.txt'\n"}
+[2.103373] (-) TimerEvent: {}
+[2.120921] (atm_master) StdoutLine: {'line': b'running build_ext\n'}
+[2.121043] (atm_master) StdoutLine: {'line': b'Creating /home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages/atm-master.egg-link (link to .)\n'}
+[2.121531] (atm_master) StdoutLine: {'line': b'Installing admission_reel_controller_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master\n'}
+[2.121879] (atm_master) StdoutLine: {'line': b'Installing master_health_publisher_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master\n'}
+[2.122272] (atm_master) StdoutLine: {'line': b'Installing master_watchdog_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master\n'}
+[2.122394] (atm_master) StdoutLine: {'line': b'Installing mission_event_logger_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master\n'}
+[2.122570] (atm_master) StdoutLine: {'line': b'Installing mission_manager_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master\n'}
+[2.122666] (atm_master) StdoutLine: {'line': b'Installing pump_controller_node script to /home/gonzalo/grodi_atm/install/atm_master/lib/atm_master\n'}
+[2.122889] (atm_master) StdoutLine: {'line': b'\n'}
+[2.122952] (atm_master) StdoutLine: {'line': b'Installed /home/gonzalo/grodi_atm/build/atm_master\n'}
+[2.123003] (atm_master) StdoutLine: {'line': b'running symlink_data\n'}
+[2.148734] (atm_master) CommandEnded: {'returncode': 0}
+[2.165797] (atm_master) JobEnded: {'identifier': 'atm_master', 'rc': 0}
+[2.166583] (atm_bringup) JobStarted: {'identifier': 'atm_bringup'}
+[2.203494] (-) TimerEvent: {}
+[2.303692] (-) TimerEvent: {}
+[2.403924] (-) TimerEvent: {}
+[2.504157] (-) TimerEvent: {}
+[2.604356] (-) TimerEvent: {}
+[2.704767] (-) TimerEvent: {}
+[2.805098] (-) TimerEvent: {}
+[2.905297] (-) TimerEvent: {}
+[3.005505] (-) TimerEvent: {}
+[3.105674] (-) TimerEvent: {}
+[3.205889] (-) TimerEvent: {}
+[3.306079] (-) TimerEvent: {}
+[3.406321] (-) TimerEvent: {}
+[3.506579] (-) TimerEvent: {}
+[3.606773] (-) TimerEvent: {}
+[3.707050] (-) TimerEvent: {}
+[3.724895] (atm_bringup) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/gonzalo/grodi_atm/build/atm_bringup/build', '--no-deps', 'symlink_data'], 'cwd': '/home/gonzalo/grodi_atm/build/atm_bringup', 'env': {'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'gonzalo', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/home/gonzalo/grodi_atm/install/atm_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gonzalo', 'OLDPWD': '/mnt/c/Users/Gonzalo/Desktop/GrodiTech', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gonzalo', 'NAME': 'DESKTOP-GLIFSAL', 'WSL_INTEROP': '/run/WSL/28641_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/Gonzalo/.codex/tmp/arg0/codex-arg0OFt5NU:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Eclipse Adoptium/jdk-25.0.2.10-hotspot/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Aldec/Active-HDL-Student-Edition/bin:/mnt/c/Program Files/Wolfram Research/WolframScript/:/mnt/c/Users/Gonzalo/AppData/Local/Microsoft/WindowsApps:/mnt/c/adb:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/AutoFirmaJA/AutoFirmaJA:/mnt/c/Program Files/MATLAB/R2023b/runtime/win64:/mnt/c/Program Files/MATLAB/R2023b/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Gonzalo/.local/bin:/mnt/c/Users/Gonzalo/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Gonzalo/AppData/Local/OpenAI/Codex/bin:/mnt/c/Program Files/WindowsApps/OpenAI.Codex_26.415.4716.0_x64__2p2nqsd0c76g0/app/resources:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'AMENT_PREFIX_PATH': '/home/gonzalo/grodi_atm/install/atm_slave:/home/gonzalo/grodi_atm/install/atm_master:/home/gonzalo/grodi_atm/install/atm_link:/home/gonzalo/grodi_atm/install/atm_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/gonzalo/grodi_atm/build/atm_bringup', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/gonzalo/grodi_atm/build/atm_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gonzalo/grodi_atm/install/atm_bringup/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_slave:/home/gonzalo/grodi_atm/install/atm_slave/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_master:/home/gonzalo/grodi_atm/install/atm_master/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/build/atm_link:/home/gonzalo/grodi_atm/install/atm_link/lib/python3.12/site-packages:/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/gonzalo/grodi_atm/install/atm_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'WSLENV': ''}, 'shell': False}
+[3.807206] (-) TimerEvent: {}
+[3.907383] (-) TimerEvent: {}
+[4.007652] (-) TimerEvent: {}
+[4.019150] (atm_bringup) StdoutLine: {'line': b'running develop\n'}
+[4.107814] (-) TimerEvent: {}
+[4.205336] (atm_bringup) StdoutLine: {'line': b'running egg_info\n'}
+[4.207933] (-) TimerEvent: {}
+[4.223434] (atm_bringup) StdoutLine: {'line': b'writing atm_bringup.egg-info/PKG-INFO\n'}
+[4.223891] (atm_bringup) StdoutLine: {'line': b'writing dependency_links to atm_bringup.egg-info/dependency_links.txt\n'}
+[4.223980] (atm_bringup) StdoutLine: {'line': b'writing requirements to atm_bringup.egg-info/requires.txt\n'}
+[4.224183] (atm_bringup) StdoutLine: {'line': b'writing top-level names to atm_bringup.egg-info/top_level.txt\n'}
+[4.261279] (atm_bringup) StdoutLine: {'line': b"reading manifest file 'atm_bringup.egg-info/SOURCES.txt'\n"}
+[4.262294] (atm_bringup) StdoutLine: {'line': b"writing manifest file 'atm_bringup.egg-info/SOURCES.txt'\n"}
+[4.281148] (atm_bringup) StdoutLine: {'line': b'running build_ext\n'}
+[4.281274] (atm_bringup) StdoutLine: {'line': b'Creating /home/gonzalo/grodi_atm/install/atm_bringup/lib/python3.12/site-packages/atm-bringup.egg-link (link to .)\n'}
+[4.281696] (atm_bringup) StdoutLine: {'line': b'\n'}
+[4.281782] (atm_bringup) StdoutLine: {'line': b'Installed /home/gonzalo/grodi_atm/build/atm_bringup\n'}
+[4.281838] (atm_bringup) StdoutLine: {'line': b'running symlink_data\n'}
+[4.307054] (atm_bringup) CommandEnded: {'returncode': 0}
+[4.308031] (-) TimerEvent: {}
+[4.315691] (atm_bringup) JobEnded: {'identifier': 'atm_bringup', 'rc': 0}
+[4.316985] (-) EventReactorShutdown: {}

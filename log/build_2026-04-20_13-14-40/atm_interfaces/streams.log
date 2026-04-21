@@ -1,0 +1,801 @@
+[0.026s] Invoking command in '/home/gonzalo/grodi_atm/build/atm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/gonzalo/grodi_atm/src/atm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gonzalo/grodi_atm/install/atm_interfaces
+[0.400s] -- The C compiler identification is GNU 13.3.0
+[1.054s] -- The CXX compiler identification is GNU 13.3.0
+[1.579s] -- Detecting C compiler ABI info
+[1.835s] -- Detecting C compiler ABI info - done
+[1.844s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.845s] -- Detecting C compile features
+[1.845s] -- Detecting C compile features - done
+[1.925s] -- Detecting CXX compiler ABI info
+[2.162s] -- Detecting CXX compiler ABI info - done
+[2.171s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.171s] -- Detecting CXX compile features
+[2.172s] -- Detecting CXX compile features - done
+[2.209s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.374s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.463s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.545s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[2.561s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.797s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.887s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[2.894s] -- Found builtin_interfaces: 2.0.3 (/opt/ros/jazzy/share/builtin_interfaces/cmake)
+[3.746s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[4.223s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.833s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.840s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[4.985s] -- Found PythonExtra: /usr/bin/python3  
+[5.514s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[5.589s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[5.600s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[5.652s] -- Added test 'lint_cmake' to check CMake code style
+[5.656s] -- Added test 'xmllint' to check XML markup files
+[5.662s] -- Configuring done (5.5s)
+[5.782s] -- Generating done (0.1s)
+[5.800s] -- Build files have been written to: /home/gonzalo/grodi_atm/build/atm_interfaces
+[5.813s] Invoked command in '/home/gonzalo/grodi_atm/build/atm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/gonzalo/grodi_atm/src/atm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gonzalo/grodi_atm/install/atm_interfaces
+[5.814s] Invoking command in '/home/gonzalo/grodi_atm/build/atm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/gonzalo/grodi_atm/build/atm_interfaces -- -j12 -l12
+[5.891s] [  1%] Generating type hashes for ROS interfaces
+[5.892s] [  1%] Generating Rust code for ROS interfaces
+[5.899s] [  1%] Built target ament_cmake_python_symlink_atm_interfaces
+[6.216s] running egg_info
+[6.217s] creating atm_interfaces.egg-info
+[6.241s] writing atm_interfaces.egg-info/PKG-INFO
+[6.241s] writing dependency_links to atm_interfaces.egg-info/dependency_links.txt
+[6.241s] writing top-level names to atm_interfaces.egg-info/top_level.txt
+[6.242s] writing manifest file 'atm_interfaces.egg-info/SOURCES.txt'
+[6.313s] reading manifest file 'atm_interfaces.egg-info/SOURCES.txt'
+[6.313s] writing manifest file 'atm_interfaces.egg-info/SOURCES.txt'
+[6.347s] [  1%] Built target ament_cmake_python_build_atm_interfaces_egg
+[6.569s] [  1%] Built target atm_interfaces__rosidl_generator_type_description
+[6.585s] [  2%] Generating C code for ROS interfaces
+[6.599s] [  2%] Generating C++ code for ROS interfaces
+[6.742s] [  2%] Built target atm_interfaces__rs
+[9.283s] [  2%] Built target atm_interfaces__cpp
+[9.903s] [  3%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/mission_state__description.c.o
+[9.903s] [  3%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/mission_state__functions.c.o
+[9.903s] [  4%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/mission_event__functions.c.o
+[9.903s] [  4%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/mission_event__type_support.c.o
+[9.904s] [  4%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/mission_state__type_support.c.o
+[9.906s] [  4%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/heartbeat__type_support.c.o
+[9.907s] [  4%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/fault_report__description.c.o
+[9.910s] [  5%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/heartbeat__functions.c.o
+[9.910s] [  6%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/fault_report__type_support.c.o
+[9.910s] [  6%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/heartbeat__description.c.o
+[9.910s] [  7%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/fault_report__functions.c.o
+[9.910s] [  7%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/mission_event__description.c.o
+[10.001s] [  8%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/line_target__functions.c.o
+[10.001s] [  8%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/line_target__description.c.o
+[10.002s] [  8%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/line_target__type_support.c.o
+[10.011s] [  9%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/stop_detection__description.c.o
+[10.030s] [  9%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/stop_detection__type_support.c.o
+[10.030s] [  9%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/stop_detection__functions.c.o
+[10.032s] [ 10%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/master_status__functions.c.o
+[10.032s] [ 10%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/master_status__description.c.o
+[10.068s] [ 11%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/master_status__type_support.c.o
+[10.069s] [ 11%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/slave_status__description.c.o
+[10.073s] [ 12%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/slave_status__functions.c.o
+[10.073s] [ 12%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/slave_status__type_support.c.o
+[10.073s] [ 12%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/spray_report__description.c.o
+[10.086s] [ 13%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/spray_report__functions.c.o
+[10.099s] [ 14%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/arm_system__description.c.o
+[10.100s] [ 14%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/msg/detail/spray_report__type_support.c.o
+[10.119s] [ 15%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/arm_system__type_support.c.o
+[10.119s] [ 15%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/arm_system__functions.c.o
+[10.134s] [ 15%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/reset_fault__description.c.o
+[10.138s] [ 16%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/reset_fault__functions.c.o
+[10.138s] [ 16%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/reset_fault__type_support.c.o
+[10.145s] [ 16%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/start_pump__description.c.o
+[10.150s] [ 17%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/start_pump__functions.c.o
+[10.162s] [ 17%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/start_pump__type_support.c.o
+[10.167s] [ 18%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/stop_pump__description.c.o
+[10.176s] [ 18%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/stop_pump__functions.c.o
+[10.203s] [ 18%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/stop_pump__type_support.c.o
+[10.203s] [ 19%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/set_admission_reel_mode__description.c.o
+[10.213s] [ 19%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/set_admission_reel_mode__functions.c.o
+[10.222s] [ 20%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/set_admission_reel_mode__type_support.c.o
+[10.243s] [ 20%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/set_zone_selection__description.c.o
+[10.245s] [ 21%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/set_zone_selection__type_support.c.o
+[10.245s] [ 21%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/set_zone_selection__functions.c.o
+[10.273s] [ 21%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/get_system_state__description.c.o
+[10.275s] [ 22%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/get_system_state__functions.c.o
+[10.291s] [ 22%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/srv/detail/get_system_state__type_support.c.o
+[10.294s] [ 23%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/execute_mission__description.c.o
+[10.310s] [ 23%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/execute_mission__functions.c.o
+[10.312s] [ 23%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/execute_mission__type_support.c.o
+[10.315s] [ 24%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/navigate_to_stop__description.c.o
+[10.328s] [ 24%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/navigate_to_stop__functions.c.o
+[10.329s] [ 25%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/navigate_to_stop__type_support.c.o
+[10.347s] [ 25%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/spray_at_stop__description.c.o
+[10.379s] [ 26%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/spray_at_stop__functions.c.o
+[10.391s] [ 26%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/return_to_base__description.c.o
+[10.391s] [ 26%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/spray_at_stop__type_support.c.o
+[10.415s] [ 27%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/return_to_base__functions.c.o
+[10.436s] [ 27%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/return_to_base__type_support.c.o
+[10.459s] [ 28%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/run_purge__description.c.o
+[10.460s] [ 28%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/run_purge__functions.c.o
+[10.499s] [ 29%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/atm_interfaces/action/detail/run_purge__type_support.c.o
+[10.697s] [ 29%] Linking C shared library libatm_interfaces__rosidl_generator_c.so
+[10.823s] [ 29%] Built target atm_interfaces__rosidl_generator_c
+[10.837s] [ 29%] Generating C type support dispatch for ROS interfaces
+[10.838s] [ 30%] Generating C++ type support for eProsima Fast-RTPS
+[10.838s] [ 30%] Generating C++ type support dispatch for ROS interfaces
+[10.838s] [ 30%] Generating C++ introspection for ROS interfaces
+[10.840s] [ 31%] Generating C type support for eProsima Fast-RTPS
+[10.841s] [ 31%] Generating C introspection for ROS interfaces
+[12.476s] [ 31%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/msg/line_target__type_support.cpp.o
+[12.476s] [ 31%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/msg/mission_state__type_support.cpp.o
+[12.478s] [ 33%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/msg/mission_event__type_support.cpp.o
+[12.478s] [ 33%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/msg/stop_detection__type_support.cpp.o
+[12.478s] [ 33%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/msg/fault_report__type_support.cpp.o
+[12.479s] [ 34%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/msg/heartbeat__type_support.cpp.o
+[12.492s] [ 34%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/msg/master_status__type_support.cpp.o
+[12.613s] [ 35%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/msg/slave_status__type_support.cpp.o
+[12.613s] [ 35%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/srv/arm_system__type_support.cpp.o
+[12.617s] [ 35%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/msg/spray_report__type_support.cpp.o
+[12.638s] [ 36%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/srv/reset_fault__type_support.cpp.o
+[12.657s] [ 37%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/srv/stop_pump__type_support.cpp.o
+[12.660s] [ 37%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/srv/start_pump__type_support.cpp.o
+[12.683s] [ 37%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/srv/set_admission_reel_mode__type_support.cpp.o
+[12.733s] [ 38%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/srv/set_zone_selection__type_support.cpp.o
+[12.736s] [ 38%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/srv/get_system_state__type_support.cpp.o
+[12.738s] [ 38%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/action/execute_mission__type_support.cpp.o
+[12.753s] [ 39%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/action/navigate_to_stop__type_support.cpp.o
+[12.766s] [ 39%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/action/spray_at_stop__type_support.cpp.o
+[12.780s] [ 39%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/msg/heartbeat__type_support.cpp.o
+[12.785s] [ 40%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/action/return_to_base__type_support.cpp.o
+[12.800s] [ 41%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/msg/mission_state__type_support.cpp.o
+[12.847s] [ 41%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/atm_interfaces/action/run_purge__type_support.cpp.o
+[12.850s] [ 41%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/msg/mission_event__type_support.cpp.o
+[12.939s] [ 42%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/msg/fault_report__type_support.cpp.o
+[12.939s] [ 43%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/msg/stop_detection__type_support.cpp.o
+[12.941s] [ 42%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/msg/line_target__type_support.cpp.o
+[12.946s] [ 43%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/msg/master_status__type_support.cpp.o
+[12.992s] [ 44%] Linking CXX shared library libatm_interfaces__rosidl_typesupport_c.so
+[13.374s] [ 44%] Built target atm_interfaces__rosidl_typesupport_c
+[13.400s] [ 44%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/msg/slave_status__type_support.cpp.o
+[13.855s] [ 45%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/srv/reset_fault__type_support.cpp.o
+[13.858s] [ 45%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/srv/arm_system__type_support.cpp.o
+[13.860s] [ 46%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/msg/spray_report__type_support.cpp.o
+[13.888s] [ 46%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/srv/start_pump__type_support.cpp.o
+[13.891s] [ 47%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/srv/stop_pump__type_support.cpp.o
+[13.915s] [ 47%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/srv/set_admission_reel_mode__type_support.cpp.o
+[13.929s] [ 47%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/srv/set_zone_selection__type_support.cpp.o
+[14.260s] [ 48%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/srv/get_system_state__type_support.cpp.o
+[14.406s] [ 49%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/msg/detail/heartbeat__type_support.cpp.o
+[14.633s] [ 49%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/msg/detail/mission_state__type_support.cpp.o
+[14.805s] [ 49%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/msg/detail/mission_event__type_support.cpp.o
+[14.816s] [ 50%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/msg/detail/fault_report__type_support.cpp.o
+[14.859s] [ 50%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/msg/detail/line_target__type_support.cpp.o
+[14.863s] [ 51%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/msg/detail/stop_detection__type_support.cpp.o
+[14.880s] [ 51%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/msg/detail/master_status__type_support.cpp.o
+[14.898s] [ 52%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/msg/detail/slave_status__type_support.cpp.o
+[14.958s] [ 53%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/msg/detail/heartbeat__type_support.c.o
+[15.051s] [ 53%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/msg/detail/mission_state__type_support.c.o
+[15.147s] [ 53%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/action/execute_mission__type_support.cpp.o
+[15.147s] [ 54%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/msg/detail/mission_event__type_support.c.o
+[15.175s] [ 54%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/msg/detail/fault_report__type_support.c.o
+[15.249s] [ 55%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/action/navigate_to_stop__type_support.cpp.o
+[15.263s] [ 56%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/msg/detail/line_target__type_support.c.o
+[15.348s] [ 56%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/msg/detail/stop_detection__type_support.c.o
+[15.387s] [ 56%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/msg/detail/spray_report__type_support.cpp.o
+[15.429s] [ 56%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/msg/detail/master_status__type_support.c.o
+[15.507s] [ 56%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/action/spray_at_stop__type_support.cpp.o
+[15.516s] [ 57%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/msg/detail/slave_status__type_support.c.o
+[15.525s] [ 58%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/action/return_to_base__type_support.cpp.o
+[15.539s] [ 58%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/msg/detail/spray_report__type_support.c.o
+[15.583s] [ 59%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/srv/detail/arm_system__type_support.c.o
+[15.604s] [ 59%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/srv/detail/arm_system__type_support.cpp.o
+[15.622s] [ 60%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/srv/detail/reset_fault__type_support.cpp.o
+[15.630s] [ 60%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/srv/detail/reset_fault__type_support.c.o
+[15.635s] [ 60%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/srv/detail/start_pump__type_support.c.o
+[15.699s] [ 60%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/srv/detail/start_pump__type_support.cpp.o
+[15.741s] [ 61%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/srv/detail/stop_pump__type_support.cpp.o
+[15.744s] [ 62%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/srv/detail/stop_pump__type_support.c.o
+[15.852s] [ 62%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/srv/detail/set_admission_reel_mode__type_support.c.o
+[15.963s] [ 63%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/srv/detail/set_zone_selection__type_support.c.o
+[16.087s] [ 63%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/srv/detail/get_system_state__type_support.c.o
+[16.116s] [ 63%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/atm_interfaces/action/run_purge__type_support.cpp.o
+[16.207s] [ 64%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/action/detail/execute_mission__type_support.c.o
+[16.403s] [ 64%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/action/detail/navigate_to_stop__type_support.c.o
+[16.589s] [ 64%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/action/detail/spray_at_stop__type_support.c.o
+[16.597s] [ 65%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/action/detail/return_to_base__type_support.c.o
+[16.624s] [ 65%] Building C object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/atm_interfaces/action/detail/run_purge__type_support.c.o
+[16.736s] [ 65%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/srv/detail/set_admission_reel_mode__type_support.cpp.o
+[16.750s] [ 66%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/srv/detail/set_zone_selection__type_support.cpp.o
+[16.753s] [ 66%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/srv/detail/get_system_state__type_support.cpp.o
+[16.756s] [ 66%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/action/detail/execute_mission__type_support.cpp.o
+[16.768s] [ 67%] Linking C shared library libatm_interfaces__rosidl_typesupport_introspection_c.so
+[16.945s] [ 68%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/action/detail/navigate_to_stop__type_support.cpp.o
+[16.973s] [ 68%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/action/detail/spray_at_stop__type_support.cpp.o
+[17.039s] [ 68%] Built target atm_interfaces__rosidl_typesupport_introspection_c
+[17.061s] [ 69%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/action/detail/return_to_base__type_support.cpp.o
+[17.061s] [ 69%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/atm_interfaces/action/detail/run_purge__type_support.cpp.o
+[17.131s] [ 69%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/msg/detail/dds_fastrtps/mission_state__type_support.cpp.o
+[17.132s] [ 69%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/msg/detail/dds_fastrtps/heartbeat__type_support.cpp.o
+[17.716s] [ 70%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/msg/detail/dds_fastrtps/mission_event__type_support.cpp.o
+[17.721s] [ 70%] Linking CXX shared library libatm_interfaces__rosidl_typesupport_cpp.so
+[17.735s] [ 70%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/msg/detail/dds_fastrtps/fault_report__type_support.cpp.o
+[17.765s] [ 71%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/msg/detail/dds_fastrtps/line_target__type_support.cpp.o
+[18.098s] [ 71%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/msg/detail/heartbeat__type_support_c.cpp.o
+[18.190s] [ 71%] Built target atm_interfaces__rosidl_typesupport_cpp
+[18.210s] [ 71%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/msg/detail/dds_fastrtps/stop_detection__type_support.cpp.o
+[18.285s] [ 72%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/msg/detail/mission_state__type_support_c.cpp.o
+[18.320s] [ 72%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/msg/detail/mission_event__type_support_c.cpp.o
+[18.705s] [ 73%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/msg/detail/fault_report__type_support_c.cpp.o
+[18.716s] [ 73%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/msg/detail/line_target__type_support_c.cpp.o
+[18.755s] [ 74%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/msg/detail/dds_fastrtps/master_status__type_support.cpp.o
+[18.767s] [ 74%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/msg/detail/stop_detection__type_support_c.cpp.o
+[18.849s] [ 75%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/msg/detail/master_status__type_support_c.cpp.o
+[18.862s] [ 76%] Linking CXX shared library libatm_interfaces__rosidl_typesupport_introspection_cpp.so
+[18.881s] [ 76%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/msg/detail/slave_status__type_support_c.cpp.o
+[18.945s] [ 77%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/msg/detail/spray_report__type_support_c.cpp.o
+[19.249s] [ 77%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/srv/detail/arm_system__type_support_c.cpp.o
+[19.336s] [ 77%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/msg/detail/dds_fastrtps/slave_status__type_support.cpp.o
+[19.351s] [ 77%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/srv/detail/reset_fault__type_support_c.cpp.o
+[19.385s] [ 77%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/msg/detail/dds_fastrtps/spray_report__type_support.cpp.o
+[19.390s] [ 77%] Built target atm_interfaces__rosidl_typesupport_introspection_cpp
+[19.421s] [ 78%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/srv/detail/dds_fastrtps/arm_system__type_support.cpp.o
+[19.769s] [ 78%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/srv/detail/dds_fastrtps/reset_fault__type_support.cpp.o
+[19.781s] [ 79%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/srv/detail/dds_fastrtps/start_pump__type_support.cpp.o
+[19.917s] [ 79%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/srv/detail/dds_fastrtps/stop_pump__type_support.cpp.o
+[19.931s] [ 80%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/srv/detail/start_pump__type_support_c.cpp.o
+[19.948s] [ 81%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/srv/detail/dds_fastrtps/set_admission_reel_mode__type_support.cpp.o
+[19.969s] [ 81%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/srv/detail/stop_pump__type_support_c.cpp.o
+[20.158s] [ 81%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/srv/detail/dds_fastrtps/set_zone_selection__type_support.cpp.o
+[20.401s] [ 81%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/srv/detail/dds_fastrtps/get_system_state__type_support.cpp.o
+[20.490s] [ 82%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/action/detail/dds_fastrtps/execute_mission__type_support.cpp.o
+[20.498s] [ 83%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/srv/detail/set_admission_reel_mode__type_support_c.cpp.o
+[20.515s] [ 83%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/srv/detail/set_zone_selection__type_support_c.cpp.o
+[20.959s] [ 84%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/srv/detail/get_system_state__type_support_c.cpp.o
+[21.165s] [ 84%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/action/detail/dds_fastrtps/navigate_to_stop__type_support.cpp.o
+[21.217s] [ 85%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/action/detail/dds_fastrtps/spray_at_stop__type_support.cpp.o
+[21.262s] [ 85%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/action/detail/execute_mission__type_support_c.cpp.o
+[21.273s] [ 85%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/action/detail/navigate_to_stop__type_support_c.cpp.o
+[21.384s] [ 85%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/action/detail/dds_fastrtps/return_to_base__type_support.cpp.o
+[21.564s] [ 86%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/action/detail/spray_at_stop__type_support_c.cpp.o
+[21.723s] [ 86%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/action/detail/return_to_base__type_support_c.cpp.o
+[21.780s] [ 87%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/atm_interfaces/action/detail/run_purge__type_support_c.cpp.o
+[21.789s] [ 88%] Building CXX object CMakeFiles/atm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/atm_interfaces/action/detail/dds_fastrtps/run_purge__type_support.cpp.o
+[22.977s] [ 88%] Linking CXX shared library libatm_interfaces__rosidl_typesupport_fastrtps_c.so
+[23.474s] [ 88%] Built target atm_interfaces__rosidl_typesupport_fastrtps_c
+[23.610s] [ 88%] Linking CXX shared library libatm_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[23.970s] [ 88%] Built target atm_interfaces__rosidl_typesupport_fastrtps_cpp
+[23.993s] [ 88%] Built target atm_interfaces
+[24.017s] [ 88%] Generating Python code for ROS interfaces
+[28.523s] [ 88%] Built target atm_interfaces__py
+[28.556s] [ 89%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_heartbeat_s.c.o
+[28.556s] [ 89%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_line_target_s.c.o
+[28.556s] [ 89%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_master_status_s.c.o
+[28.556s] [ 89%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_slave_status_s.c.o
+[28.557s] [ 90%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_stop_detection_s.c.o
+[28.557s] [ 90%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_mission_event_s.c.o
+[28.558s] [ 90%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_mission_state_s.c.o
+[28.558s] [ 91%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_fault_report_s.c.o
+[28.558s] [ 92%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.o
+[28.559s] [ 92%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o
+[28.559s] [ 92%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c.o
+[28.559s] [ 93%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_spray_report_s.c.o
+[29.402s] [ 94%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.o
+[29.402s] [ 94%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c.o
+[29.413s] [ 95%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.o
+[29.413s] [ 95%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c.o
+[29.413s] [ 96%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c.o
+[29.413s] [ 96%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c.o
+[29.416s] [ 97%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c.o
+[29.417s] [ 97%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_run_purge_s.c.o
+[29.418s] [ 97%] Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c.o
+[29.796s] [ 97%] Linking C shared library libatm_interfaces__rosidl_generator_py.so
+[29.932s] [ 97%] Built target atm_interfaces__rosidl_generator_py
+[29.956s] [ 97%] Building C object CMakeFiles/atm_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o
+[29.956s] [ 97%] Building C object CMakeFiles/atm_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_c.c.o
+[29.956s] [ 97%] Building C object CMakeFiles/atm_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[30.432s] [ 98%] Linking C shared module rosidl_generator_py/atm_interfaces/atm_interfaces_s__rosidl_typesupport_c.so
+[30.456s] [ 99%] Linking C shared module rosidl_generator_py/atm_interfaces/atm_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[30.462s] [100%] Linking C shared module rosidl_generator_py/atm_interfaces/atm_interfaces_s__rosidl_typesupport_introspection_c.so
+[30.579s] [100%] Built target atm_interfaces_s__rosidl_typesupport_c
+[30.600s] [100%] Built target atm_interfaces_s__rosidl_typesupport_fastrtps_c
+[30.609s] [100%] Built target atm_interfaces_s__rosidl_typesupport_introspection_c
+[30.623s] Invoked command in '/home/gonzalo/grodi_atm/build/atm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/gonzalo/grodi_atm/build/atm_interfaces -- -j12 -l12
+[30.634s] Invoking command in '/home/gonzalo/grodi_atm/build/atm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/gonzalo/grodi_atm/build/atm_interfaces
+[30.644s] -- Install configuration: ""
+[30.645s] -- Execute custom install script
+[30.646s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/ament_index/resource_index/rosidl_interfaces/atm_interfaces
+[30.656s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/Heartbeat.json
+[30.667s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/MissionState.json
+[30.678s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/MissionEvent.json
+[30.687s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/FaultReport.json
+[30.698s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/LineTarget.json
+[30.707s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/StopDetection.json
+[30.717s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/MasterStatus.json
+[30.729s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SlaveStatus.json
+[30.739s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SprayReport.json
+[30.750s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ArmSystem.json
+[30.761s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ResetFault.json
+[30.771s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StartPump.json
+[30.782s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StopPump.json
+[30.791s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/SetAdmissionReelMode.json
+[30.801s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/SetZoneSelection.json
+[30.811s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/GetSystemState.json
+[30.822s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/ExecuteMission.json
+[30.833s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/NavigateToStop.json
+[30.842s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/SprayAtStop.json
+[30.854s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/ReturnToBase.json
+[30.865s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/RunPurge.json
+[30.876s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/execute_mission__functions.h
+[30.887s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/execute_mission__struct.h
+[30.897s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/execute_mission__type_support.h
+[30.907s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/navigate_to_stop__functions.h
+[30.917s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/navigate_to_stop__struct.h
+[30.927s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/navigate_to_stop__type_support.h
+[30.938s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/return_to_base__functions.h
+[30.949s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/return_to_base__struct.h
+[30.958s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/return_to_base__type_support.h
+[30.970s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/run_purge__functions.h
+[30.979s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/run_purge__struct.h
+[30.990s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/run_purge__type_support.h
+[31.001s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/spray_at_stop__functions.h
+[31.011s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/spray_at_stop__struct.h
+[31.022s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/spray_at_stop__type_support.h
+[31.031s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/execute_mission.h
+[31.042s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/navigate_to_stop.h
+[31.053s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/return_to_base.h
+[31.062s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/run_purge.h
+[31.073s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/spray_at_stop.h
+[31.083s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/fault_report__functions.h
+[31.094s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/fault_report__struct.h
+[31.105s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/fault_report__type_support.h
+[31.114s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/heartbeat__functions.h
+[31.125s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/heartbeat__struct.h
+[31.137s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/heartbeat__type_support.h
+[31.147s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/line_target__functions.h
+[31.158s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/line_target__struct.h
+[31.168s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/line_target__type_support.h
+[31.179s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/master_status__functions.h
+[31.190s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/master_status__struct.h
+[31.200s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/master_status__type_support.h
+[31.210s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_event__functions.h
+[31.219s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_event__struct.h
+[31.230s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_event__type_support.h
+[31.243s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_state__functions.h
+[31.253s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_state__struct.h
+[31.266s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_state__type_support.h
+[31.278s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/slave_status__functions.h
+[31.287s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/slave_status__struct.h
+[31.298s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/slave_status__type_support.h
+[31.308s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__functions.h
+[31.318s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__struct.h
+[31.329s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__type_support.h
+[31.338s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__functions.h
+[31.348s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__struct.h
+[31.359s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__type_support.h
+[31.369s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/fault_report.h
+[31.380s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/heartbeat.h
+[31.389s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/line_target.h
+[31.400s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/master_status.h
+[31.411s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/mission_event.h
+[31.420s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/mission_state.h
+[31.431s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/rosidl_generator_c__visibility_control.h
+[31.441s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/slave_status.h
+[31.452s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/spray_report.h
+[31.463s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/stop_detection.h
+[31.473s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/arm_system.h
+[31.485s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__functions.h
+[31.494s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__struct.h
+[31.505s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__type_support.h
+[31.516s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__functions.h
+[31.525s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__struct.h
+[31.536s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__type_support.h
+[31.546s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__functions.h
+[31.556s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__struct.h
+[31.568s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__type_support.h
+[31.578s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__functions.h
+[31.588s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__struct.h
+[31.599s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__type_support.h
+[31.609s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_zone_selection__functions.h
+[31.619s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_zone_selection__struct.h
+[31.628s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_zone_selection__type_support.h
+[31.639s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/start_pump__functions.h
+[31.648s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/start_pump__struct.h
+[31.659s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/start_pump__type_support.h
+[31.670s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__functions.h
+[31.679s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__struct.h
+[31.690s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__type_support.h
+[31.700s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/get_system_state.h
+[31.710s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/reset_fault.h
+[31.722s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/set_admission_reel_mode.h
+[31.731s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/set_zone_selection.h
+[31.742s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/start_pump.h
+[31.753s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/stop_pump.h
+[31.764s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/environment/library_path.sh
+[31.774s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/environment/library_path.dsv
+[31.784s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/execute_mission__rosidl_typesupport_fastrtps_c.h
+[31.795s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/navigate_to_stop__rosidl_typesupport_fastrtps_c.h
+[31.806s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/return_to_base__rosidl_typesupport_fastrtps_c.h
+[31.815s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/run_purge__rosidl_typesupport_fastrtps_c.h
+[31.826s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/spray_at_stop__rosidl_typesupport_fastrtps_c.h
+[31.835s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/fault_report__rosidl_typesupport_fastrtps_c.h
+[31.846s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/heartbeat__rosidl_typesupport_fastrtps_c.h
+[31.856s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/line_target__rosidl_typesupport_fastrtps_c.h
+[31.866s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/master_status__rosidl_typesupport_fastrtps_c.h
+[31.877s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_event__rosidl_typesupport_fastrtps_c.h
+[31.886s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_state__rosidl_typesupport_fastrtps_c.h
+[31.897s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/slave_status__rosidl_typesupport_fastrtps_c.h
+[31.908s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__rosidl_typesupport_fastrtps_c.h
+[31.918s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__rosidl_typesupport_fastrtps_c.h
+[31.929s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[31.937s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__rosidl_typesupport_fastrtps_c.h
+[31.948s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__rosidl_typesupport_fastrtps_c.h
+[31.959s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__rosidl_typesupport_fastrtps_c.h
+[31.969s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__rosidl_typesupport_fastrtps_c.h
+[31.979s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_zone_selection__rosidl_typesupport_fastrtps_c.h
+[31.990s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/start_pump__rosidl_typesupport_fastrtps_c.h
+[32.001s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__rosidl_typesupport_fastrtps_c.h
+[32.013s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/execute_mission__rosidl_typesupport_introspection_c.h
+[32.022s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/navigate_to_stop__rosidl_typesupport_introspection_c.h
+[32.032s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/return_to_base__rosidl_typesupport_introspection_c.h
+[32.042s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/run_purge__rosidl_typesupport_introspection_c.h
+[32.052s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/spray_at_stop__rosidl_typesupport_introspection_c.h
+[32.064s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/fault_report__rosidl_typesupport_introspection_c.h
+[32.073s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/heartbeat__rosidl_typesupport_introspection_c.h
+[32.084s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/line_target__rosidl_typesupport_introspection_c.h
+[32.094s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/master_status__rosidl_typesupport_introspection_c.h
+[32.104s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_event__rosidl_typesupport_introspection_c.h
+[32.115s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_state__rosidl_typesupport_introspection_c.h
+[32.124s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/slave_status__rosidl_typesupport_introspection_c.h
+[32.135s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__rosidl_typesupport_introspection_c.h
+[32.144s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__rosidl_typesupport_introspection_c.h
+[32.155s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[32.166s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__rosidl_typesupport_introspection_c.h
+[32.176s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__rosidl_typesupport_introspection_c.h
+[32.187s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__rosidl_typesupport_introspection_c.h
+[32.198s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__rosidl_typesupport_introspection_c.h
+[32.207s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_zone_selection__rosidl_typesupport_introspection_c.h
+[32.219s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/start_pump__rosidl_typesupport_introspection_c.h
+[32.228s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__rosidl_typesupport_introspection_c.h
+[32.239s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/execute_mission__builder.hpp
+[32.250s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/execute_mission__struct.hpp
+[32.260s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/execute_mission__traits.hpp
+[32.271s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/execute_mission__type_support.hpp
+[32.281s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/navigate_to_stop__builder.hpp
+[32.291s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/navigate_to_stop__struct.hpp
+[32.303s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/navigate_to_stop__traits.hpp
+[32.312s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/navigate_to_stop__type_support.hpp
+[32.322s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/return_to_base__builder.hpp
+[32.331s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/return_to_base__struct.hpp
+[32.342s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/return_to_base__traits.hpp
+[32.353s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/return_to_base__type_support.hpp
+[32.364s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/run_purge__builder.hpp
+[32.374s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/run_purge__struct.hpp
+[32.385s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/run_purge__traits.hpp
+[32.395s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/run_purge__type_support.hpp
+[32.405s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/spray_at_stop__builder.hpp
+[32.415s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/spray_at_stop__struct.hpp
+[32.427s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/spray_at_stop__traits.hpp
+[32.437s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/spray_at_stop__type_support.hpp
+[32.447s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/execute_mission.hpp
+[32.458s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/navigate_to_stop.hpp
+[32.467s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/return_to_base.hpp
+[32.478s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/run_purge.hpp
+[32.490s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/spray_at_stop.hpp
+[32.501s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/fault_report__builder.hpp
+[32.513s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/fault_report__struct.hpp
+[32.524s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/fault_report__traits.hpp
+[32.533s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/fault_report__type_support.hpp
+[32.545s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/heartbeat__builder.hpp
+[32.554s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/heartbeat__struct.hpp
+[32.565s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/heartbeat__traits.hpp
+[32.576s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/heartbeat__type_support.hpp
+[32.585s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/line_target__builder.hpp
+[32.596s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/line_target__struct.hpp
+[32.606s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/line_target__traits.hpp
+[32.616s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/line_target__type_support.hpp
+[32.626s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/master_status__builder.hpp
+[32.636s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/master_status__struct.hpp
+[32.646s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/master_status__traits.hpp
+[32.656s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/master_status__type_support.hpp
+[32.666s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_event__builder.hpp
+[32.677s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_event__struct.hpp
+[32.687s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_event__traits.hpp
+[32.698s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_event__type_support.hpp
+[32.707s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_state__builder.hpp
+[32.718s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_state__struct.hpp
+[32.729s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_state__traits.hpp
+[32.738s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_state__type_support.hpp
+[32.750s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/slave_status__builder.hpp
+[32.759s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/slave_status__struct.hpp
+[32.770s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/slave_status__traits.hpp
+[32.781s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/slave_status__type_support.hpp
+[32.790s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__builder.hpp
+[32.801s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__struct.hpp
+[32.809s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__traits.hpp
+[32.821s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__type_support.hpp
+[32.832s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__builder.hpp
+[32.841s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__struct.hpp
+[32.853s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__traits.hpp
+[32.862s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__type_support.hpp
+[32.873s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/fault_report.hpp
+[32.883s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/heartbeat.hpp
+[32.892s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/line_target.hpp
+[32.903s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/master_status.hpp
+[32.914s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/mission_event.hpp
+[32.924s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/mission_state.hpp
+[32.935s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[32.945s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/slave_status.hpp
+[32.955s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/spray_report.hpp
+[32.965s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/stop_detection.hpp
+[32.976s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/arm_system.hpp
+[32.987s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__builder.hpp
+[32.996s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__struct.hpp
+[33.007s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__traits.hpp
+[33.018s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__type_support.hpp
+[33.028s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__builder.hpp
+[33.040s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__struct.hpp
+[33.050s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__traits.hpp
+[33.060s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__type_support.hpp
+[33.072s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__builder.hpp
+[33.082s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__struct.hpp
+[33.092s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__traits.hpp
+[33.102s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__type_support.hpp
+[33.114s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__builder.hpp
+[33.124s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__struct.hpp
+[33.134s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__traits.hpp
+[33.144s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__type_support.hpp
+[33.155s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_zone_selection__builder.hpp
+[33.165s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_zone_selection__struct.hpp
+[33.175s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_zone_selection__traits.hpp
+[33.185s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_zone_selection__type_support.hpp
+[33.196s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/start_pump__builder.hpp
+[33.207s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/start_pump__struct.hpp
+[33.216s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/start_pump__traits.hpp
+[33.228s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/start_pump__type_support.hpp
+[33.238s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__builder.hpp
+[33.249s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__struct.hpp
+[33.261s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__traits.hpp
+[33.270s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__type_support.hpp
+[33.281s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/get_system_state.hpp
+[33.292s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/reset_fault.hpp
+[33.302s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/set_admission_reel_mode.hpp
+[33.312s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/set_zone_selection.hpp
+[33.321s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/start_pump.hpp
+[33.332s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/stop_pump.hpp
+[33.344s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/execute_mission__rosidl_typesupport_fastrtps_cpp.hpp
+[33.354s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/navigate_to_stop__rosidl_typesupport_fastrtps_cpp.hpp
+[33.366s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/return_to_base__rosidl_typesupport_fastrtps_cpp.hpp
+[33.377s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/run_purge__rosidl_typesupport_fastrtps_cpp.hpp
+[33.386s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/spray_at_stop__rosidl_typesupport_fastrtps_cpp.hpp
+[33.397s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/fault_report__rosidl_typesupport_fastrtps_cpp.hpp
+[33.406s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/heartbeat__rosidl_typesupport_fastrtps_cpp.hpp
+[33.417s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/line_target__rosidl_typesupport_fastrtps_cpp.hpp
+[33.426s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/master_status__rosidl_typesupport_fastrtps_cpp.hpp
+[33.437s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_event__rosidl_typesupport_fastrtps_cpp.hpp
+[33.449s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_state__rosidl_typesupport_fastrtps_cpp.hpp
+[33.459s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/slave_status__rosidl_typesupport_fastrtps_cpp.hpp
+[33.470s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__rosidl_typesupport_fastrtps_cpp.hpp
+[33.480s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__rosidl_typesupport_fastrtps_cpp.hpp
+[33.490s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[33.501s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__rosidl_typesupport_fastrtps_cpp.hpp
+[33.509s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__rosidl_typesupport_fastrtps_cpp.hpp
+[33.520s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__rosidl_typesupport_fastrtps_cpp.hpp
+[33.531s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[33.541s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_zone_selection__rosidl_typesupport_fastrtps_cpp.hpp
+[33.552s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/start_pump__rosidl_typesupport_fastrtps_cpp.hpp
+[33.561s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__rosidl_typesupport_fastrtps_cpp.hpp
+[33.572s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/execute_mission__rosidl_typesupport_introspection_cpp.hpp
+[33.583s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/navigate_to_stop__rosidl_typesupport_introspection_cpp.hpp
+[33.593s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/return_to_base__rosidl_typesupport_introspection_cpp.hpp
+[33.603s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/run_purge__rosidl_typesupport_introspection_cpp.hpp
+[33.613s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/action/detail/spray_at_stop__rosidl_typesupport_introspection_cpp.hpp
+[33.626s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/fault_report__rosidl_typesupport_introspection_cpp.hpp
+[33.637s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/heartbeat__rosidl_typesupport_introspection_cpp.hpp
+[33.646s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/line_target__rosidl_typesupport_introspection_cpp.hpp
+[33.656s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/master_status__rosidl_typesupport_introspection_cpp.hpp
+[33.666s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_event__rosidl_typesupport_introspection_cpp.hpp
+[33.678s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/mission_state__rosidl_typesupport_introspection_cpp.hpp
+[33.689s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/slave_status__rosidl_typesupport_introspection_cpp.hpp
+[33.698s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__rosidl_typesupport_introspection_cpp.hpp
+[33.708s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__rosidl_typesupport_introspection_cpp.hpp
+[33.719s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__rosidl_typesupport_introspection_cpp.hpp
+[33.729s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__rosidl_typesupport_introspection_cpp.hpp
+[33.739s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__rosidl_typesupport_introspection_cpp.hpp
+[33.748s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__rosidl_typesupport_introspection_cpp.hpp
+[33.759s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_zone_selection__rosidl_typesupport_introspection_cpp.hpp
+[33.770s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/start_pump__rosidl_typesupport_introspection_cpp.hpp
+[33.780s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__rosidl_typesupport_introspection_cpp.hpp
+[33.791s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/environment/pythonpath.sh
+[33.801s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/environment/pythonpath.dsv
+[33.812s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[33.823s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[33.832s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[33.843s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[33.854s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/__init__.py
+[33.864s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_c.c
+[33.875s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[33.885s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[33.896s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/__init__.py
+[33.907s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_execute_mission.py
+[33.916s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_execute_mission_s.c
+[33.928s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_navigate_to_stop.py
+[33.937s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_navigate_to_stop_s.c
+[33.948s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_return_to_base.py
+[33.959s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_return_to_base_s.c
+[33.969s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_run_purge.py
+[33.980s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_run_purge_s.c
+[33.989s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_spray_at_stop.py
+[33.999s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_spray_at_stop_s.c
+[34.010s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/atm_interfaces_s__rosidl_typesupport_c.so
+[34.020s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/atm_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[34.031s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/atm_interfaces_s__rosidl_typesupport_introspection_c.so
+[34.040s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/__init__.py
+[34.051s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_fault_report.py
+[34.062s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_fault_report_s.c
+[34.072s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_heartbeat.py
+[34.083s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_heartbeat_s.c
+[34.092s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_line_target.py
+[34.103s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_line_target_s.c
+[34.114s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_master_status.py
+[34.124s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_master_status_s.c
+[34.135s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_mission_event.py
+[34.146s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_mission_event_s.c
+[34.156s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_mission_state.py
+[34.168s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_mission_state_s.c
+[34.177s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_slave_status.py
+[34.188s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_slave_status_s.c
+[34.199s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_spray_report.py
+[34.208s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_spray_report_s.c
+[34.221s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_stop_detection.py
+[34.232s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_stop_detection_s.c
+[34.242s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/__init__.py
+[34.253s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_arm_system.py
+[34.263s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_arm_system_s.c
+[34.274s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_get_system_state.py
+[34.284s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_get_system_state_s.c
+[34.294s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_reset_fault.py
+[34.305s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_reset_fault_s.c
+[34.314s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_set_admission_reel_mode.py
+[34.325s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_set_admission_reel_mode_s.c
+[34.335s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_set_zone_selection.py
+[34.344s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_set_zone_selection_s.c
+[34.356s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_start_pump.py
+[34.364s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_start_pump_s.c
+[34.375s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_stop_pump.py
+[34.386s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_stop_pump_s.c
+[34.396s] -- Up-to-date symlink: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/atm_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[34.397s] -- Up-to-date symlink: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/atm_interfaces_s__rosidl_typesupport_introspection_c.so
+[34.397s] -- Up-to-date symlink: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/atm_interfaces_s__rosidl_typesupport_c.so
+[34.397s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/ament_index/resource_index/rust_packages/atm_interfaces
+[34.409s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/rust/Cargo.toml
+[34.418s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/rust/build.rs
+[34.428s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/rust/src/action.rs
+[34.440s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/rust/src/action/rmw.rs
+[34.449s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/rust/src/lib.rs
+[34.460s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/rust/src/msg.rs
+[34.472s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/rust/src/msg/rmw.rs
+[34.483s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/rust/src/srv.rs
+[34.494s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/rust/src/srv/rmw.rs
+[34.505s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/Heartbeat.idl
+[34.515s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/MissionState.idl
+[34.528s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/MissionEvent.idl
+[34.539s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/FaultReport.idl
+[34.550s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/LineTarget.idl
+[34.565s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/StopDetection.idl
+[34.577s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/MasterStatus.idl
+[34.586s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SlaveStatus.idl
+[34.598s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SprayReport.idl
+[34.609s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ArmSystem.idl
+[34.620s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ResetFault.idl
+[34.632s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StartPump.idl
+[34.642s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StopPump.idl
+[34.653s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/SetAdmissionReelMode.idl
+[34.665s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/SetZoneSelection.idl
+[34.677s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/GetSystemState.idl
+[34.686s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/ExecuteMission.idl
+[34.698s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/NavigateToStop.idl
+[34.710s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/SprayAtStop.idl
+[34.721s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/ReturnToBase.idl
+[34.732s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/RunPurge.idl
+[34.742s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/Heartbeat.msg
+[34.753s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/MissionState.msg
+[34.765s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/MissionEvent.msg
+[34.775s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/FaultReport.msg
+[34.786s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/LineTarget.msg
+[34.798s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/StopDetection.msg
+[34.809s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/MasterStatus.msg
+[34.820s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SlaveStatus.msg
+[34.831s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SprayReport.msg
+[34.841s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ArmSystem.srv
+[34.852s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ResetFault.srv
+[34.861s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StartPump.srv
+[34.872s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StopPump.srv
+[34.884s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/SetAdmissionReelMode.srv
+[34.893s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/SetZoneSelection.srv
+[34.905s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/GetSystemState.srv
+[34.920s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/ExecuteMission.action
+[34.926s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/NavigateToStop.action
+[34.937s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/SprayAtStop.action
+[34.946s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/ReturnToBase.action
+[34.958s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/action/RunPurge.action
+[34.972s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/ament_index/resource_index/package_run_dependencies/atm_interfaces
+[34.986s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/ament_index/resource_index/parent_prefix_path/atm_interfaces
+[34.995s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/environment/ament_prefix_path.sh
+[35.007s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/environment/ament_prefix_path.dsv
+[35.017s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/environment/path.sh
+[35.027s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/environment/path.dsv
+[35.039s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/local_setup.bash
+[35.049s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/local_setup.sh
+[35.060s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/local_setup.zsh
+[35.071s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/local_setup.dsv
+[35.082s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/package.dsv
+[35.094s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/ament_index/resource_index/packages/atm_interfaces
+[35.105s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/rosidl_cmake-extras.cmake
+[35.115s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[35.127s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[35.139s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[35.150s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[35.162s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[35.175s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[35.185s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/atm_interfacesConfig.cmake
+[35.196s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/atm_interfacesConfig-version.cmake
+[35.207s] -- Symlinking: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/package.xml
+[35.217s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_generator_c.so
+[35.218s] -- Set non-toolchain portion of runtime path of "/home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_generator_c.so" to ""
+[35.218s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_fastrtps_c.so
+[35.219s] -- Set non-toolchain portion of runtime path of "/home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[35.219s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_introspection_c.so
+[35.220s] -- Set non-toolchain portion of runtime path of "/home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[35.220s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_c.so
+[35.220s] -- Set non-toolchain portion of runtime path of "/home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_c.so" to ""
+[35.220s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[35.224s] -- Set non-toolchain portion of runtime path of "/home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[35.224s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_introspection_cpp.so
+[35.226s] -- Set non-toolchain portion of runtime path of "/home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[35.226s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_cpp.so
+[35.227s] -- Set non-toolchain portion of runtime path of "/home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_typesupport_cpp.so" to ""
+[35.362s] Listing '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces'...
+[35.362s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/__init__.py'...
+[35.362s] Listing '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action'...
+[35.362s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/__init__.py'...
+[35.362s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_execute_mission.py'...
+[35.362s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_navigate_to_stop.py'...
+[35.362s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_return_to_base.py'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_run_purge.py'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/action/_spray_at_stop.py'...
+[35.363s] Listing '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/__init__.py'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_fault_report.py'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_heartbeat.py'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_line_target.py'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_master_status.py'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_mission_event.py'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_mission_state.py'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_slave_status.py'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_spray_report.py'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/msg/_stop_detection.py'...
+[35.363s] Listing '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv'...
+[35.363s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/__init__.py'...
+[35.364s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_arm_system.py'...
+[35.364s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_get_system_state.py'...
+[35.364s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_reset_fault.py'...
+[35.364s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_set_admission_reel_mode.py'...
+[35.364s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_set_zone_selection.py'...
+[35.364s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_start_pump.py'...
+[35.364s] Compiling '/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_stop_pump.py'...
+[35.368s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_generator_py.so
+[35.369s] -- Set non-toolchain portion of runtime path of "/home/gonzalo/grodi_atm/install/atm_interfaces/lib/libatm_interfaces__rosidl_generator_py.so" to ""
+[35.369s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/export_atm_interfaces__rosidl_generator_cExport.cmake
+[35.369s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/export_atm_interfaces__rosidl_generator_cExport-noconfig.cmake
+[35.369s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/export_atm_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[35.369s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/export_atm_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[35.370s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/atm_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[35.370s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/atm_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[35.370s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/atm_interfaces__rosidl_typesupport_cExport.cmake
+[35.370s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/atm_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[35.371s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/export_atm_interfaces__rosidl_generator_cppExport.cmake
+[35.371s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/export_atm_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[35.371s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/export_atm_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[35.371s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/atm_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[35.372s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/atm_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[35.372s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/atm_interfaces__rosidl_typesupport_cppExport.cmake
+[35.372s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/atm_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[35.372s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/export_atm_interfaces__rosidl_generator_pyExport.cmake
+[35.372s] -- Installing: /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/cmake/export_atm_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[35.374s] Invoked command in '/home/gonzalo/grodi_atm/build/atm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/gonzalo/grodi_atm/build/atm_interfaces

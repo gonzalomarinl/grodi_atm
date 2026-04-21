@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from atm_interfaces/action/NavigateToStop.action
+// generated code does not contain a copyright notice
+
+
+module atm_interfaces {
+  module action {
+    struct NavigateToStop_Goal {
+      string mission_id;
+
+      string line_id;
+
+      uint32 stop_index;
+    };
+    struct NavigateToStop_Result {
+      boolean success;
+
+      boolean stop_found;
+
+      string message;
+    };
+    struct NavigateToStop_Feedback {
+      string navigation_state;
+
+      string current_line_id;
+
+      float vision_confidence;
+    };
+  };
+};
