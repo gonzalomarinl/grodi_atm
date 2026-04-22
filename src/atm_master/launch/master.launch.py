@@ -25,8 +25,15 @@ def generate_launch_description() -> LaunchDescription:
             ),
             Node(
                 package="atm_master",
-                executable="admission_reel_controller_node",
-                name="admission_reel_controller",
+                executable="ground_reel_motor_node",
+                name="ground_reel_motor",
+                output="screen",
+                parameters=[config_path],
+            ),
+            Node(
+                package="atm_master",
+                executable="hose_guide_controller_node",
+                name="hose_guide_controller",
                 output="screen",
                 parameters=[config_path],
             ),

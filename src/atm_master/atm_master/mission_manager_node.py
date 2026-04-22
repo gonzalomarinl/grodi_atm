@@ -24,15 +24,7 @@ from atm_interfaces.srv import (
 
 
 class MissionManagerNode(Node):
-    """Gestor global de estados de misión.
-
-    Esta primera versión deja resuelta la base de ROS 2:
-    - publica estado global;
-    - registra eventos de misión;
-    - permite armar/desarmar el sistema;
-    - expone un servicio de consulta de estado;
-    - deja un punto claro para colgar la lógica futura de acciones y watchdog.
-    """
+    """Gestor global de estados de misión."""
 
     def __init__(self) -> None:
         super().__init__("mission_manager")
@@ -66,6 +58,8 @@ class MissionManagerNode(Node):
         self.reel_roll_speed = float(self.get_parameter("reel_roll_speed").value)
         self.current_reel_mode = "STOP"
         self.current_reel_speed = 0.0
+        self.current_hose_guide_mode = "STOP"
+        self.current_hose_guide_speed = 0.0
 
         self.state_pub = self.create_publisher(MissionState, "mission/state", 10)
         self.event_pub = self.create_publisher(MissionEvent, "mission/events", 20)
@@ -74,6 +68,7 @@ class MissionManagerNode(Node):
         self.start_pump_client = self.create_client(StartPump, "master/start_pump")
         self.stop_pump_client = self.create_client(StopPump, "master/stop_pump")
         self.reel_client = self.create_client(SetAdmissionReelMode, "master/set_admission_reel_mode")
+        self.hose_guide_client = self.create_client(SetAdmissionReelMode, "master/set_hose_guide_mode")
 
         self.create_subscription(
             SlaveStatus,
@@ -225,15 +220,19 @@ class MissionManagerNode(Node):
 
     def sync_reel(self, mode: str, speed: float) -> None:
         if mode == self.current_reel_mode and abs(speed - self.current_reel_speed) < 1e-6:
+            self.sync_hose_guide(mode, speed)
             return
-        if not self.reel_client.wait_for_service(timeout_sec=0.2):
+
+        if self.reel_client.wait_for_service(timeout_sec=0.2):
+            request = SetAdmissionReelMode.Request()
+            request.mode = mode
+            request.speed = float(speed)
+            future = self.reel_client.call_async(request)
+            future.add_done_callback(partial(self.on_reel_response, mode=mode, speed=speed))
+        else:
             self.get_logger().warning("Servicio de carrete no disponible.")
-            return
-        request = SetAdmissionReelMode.Request()
-        request.mode = mode
-        request.speed = float(speed)
-        future = self.reel_client.call_async(request)
-        future.add_done_callback(partial(self.on_reel_response, mode=mode, speed=speed))
+
+        self.sync_hose_guide(mode, speed)
 
     def on_reel_response(self, future, mode: str, speed: float) -> None:
         try:
@@ -247,6 +246,31 @@ class MissionManagerNode(Node):
             self.publish_event("reel_mode_changed", response.message)
         else:
             self.get_logger().warning(f"No se pudo cambiar el carrete: {response.message}")
+
+    def sync_hose_guide(self, mode: str, speed: float) -> None:
+        if mode == self.current_hose_guide_mode and abs(speed - self.current_hose_guide_speed) < 1e-6:
+            return
+        if not self.hose_guide_client.wait_for_service(timeout_sec=0.2):
+            self.get_logger().warning("Servicio de guiado de manguera no disponible.")
+            return
+        request = SetAdmissionReelMode.Request()
+        request.mode = mode
+        request.speed = float(speed)
+        future = self.hose_guide_client.call_async(request)
+        future.add_done_callback(partial(self.on_hose_guide_response, mode=mode, speed=speed))
+
+    def on_hose_guide_response(self, future, mode: str, speed: float) -> None:
+        try:
+            response = future.result()
+        except Exception as exc:
+            self.get_logger().warning(f"Fallo llamando al guiado de manguera: {exc}")
+            return
+        if response.success:
+            self.current_hose_guide_mode = mode
+            self.current_hose_guide_speed = speed
+            self.publish_event("hose_guide_mode_changed", response.message)
+        else:
+            self.get_logger().warning(f"No se pudo cambiar el guiado: {response.message}")
 
     def handle_pump_request(self, enable: bool, source_event: MissionEvent) -> None:
         if enable and not self.system_armed:
@@ -264,7 +288,9 @@ class MissionManagerNode(Node):
         request = StartPump.Request()
         request.enable = True
         future = self.start_pump_client.call_async(request)
-        future.add_done_callback(partial(self.on_pump_response, mission_id=mission_id, ack_event_type=ack_event_type))
+        future.add_done_callback(
+            partial(self.on_pump_response, mission_id=mission_id, ack_event_type=ack_event_type)
+        )
 
     def call_stop_pump(self, ack_event_type: str | None, mission_id: str | None = None) -> None:
         if not self.stop_pump_client.wait_for_service(timeout_sec=0.5):

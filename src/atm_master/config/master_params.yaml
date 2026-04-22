@@ -10,8 +10,25 @@ pump_controller:
   ros__parameters:
     startup_enabled: false
 
-admission_reel_controller:
-  ros__parameters: {}
+ground_reel_motor:
+  ros__parameters:
+    use_mock_backend: true
+    startup_mode: STOP
+    startup_speed: 0.0
+    status_period_sec: 0.5
+    max_speed: 1.0
+
+hose_guide_controller:
+  ros__parameters:
+    use_mock_backend: true
+    startup_mode: STOP
+    startup_speed: 0.0
+    status_period_sec: 0.5
+    step_period_sec: 0.1
+    travel_min: 0.0
+    travel_max: 1.0
+    travel_increment: 0.02
+    max_speed: 1.0
 
 master_watchdog:
   ros__parameters:

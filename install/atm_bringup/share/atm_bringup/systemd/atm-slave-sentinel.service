@@ -1,14 +1,1 @@
-[Unit]
-Description=Sentinel externo de la Raspberry esclava del atomizador
-After=network-online.target
-Wants=network-online.target
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/python3 /opt/atm/atm_slave_sentinel.py
-Restart=always
-RestartSec=5
-NoNewPrivileges=true
-
-[Install]
-WantedBy=multi-user.target
+/home/gonzalo/grodi_atm/build/atm_bringup/systemd/atm-slave-sentinel.service

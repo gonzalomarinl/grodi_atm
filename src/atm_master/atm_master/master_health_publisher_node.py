@@ -13,12 +13,7 @@ from atm_interfaces.msg import Heartbeat, MasterStatus, MissionEvent, MissionSta
 
 
 class MasterHealthPublisherNode(Node):
-    """Escribe un snapshot JSON mínimo para el sentinel externo.
-
-    El objetivo no es sustituir ROS 2, sino dar a un proceso externo una fuente de
-    verdad simple, local y muy barata de consultar aunque el resto del grafo esté
-    parcialmente degradado.
-    """
+    """Escribe un snapshot JSON mínimo para el sentinel externo."""
 
     CRITICAL_STATES = {"EXECUTING", "RETURNING_HOME", "PURGING"}
 
@@ -40,12 +35,14 @@ class MasterHealthPublisherNode(Node):
         self.comms_degraded = False
         self.pump_enabled = False
         self.reel_state = "UNKNOWN"
+        self.hose_guide_state = "UNKNOWN"
         self.system_armed = False
         self.last_slave_heartbeat = 0.0
 
         self.create_subscription(MissionState, "mission/state", self.handle_mission_state, 20)
         self.create_subscription(MasterStatus, "master/status", self.handle_master_status, 20)
-        self.create_subscription(MasterStatus, "master/reel_status", self.handle_master_status, 20)
+        self.create_subscription(MasterStatus, "master/reel_status", self.handle_reel_status, 20)
+        self.create_subscription(MasterStatus, "master/hose_guide_status", self.handle_hose_guide_status, 20)
         self.create_subscription(MissionEvent, "mission/events", self.handle_mission_event, 20)
         self.create_subscription(Heartbeat, "link/slave_heartbeat", self.handle_slave_heartbeat, 20)
 
@@ -77,9 +74,15 @@ class MasterHealthPublisherNode(Node):
 
     def handle_master_status(self, msg: MasterStatus) -> None:
         self.pump_enabled = msg.pump_enabled
+        self.system_armed = self.system_armed or msg.system_armed
+
+    def handle_reel_status(self, msg: MasterStatus) -> None:
         if msg.reel_state != "UNKNOWN":
             self.reel_state = msg.reel_state
-        self.system_armed = self.system_armed or msg.system_armed
+
+    def handle_hose_guide_status(self, msg: MasterStatus) -> None:
+        if msg.reel_state != "UNKNOWN":
+            self.hose_guide_state = msg.reel_state
 
     def handle_mission_event(self, msg: MissionEvent) -> None:
         if msg.event_type == "system_armed":
@@ -109,6 +112,7 @@ class MasterHealthPublisherNode(Node):
             "system_armed": bool(self.system_armed),
             "pump_enabled": bool(self.pump_enabled),
             "reel_state": self.reel_state,
+            "hose_guide_state": self.hose_guide_state,
             "last_slave_heartbeat_age_sec": slave_hb_age,
         }
 

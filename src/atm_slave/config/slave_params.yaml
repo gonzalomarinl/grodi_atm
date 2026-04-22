@@ -10,14 +10,21 @@ slave_state_manager:
     max_stop_retries: 3
     max_skipped_waypoints: 3
 
-navigation_executor:
+rail_motion_controller:
   ros__parameters:
+    use_mock_backend: true
     navigate_duration_sec: 2.0
     return_duration_sec: 2.5
-    feedback_period_sec: 0.5
+    feedback_period_sec: 0.2
+    stop_detection_timeout_sec: 20.0
+    simulate_stop_detection: true
+    motion_frequency: 200
+    base_en_inicio: false
+    dir_enable: true
 
-vertical_atomizer_controller:
+vertical_reel_controller:
   ros__parameters:
+    use_mock_backend: true
     lower_duration_sec: 1.5
     raise_duration_sec: 2.0
     startup_position: UP

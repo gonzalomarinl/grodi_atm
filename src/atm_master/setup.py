@@ -29,6 +29,8 @@ setup(
             'mission_manager_node = atm_master.mission_manager_node:main',
             'pump_controller_node = atm_master.pump_controller_node:main',
             'admission_reel_controller_node = atm_master.admission_reel_controller_node:main',
+            'ground_reel_motor_node = atm_master.ground_reel_motor_node:main',
+            'hose_guide_controller_node = atm_master.hose_guide_controller_node:main',
             'master_watchdog_node = atm_master.master_watchdog_node:main',
             'mission_event_logger_node = atm_master.mission_event_logger_node:main',
             'master_health_publisher_node = atm_master.master_health_publisher_node:main',
