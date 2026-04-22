@@ -76,6 +76,7 @@ CMakeFiles/atm_interfaces: /home/gonzalo/grodi_atm/src/atm_interfaces/msg/Master
 CMakeFiles/atm_interfaces: /home/gonzalo/grodi_atm/src/atm_interfaces/msg/SlaveStatus.msg
 CMakeFiles/atm_interfaces: /home/gonzalo/grodi_atm/src/atm_interfaces/msg/SprayReport.msg
 CMakeFiles/atm_interfaces: /home/gonzalo/grodi_atm/src/atm_interfaces/srv/ArmSystem.srv
+CMakeFiles/atm_interfaces: /home/gonzalo/grodi_atm/src/atm_interfaces/srv/EmergencyStop.srv
 CMakeFiles/atm_interfaces: /home/gonzalo/grodi_atm/src/atm_interfaces/srv/ResetFault.srv
 CMakeFiles/atm_interfaces: /home/gonzalo/grodi_atm/src/atm_interfaces/srv/StartPump.srv
 CMakeFiles/atm_interfaces: /home/gonzalo/grodi_atm/src/atm_interfaces/srv/StopPump.srv

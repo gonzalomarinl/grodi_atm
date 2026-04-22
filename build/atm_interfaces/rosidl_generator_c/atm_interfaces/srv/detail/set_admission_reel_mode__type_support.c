@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
+#include "atm_interfaces/srv/detail/set_admission_reel_mode__struct.h"
 #include "atm_interfaces/srv/detail/set_admission_reel_mode__type_support.h"
 #include "atm_interfaces/srv/detail/set_admission_reel_mode__functions.h"
-#include "atm_interfaces/srv/detail/set_admission_reel_mode__struct.h"
 
 #ifdef __cplusplus
 extern "C"

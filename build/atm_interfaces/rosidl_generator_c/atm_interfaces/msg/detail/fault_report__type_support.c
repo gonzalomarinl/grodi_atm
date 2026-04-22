@@ -4,9 +4,9 @@
 
 #include <string.h>
 
+#include "atm_interfaces/msg/detail/fault_report__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "atm_interfaces/msg/detail/fault_report__struct.h"
-#include "atm_interfaces/msg/detail/fault_report__type_support.h"
 #include "atm_interfaces/msg/detail/fault_report__functions.h"
 
 #ifdef __cplusplus

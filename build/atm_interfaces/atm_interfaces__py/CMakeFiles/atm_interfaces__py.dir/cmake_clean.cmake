@@ -35,6 +35,8 @@ file(REMOVE_RECURSE
   "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/__init__.py"
   "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_arm_system.py"
   "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c"
+  "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_emergency_stop.py"
+  "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c"
   "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_get_system_state.py"
   "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c"
   "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_reset_fault.py"

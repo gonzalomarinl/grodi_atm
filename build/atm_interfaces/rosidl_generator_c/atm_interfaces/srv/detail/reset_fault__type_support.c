@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
+#include "atm_interfaces/srv/detail/reset_fault__struct.h"
 #include "atm_interfaces/srv/detail/reset_fault__functions.h"
 #include "atm_interfaces/srv/detail/reset_fault__type_support.h"
-#include "atm_interfaces/srv/detail/reset_fault__struct.h"
 
 #ifdef __cplusplus
 extern "C"

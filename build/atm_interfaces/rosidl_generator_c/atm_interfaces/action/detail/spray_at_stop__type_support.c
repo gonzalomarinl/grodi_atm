@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "atm_interfaces/action/detail/spray_at_stop__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "atm_interfaces/action/detail/spray_at_stop__functions.h"
 #include "atm_interfaces/action/detail/spray_at_stop__struct.h"
-#include "atm_interfaces/action/detail/spray_at_stop__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -2,6 +2,10 @@ from atm_interfaces.srv._arm_system import ArmSystem  # noqa: F401
 from atm_interfaces.srv._arm_system import ArmSystem_Event  # noqa: F401
 from atm_interfaces.srv._arm_system import ArmSystem_Request  # noqa: F401
 from atm_interfaces.srv._arm_system import ArmSystem_Response  # noqa: F401
+from atm_interfaces.srv._emergency_stop import EmergencyStop  # noqa: F401
+from atm_interfaces.srv._emergency_stop import EmergencyStop_Event  # noqa: F401
+from atm_interfaces.srv._emergency_stop import EmergencyStop_Request  # noqa: F401
+from atm_interfaces.srv._emergency_stop import EmergencyStop_Response  # noqa: F401
 from atm_interfaces.srv._get_system_state import GetSystemState  # noqa: F401
 from atm_interfaces.srv._get_system_state import GetSystemState_Event  # noqa: F401
 from atm_interfaces.srv._get_system_state import GetSystemState_Request  # noqa: F401

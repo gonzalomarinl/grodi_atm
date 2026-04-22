@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "atm_interfaces/action/detail/run_purge__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "atm_interfaces/action/detail/run_purge__type_support.h"
 #include "atm_interfaces/action/detail/run_purge__functions.h"
 

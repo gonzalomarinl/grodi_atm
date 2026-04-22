@@ -29,6 +29,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_stop_detection_s.c.o.d"
   "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c.o"
   "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c.o.d"
+  "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.o"
+  "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.o.d"
   "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.o"
   "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.o.d"
   "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o"

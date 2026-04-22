@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "atm_interfaces/action/detail/navigate_to_stop__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "atm_interfaces/action/detail/navigate_to_stop__type_support.h"
 #include "atm_interfaces/action/detail/navigate_to_stop__functions.h"
-#include "atm_interfaces/action/detail/navigate_to_stop__struct.h"
 
 #ifdef __cplusplus
 extern "C"

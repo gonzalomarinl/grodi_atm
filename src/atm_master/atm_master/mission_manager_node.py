@@ -12,9 +12,10 @@ from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
 from atm_interfaces.action import ExecuteMission
-from atm_interfaces.msg import FaultReport, LineTarget, MissionEvent, MissionState, SlaveStatus
+from atm_interfaces.msg import FaultReport, Heartbeat, LineTarget, MissionEvent, MissionState, SlaveStatus
 from atm_interfaces.srv import (
     ArmSystem,
+    EmergencyStop,
     GetSystemState,
     ResetFault,
     SetAdmissionReelMode,
@@ -35,6 +36,8 @@ class MissionManagerNode(Node):
         self.declare_parameter("execute_feedback_period_sec", 0.5)
         self.declare_parameter("reel_unroll_speed", 1.0)
         self.declare_parameter("reel_roll_speed", 1.0)
+        self.declare_parameter("heartbeat_timeout_sec", 5.0)
+        self.declare_parameter("link_check_period_sec", 0.5)
 
         self.machine_id = self.get_parameter("machine_id").value
         self.mission_id = ""
@@ -45,12 +48,16 @@ class MissionManagerNode(Node):
         self.comms_degraded = False
         self.system_armed = False
         self.feedback_period = float(self.get_parameter("execute_feedback_period_sec").value)
+        self.heartbeat_timeout = float(self.get_parameter("heartbeat_timeout_sec").value)
 
         self.slave_state = "UNKNOWN"
         self.slave_at_base = False
         self.slave_link_ok = False
+        self.last_slave_heartbeat_ns = self.get_clock().now().nanoseconds
         self.active_goal_handle = None
         self.goal_cancel_requested = False
+        self.return_home_command_sent = False
+        self.emergency_stop_requested = False
         self.mission_fault = None
         self.mission_finished = False
         self.callback_group = ReentrantCallbackGroup()
@@ -70,6 +77,13 @@ class MissionManagerNode(Node):
         self.reel_client = self.create_client(SetAdmissionReelMode, "master/set_admission_reel_mode")
         self.hose_guide_client = self.create_client(SetAdmissionReelMode, "master/set_hose_guide_mode")
 
+        self.create_subscription(
+            Heartbeat,
+            "link/slave_heartbeat",
+            self.handle_slave_heartbeat,
+            20,
+            callback_group=self.callback_group,
+        )
         self.create_subscription(
             SlaveStatus,
             "link/incoming/slave_status",
@@ -93,6 +107,7 @@ class MissionManagerNode(Node):
         )
 
         self.create_service(ArmSystem, "mission/arm_system", self.handle_arm_system)
+        self.create_service(EmergencyStop, "mission/emergency_stop", self.handle_emergency_stop)
         self.create_service(ResetFault, "mission/reset_fault", self.handle_reset_fault)
         self.create_service(GetSystemState, "mission/get_system_state", self.handle_get_system_state)
         self.execute_action = ActionServer(
@@ -106,6 +121,10 @@ class MissionManagerNode(Node):
         )
 
         self.state_timer = self.create_timer(0.5, self.publish_state)
+        self.link_timer = self.create_timer(
+            float(self.get_parameter("link_check_period_sec").value),
+            self.check_slave_link,
+        )
 
         self.publish_event("system_boot", f"Mission manager inicializado en {self.machine_id}")
         self.get_logger().info("Mission manager listo.")
@@ -138,19 +157,39 @@ class MissionManagerNode(Node):
         self.current_line_id = msg.current_line_id or self.current_line_id
         self.current_stop_index = msg.current_stop_index
 
-        if msg.state == "RETURNING":
+        if self.emergency_stop_requested:
+            self.state = "EMERGENCY_STOP"
+        elif self.comms_degraded:
+            self.state = "DEGRADED_COMMS"
+        elif msg.state == "RETURNING":
             self.state = "RETURNING_HOME"
         elif msg.state in {"MOVING", "STOP_CONFIRMED", "LOWERING_ATOMIZER", "SPRAYING_ASCENT"}:
             self.state = "EXECUTING"
 
         self.sync_reel_with_slave_state(msg.state)
 
+    def handle_slave_heartbeat(self, _msg: Heartbeat) -> None:
+        self.last_slave_heartbeat_ns = self.get_clock().now().nanoseconds
+        self.slave_link_ok = True
+
     def handle_link_event(self, msg: MissionEvent) -> None:
         if msg.event_type == "return_completed":
-            self.state = "COMPLETED" if not self.goal_cancel_requested and self.mission_fault is None else "IDLE"
+            if self.emergency_stop_requested:
+                self.state = "EMERGENCY_STOP"
+            elif self.comms_degraded:
+                self.state = "DEGRADED_COMMS"
+            elif not self.goal_cancel_requested and self.mission_fault is None:
+                self.state = "COMPLETED"
+            else:
+                self.state = "IDLE"
             self.mission_finished = True
         elif msg.event_type == "return_started":
-            self.state = "RETURNING_HOME"
+            if self.emergency_stop_requested:
+                self.state = "EMERGENCY_STOP"
+            elif self.comms_degraded:
+                self.state = "DEGRADED_COMMS"
+            else:
+                self.state = "RETURNING_HOME"
         elif msg.event_type == "pump_on_request":
             self.handle_pump_request(enable=True, source_event=msg)
         elif msg.event_type == "pump_off_request":
@@ -159,6 +198,7 @@ class MissionManagerNode(Node):
     def handle_fault_report(self, msg: FaultReport) -> None:
         self.mission_fault = msg
         self.state = "FAULT"
+        self.comms_degraded = False
         self.sync_reel("STOP", 0.0)
         self.call_stop_pump(ack_event_type=None)
         self.publish_event("fault_detected", f"{msg.fault_code}: {msg.description}")
@@ -178,12 +218,39 @@ class MissionManagerNode(Node):
         if self.active_goal_handle is not None:
             self.get_logger().warning("Rechazando misión: ya existe una misión en curso.")
             return GoalResponse.REJECT
+        if self.state in {"FAULT", "EMERGENCY_STOP", "DEGRADED_COMMS"}:
+            self.get_logger().warning(f"Rechazando misión: sistema en estado {self.state}.")
+            return GoalResponse.REJECT
         return GoalResponse.ACCEPT
 
     def handle_cancel(self, _goal_handle) -> CancelResponse:
         self.goal_cancel_requested = True
         self.publish_event("mission_cancelled", "Cancelación solicitada desde cliente de acción.")
         return CancelResponse.ACCEPT
+
+    def check_slave_link(self) -> None:
+        now_ns = self.get_clock().now().nanoseconds
+        delta_sec = (now_ns - self.last_slave_heartbeat_ns) / 1e9
+        link_ok = delta_sec <= self.heartbeat_timeout
+        self.slave_link_ok = link_ok
+
+        if link_ok or self.comms_degraded or self.emergency_stop_requested or self.mission_fault is not None:
+            return
+
+        if self.active_goal_handle is None:
+            return
+
+        self.comms_degraded = True
+        self.state = "DEGRADED_COMMS"
+        self.sync_reel("STOP", 0.0)
+        self.call_stop_pump(ack_event_type=None)
+        self.publish_event(
+            "link_degraded",
+            f"Heartbeat de esclava perdido durante {delta_sec:.1f}s; degradación de comunicaciones.",
+        )
+        if not self.return_home_command_sent:
+            self.return_home_command_sent = True
+            self.publish_event("return_home", "Comunicaciones degradadas: retorno seguro solicitado.")
 
     def publish_targets(
         self,
@@ -332,8 +399,11 @@ class MissionManagerNode(Node):
     def execute_mission(self, goal_handle) -> ExecuteMission.Result:
         self.active_goal_handle = goal_handle
         self.goal_cancel_requested = False
+        self.return_home_command_sent = False
+        self.emergency_stop_requested = False
         self.mission_fault = None
         self.mission_finished = False
+        self.comms_degraded = False
 
         self.mission_id = goal_handle.request.mission_id
         self.mission_type = goal_handle.request.mission_type
@@ -357,10 +427,11 @@ class MissionManagerNode(Node):
 
         feedback = ExecuteMission.Feedback()
         while rclpy.ok():
-            if goal_handle.is_cancel_requested:
+            if goal_handle.is_cancel_requested and not self.return_home_command_sent:
                 self.goal_cancel_requested = True
                 self.state = "RETURNING_HOME"
                 self.sync_reel("ROLL", self.reel_roll_speed)
+                self.return_home_command_sent = True
                 self.publish_event("return_home", "Cancelación activa: retorno a base solicitado.")
 
             if self.mission_fault is not None:
@@ -382,17 +453,22 @@ class MissionManagerNode(Node):
             if self.mission_finished:
                 if self.goal_cancel_requested:
                     goal_handle.canceled()
+                elif self.emergency_stop_requested or self.comms_degraded:
+                    goal_handle.abort()
                 else:
                     goal_handle.succeed()
 
                 result = ExecuteMission.Result()
-                result.success = not self.goal_cancel_requested
+                result.success = not (self.goal_cancel_requested or self.emergency_stop_requested or self.comms_degraded)
                 result.final_state = self.state
-                result.message = (
-                    "Misión cancelada y robot en base."
-                    if self.goal_cancel_requested
-                    else "Misión completada y robot en base."
-                )
+                if self.goal_cancel_requested:
+                    result.message = "Misión cancelada y robot en base."
+                elif self.emergency_stop_requested:
+                    result.message = "Parada de emergencia ejecutada y robot en base."
+                elif self.comms_degraded:
+                    result.message = "Comunicaciones degradadas; retorno seguro completado."
+                else:
+                    result.message = "Misión completada y robot en base."
 
                 self.active_goal_handle = None
                 self.goal_cancel_requested = False
@@ -416,14 +492,37 @@ class MissionManagerNode(Node):
         response.success = True
         return response
 
+    def handle_emergency_stop(
+        self,
+        request: EmergencyStop.Request,
+        response: EmergencyStop.Response,
+    ) -> EmergencyStop.Response:
+        self.emergency_stop_requested = True
+        self.goal_cancel_requested = False
+        self.comms_degraded = False
+        self.state = "EMERGENCY_STOP"
+        self.sync_reel("STOP", 0.0)
+        self.call_stop_pump(ack_event_type=None)
+        self.publish_event(
+            "emergency_stop",
+            f"Parada de emergencia solicitada desde {request.source}: {request.reason}",
+        )
+        response.success = True
+        response.message = "Parada de emergencia latched en la maestra."
+        return response
+
     def handle_reset_fault(self, request: ResetFault.Request, response: ResetFault.Response) -> ResetFault.Response:
-        if self.state != "FAULT":
+        if self.state not in {"FAULT", "EMERGENCY_STOP", "DEGRADED_COMMS"}:
             response.success = False
             response.message = f"No hay fallo activo que resetear. Fuente solicitada: {request.source}"
             return response
 
         self.state = "IDLE"
         self.comms_degraded = False
+        self.emergency_stop_requested = False
+        self.goal_cancel_requested = False
+        self.return_home_command_sent = False
+        self.mission_fault = None
         response.success = True
         response.message = f"Fallo reseteado desde {request.source}: {request.reason}"
         self.publish_event("fault_reset", response.message)

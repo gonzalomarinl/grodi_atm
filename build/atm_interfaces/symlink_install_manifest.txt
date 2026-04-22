@@ -9,6 +9,7 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SlaveStatus.json
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SprayReport.json
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ArmSystem.json
+/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/EmergencyStop.json
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ResetFault.json
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StartPump.json
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StopPump.json
@@ -81,6 +82,9 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__functions.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__struct.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__type_support.h
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/emergency_stop__functions.h
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/emergency_stop__struct.h
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/emergency_stop__type_support.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__functions.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__struct.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__type_support.h
@@ -99,6 +103,7 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__functions.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__struct.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__type_support.h
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/emergency_stop.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/get_system_state.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/reset_fault.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/set_admission_reel_mode.h
@@ -123,6 +128,7 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__rosidl_typesupport_fastrtps_c.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__rosidl_typesupport_fastrtps_c.h
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/emergency_stop__rosidl_typesupport_fastrtps_c.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__rosidl_typesupport_fastrtps_c.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__rosidl_typesupport_fastrtps_c.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__rosidl_typesupport_fastrtps_c.h
@@ -145,6 +151,7 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__rosidl_typesupport_introspection_c.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__rosidl_typesupport_introspection_c.h
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/emergency_stop__rosidl_typesupport_introspection_c.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__rosidl_typesupport_introspection_c.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__rosidl_typesupport_introspection_c.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__rosidl_typesupport_introspection_c.h
@@ -227,6 +234,10 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__struct.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__traits.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__type_support.hpp
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/emergency_stop__builder.hpp
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/emergency_stop__struct.hpp
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/emergency_stop__traits.hpp
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/emergency_stop__type_support.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__builder.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__struct.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__traits.hpp
@@ -251,6 +262,7 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__struct.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__traits.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/stop_pump__type_support.hpp
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/emergency_stop.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/get_system_state.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/reset_fault.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/set_admission_reel_mode.hpp
@@ -273,6 +285,7 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__rosidl_typesupport_fastrtps_cpp.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__rosidl_typesupport_fastrtps_cpp.hpp
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/emergency_stop__rosidl_typesupport_fastrtps_cpp.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__rosidl_typesupport_fastrtps_cpp.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__rosidl_typesupport_fastrtps_cpp.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__rosidl_typesupport_fastrtps_cpp.hpp
@@ -294,6 +307,7 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/spray_report__rosidl_typesupport_introspection_cpp.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/msg/detail/stop_detection__rosidl_typesupport_introspection_cpp.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/arm_system__rosidl_typesupport_introspection_cpp.hpp
+/home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/emergency_stop__rosidl_typesupport_introspection_cpp.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/get_system_state__rosidl_typesupport_introspection_cpp.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/reset_fault__rosidl_typesupport_introspection_cpp.hpp
 /home/gonzalo/grodi_atm/install/atm_interfaces/include/atm_interfaces/atm_interfaces/srv/detail/set_admission_reel_mode__rosidl_typesupport_introspection_cpp.hpp
@@ -346,6 +360,8 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/__init__.py
 /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_arm_system.py
 /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_arm_system_s.c
+/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_emergency_stop.py
+/home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_emergency_stop_s.c
 /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_get_system_state.py
 /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_get_system_state_s.c
 /home/gonzalo/grodi_atm/install/atm_interfaces/lib/python3.12/site-packages/atm_interfaces/srv/_reset_fault.py
@@ -381,6 +397,7 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SlaveStatus.idl
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SprayReport.idl
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ArmSystem.idl
+/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/EmergencyStop.idl
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ResetFault.idl
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StartPump.idl
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StopPump.idl
@@ -402,6 +419,7 @@
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SlaveStatus.msg
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/msg/SprayReport.msg
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ArmSystem.srv
+/home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/EmergencyStop.srv
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/ResetFault.srv
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StartPump.srv
 /home/gonzalo/grodi_atm/install/atm_interfaces/share/atm_interfaces/srv/StopPump.srv

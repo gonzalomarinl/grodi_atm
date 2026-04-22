@@ -28,6 +28,8 @@ msg/StopDetection.idl
 msg/StopDetection.msg
 srv/ArmSystem.idl
 srv/ArmSystem.srv
+srv/EmergencyStop.idl
+srv/EmergencyStop.srv
 srv/GetSystemState.idl
 srv/GetSystemState.srv
 srv/ResetFault.idl

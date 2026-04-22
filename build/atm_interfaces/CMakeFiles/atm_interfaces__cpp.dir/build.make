@@ -116,6 +116,11 @@ CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/a
 CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/arm_system__struct.hpp
 CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/arm_system__traits.hpp
 CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/arm_system__type_support.hpp
+CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/emergency_stop.hpp
+CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__builder.hpp
+CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__struct.hpp
+CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__traits.hpp
+CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__type_support.hpp
 CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/reset_fault.hpp
 CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/reset_fault__builder.hpp
 CMakeFiles/atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/reset_fault__struct.hpp
@@ -202,6 +207,7 @@ rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp: rosidl_adapter/atm_interf
 rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp: rosidl_adapter/atm_interfaces/msg/SlaveStatus.idl
 rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp: rosidl_adapter/atm_interfaces/msg/SprayReport.idl
 rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp: rosidl_adapter/atm_interfaces/srv/ArmSystem.idl
+rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp: rosidl_adapter/atm_interfaces/srv/EmergencyStop.idl
 rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp: rosidl_adapter/atm_interfaces/srv/ResetFault.idl
 rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp: rosidl_adapter/atm_interfaces/srv/StartPump.idl
 rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp: rosidl_adapter/atm_interfaces/srv/StopPump.idl
@@ -370,6 +376,21 @@ rosidl_generator_cpp/atm_interfaces/srv/detail/arm_system__traits.hpp: rosidl_ge
 
 rosidl_generator_cpp/atm_interfaces/srv/detail/arm_system__type_support.hpp: rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/atm_interfaces/srv/detail/arm_system__type_support.hpp
+
+rosidl_generator_cpp/atm_interfaces/srv/emergency_stop.hpp: rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/atm_interfaces/srv/emergency_stop.hpp
+
+rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__builder.hpp: rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__builder.hpp
+
+rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__struct.hpp: rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__struct.hpp
+
+rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__traits.hpp: rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__traits.hpp
+
+rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__type_support.hpp: rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__type_support.hpp
 
 rosidl_generator_cpp/atm_interfaces/srv/reset_fault.hpp: rosidl_generator_cpp/atm_interfaces/msg/heartbeat.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/atm_interfaces/srv/reset_fault.hpp
@@ -616,6 +637,10 @@ atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/arm_system__
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/arm_system__struct.hpp
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/arm_system__traits.hpp
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/arm_system__type_support.hpp
+atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__builder.hpp
+atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__struct.hpp
+atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__traits.hpp
+atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/emergency_stop__type_support.hpp
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/get_system_state__builder.hpp
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/get_system_state__struct.hpp
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/get_system_state__traits.hpp
@@ -640,6 +665,7 @@ atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/stop_pump__b
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/stop_pump__struct.hpp
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/stop_pump__traits.hpp
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/detail/stop_pump__type_support.hpp
+atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/emergency_stop.hpp
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/get_system_state.hpp
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/reset_fault.hpp
 atm_interfaces__cpp: rosidl_generator_cpp/atm_interfaces/srv/set_admission_reel_mode.hpp

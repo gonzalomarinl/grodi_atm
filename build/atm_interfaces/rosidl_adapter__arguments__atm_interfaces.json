@@ -11,6 +11,7 @@
     "/home/gonzalo/grodi_atm/src/atm_interfaces:msg/SlaveStatus.msg",
     "/home/gonzalo/grodi_atm/src/atm_interfaces:msg/SprayReport.msg",
     "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/ArmSystem.srv",
+    "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/EmergencyStop.srv",
     "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/ResetFault.srv",
     "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/StartPump.srv",
     "/home/gonzalo/grodi_atm/src/atm_interfaces:srv/StopPump.srv",

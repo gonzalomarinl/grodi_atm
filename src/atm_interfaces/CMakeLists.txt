@@ -23,6 +23,7 @@ set(msg_files
 
 set(srv_files
   "srv/ArmSystem.srv"
+  "srv/EmergencyStop.srv"
   "srv/ResetFault.srv"
   "srv/StartPump.srv"
   "srv/StopPump.srv"

@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "atm_interfaces/msg/detail/heartbeat__struct.h"
-#include "atm_interfaces/msg/detail/heartbeat__type_support.h"
 #include "atm_interfaces/msg/detail/heartbeat__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "atm_interfaces/msg/detail/heartbeat__type_support.h"
+#include "atm_interfaces/msg/detail/heartbeat__struct.h"
 
 #ifdef __cplusplus
 extern "C"

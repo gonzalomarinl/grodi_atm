@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
-#include "atm_interfaces/msg/detail/spray_report__functions.h"
 #include "atm_interfaces/msg/detail/spray_report__struct.h"
+#include "atm_interfaces/msg/detail/spray_report__functions.h"
 #include "atm_interfaces/msg/detail/spray_report__type_support.h"
 
 #ifdef __cplusplus

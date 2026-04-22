@@ -348,6 +348,9 @@ ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" F
 # install(FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_type_description/atm_interfaces/srv/ArmSystem.json" "DESTINATION" "share/atm_interfaces/srv")
 ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_type_description/atm_interfaces/srv/ArmSystem.json" "DESTINATION" "share/atm_interfaces/srv")
 
+# install(FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_type_description/atm_interfaces/srv/EmergencyStop.json" "DESTINATION" "share/atm_interfaces/srv")
+ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_type_description/atm_interfaces/srv/EmergencyStop.json" "DESTINATION" "share/atm_interfaces/srv")
+
 # install(FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_type_description/atm_interfaces/srv/ResetFault.json" "DESTINATION" "share/atm_interfaces/srv")
 ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_type_description/atm_interfaces/srv/ResetFault.json" "DESTINATION" "share/atm_interfaces/srv")
 
@@ -462,6 +465,9 @@ ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" F
 # install(FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces/srv/ArmSystem.idl" "DESTINATION" "share/atm_interfaces/srv")
 ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces/srv/ArmSystem.idl" "DESTINATION" "share/atm_interfaces/srv")
 
+# install(FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces/srv/EmergencyStop.idl" "DESTINATION" "share/atm_interfaces/srv")
+ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces/srv/EmergencyStop.idl" "DESTINATION" "share/atm_interfaces/srv")
+
 # install(FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces/srv/ResetFault.idl" "DESTINATION" "share/atm_interfaces/srv")
 ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" FILES "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces/srv/ResetFault.idl" "DESTINATION" "share/atm_interfaces/srv")
 
@@ -524,6 +530,9 @@ ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" F
 
 # install(FILES "/home/gonzalo/grodi_atm/src/atm_interfaces/srv/ArmSystem.srv" "DESTINATION" "share/atm_interfaces/srv")
 ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" FILES "/home/gonzalo/grodi_atm/src/atm_interfaces/srv/ArmSystem.srv" "DESTINATION" "share/atm_interfaces/srv")
+
+# install(FILES "/home/gonzalo/grodi_atm/src/atm_interfaces/srv/EmergencyStop.srv" "DESTINATION" "share/atm_interfaces/srv")
+ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" FILES "/home/gonzalo/grodi_atm/src/atm_interfaces/srv/EmergencyStop.srv" "DESTINATION" "share/atm_interfaces/srv")
 
 # install(FILES "/home/gonzalo/grodi_atm/src/atm_interfaces/srv/ResetFault.srv" "DESTINATION" "share/atm_interfaces/srv")
 ament_cmake_symlink_install_files("/home/gonzalo/grodi_atm/src/atm_interfaces" FILES "/home/gonzalo/grodi_atm/src/atm_interfaces/srv/ResetFault.srv" "DESTINATION" "share/atm_interfaces/srv")

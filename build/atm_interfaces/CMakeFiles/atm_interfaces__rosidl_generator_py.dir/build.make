@@ -209,10 +209,24 @@ CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_inter
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c.s
 
+CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
+CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.o: rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c
+CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c
+
+CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c > CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.i
+
+CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.s
+
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o: rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c
 
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_inter
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.o: rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c
 
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.i: cmake_force
@@ -240,7 +254,7 @@ CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_inter
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.o: rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c
 
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_inter
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c.o: rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c
 
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_admission_reel_mode_s.c.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_inter
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c.o: rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c
 
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_set_zone_selection_s.c.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_inter
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.o: rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c
 
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_inter
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c.o: rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c
 
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_execute_mission_s.c.i: cmake_force
@@ -310,7 +324,7 @@ CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_inter
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c.o: rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c
 
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_navigate_to_stop_s.c.i: cmake_force
@@ -324,7 +338,7 @@ CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_inter
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c.o: rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c
 
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_spray_at_stop_s.c.i: cmake_force
@@ -338,7 +352,7 @@ CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_inter
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c.o: rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c
 
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_return_to_base_s.c.i: cmake_force
@@ -352,7 +366,7 @@ CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_inter
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_run_purge_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_run_purge_s.c.o: rosidl_generator_py/atm_interfaces/action/_run_purge_s.c
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_run_purge_s.c.o: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_run_purge_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_run_purge_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_run_purge_s.c.o -MF CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_run_purge_s.c.o.d -o CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_run_purge_s.c.o -c /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_py/atm_interfaces/action/_run_purge_s.c
 
 CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/action/_run_purge_s.c.i: cmake_force
@@ -375,6 +389,7 @@ atm_interfaces__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_slave_status_s.c.o" \
 "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_spray_report_s.c.o" \
 "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c.o" \
+"CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.o" \
 "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o" \
 "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.o" \
 "CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.o" \
@@ -400,6 +415,7 @@ libatm_interfaces__rosidl_generator_py.so: CMakeFiles/atm_interfaces__rosidl_gen
 libatm_interfaces__rosidl_generator_py.so: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_slave_status_s.c.o
 libatm_interfaces__rosidl_generator_py.so: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/msg/_spray_report_s.c.o
 libatm_interfaces__rosidl_generator_py.so: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c.o
+libatm_interfaces__rosidl_generator_py.so: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c.o
 libatm_interfaces__rosidl_generator_py.so: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c.o
 libatm_interfaces__rosidl_generator_py.so: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c.o
 libatm_interfaces__rosidl_generator_py.so: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c.o
@@ -457,7 +473,7 @@ libatm_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libunique_identifi
 libatm_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libatm_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/librcutils.so
 libatm_interfaces__rosidl_generator_py.so: CMakeFiles/atm_interfaces__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking C shared library libatm_interfaces__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gonzalo/grodi_atm/build/atm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking C shared library libatm_interfaces__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/atm_interfaces__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

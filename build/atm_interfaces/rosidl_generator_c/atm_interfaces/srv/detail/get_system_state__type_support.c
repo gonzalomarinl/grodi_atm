@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
+#include "atm_interfaces/srv/detail/get_system_state__type_support.h"
 #include "atm_interfaces/srv/detail/get_system_state__struct.h"
 #include "atm_interfaces/srv/detail/get_system_state__functions.h"
-#include "atm_interfaces/srv/detail/get_system_state__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

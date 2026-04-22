@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "atm_interfaces/srv/detail/stop_pump__struct.h"
-#include "atm_interfaces/srv/detail/stop_pump__type_support.h"
 #include "atm_interfaces/srv/detail/stop_pump__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "atm_interfaces/srv/detail/stop_pump__type_support.h"
+#include "atm_interfaces/srv/detail/stop_pump__struct.h"
 
 #ifdef __cplusplus
 extern "C"

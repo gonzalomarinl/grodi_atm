@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "atm_interfaces/msg/detail/slave_status__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "atm_interfaces/msg/detail/slave_status__type_support.h"
 #include "atm_interfaces/msg/detail/slave_status__struct.h"
-#include "atm_interfaces/msg/detail/slave_status__functions.h"
 
 #ifdef __cplusplus
 extern "C"

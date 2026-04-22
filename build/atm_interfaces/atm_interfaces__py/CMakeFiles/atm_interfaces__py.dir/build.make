@@ -79,6 +79,7 @@ include /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFil
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/msg/_slave_status.py
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/msg/_spray_report.py
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_arm_system.py
+/home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_emergency_stop.py
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_reset_fault.py
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_start_pump.py
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_stop_pump.py
@@ -103,6 +104,7 @@ include /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFil
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/msg/_slave_status_s.c
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/msg/_spray_report_s.c
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c
+/home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_start_pump_s.c
 /home/gonzalo/grodi_atm/build/atm_interfaces/atm_interfaces__py/CMakeFiles/atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_stop_pump_s.c
@@ -138,6 +140,7 @@ rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastr
 rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/atm_interfaces/msg/SlaveStatus.idl
 rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/atm_interfaces/msg/SprayReport.idl
 rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/atm_interfaces/srv/ArmSystem.idl
+rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/atm_interfaces/srv/EmergencyStop.idl
 rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/atm_interfaces/srv/ResetFault.idl
 rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/atm_interfaces/srv/StartPump.idl
 rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/atm_interfaces/srv/StopPump.idl
@@ -195,6 +198,9 @@ rosidl_generator_py/atm_interfaces/msg/_spray_report.py: rosidl_generator_py/atm
 
 rosidl_generator_py/atm_interfaces/srv/_arm_system.py: rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/atm_interfaces/srv/_arm_system.py
+
+rosidl_generator_py/atm_interfaces/srv/_emergency_stop.py: rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/atm_interfaces/srv/_emergency_stop.py
 
 rosidl_generator_py/atm_interfaces/srv/_reset_fault.py: rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/atm_interfaces/srv/_reset_fault.py
@@ -268,6 +274,9 @@ rosidl_generator_py/atm_interfaces/msg/_spray_report_s.c: rosidl_generator_py/at
 rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c: rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c
 
+rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c: rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c
+
 rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c: rosidl_generator_py/atm_interfaces/_atm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/atm_interfaces/srv/_reset_fault_s.c
 
@@ -338,6 +347,8 @@ atm_interfaces__py: rosidl_generator_py/atm_interfaces/msg/_stop_detection_s.c
 atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/__init__.py
 atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_arm_system.py
 atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_arm_system_s.c
+atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_emergency_stop.py
+atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_emergency_stop_s.c
 atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_get_system_state.py
 atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_get_system_state_s.c
 atm_interfaces__py: rosidl_generator_py/atm_interfaces/srv/_reset_fault.py

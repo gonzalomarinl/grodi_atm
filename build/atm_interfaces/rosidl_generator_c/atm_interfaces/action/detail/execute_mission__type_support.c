@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
-#include "atm_interfaces/action/detail/execute_mission__struct.h"
 #include "atm_interfaces/action/detail/execute_mission__type_support.h"
+#include "atm_interfaces/action/detail/execute_mission__struct.h"
 #include "atm_interfaces/action/detail/execute_mission__functions.h"
 
 #ifdef __cplusplus

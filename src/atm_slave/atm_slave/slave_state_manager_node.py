@@ -24,6 +24,7 @@ class SlaveStateManagerNode(Node):
         self.declare_parameter("startup_state", "AT_BASE")
         self.declare_parameter("max_stop_retries", 3)
         self.declare_parameter("max_skipped_waypoints", 3)
+        self.declare_parameter("master_heartbeat_timeout_sec", 5.0)
 
         self.machine_id = self.get_parameter("machine_id").value
         self.state = self.get_parameter("startup_state").value
@@ -37,6 +38,7 @@ class SlaveStateManagerNode(Node):
         self.atomizer_down = False
         self.link_ok = False
         self.last_master_heartbeat = 0.0
+        self.master_heartbeat_timeout = float(self.get_parameter("master_heartbeat_timeout_sec").value)
         self.max_stop_retries = int(self.get_parameter("max_stop_retries").value)
         self.max_skipped_waypoints = int(self.get_parameter("max_skipped_waypoints").value)
 
@@ -48,6 +50,8 @@ class SlaveStateManagerNode(Node):
         self.pending_targets: deque[LineTarget] = deque()
         self.active_target_retry_count = 0
         self.skipped_target_count = 0
+        self.link_loss_return_announced = False
+        self.emergency_stop_announced = False
 
         self.status_pub = self.create_publisher(SlaveStatus, "slave/status", 20)
         self.event_pub = self.create_publisher(MissionEvent, "mission/events", 20)
@@ -75,11 +79,16 @@ class SlaveStateManagerNode(Node):
         if msg.state == "MISSION_LOADED":
             self.mission_loaded = True
             self.return_requested = False
+            self.link_loss_return_announced = False
+            self.emergency_stop_announced = False
             self.active_target_retry_count = 0
             self.skipped_target_count = 0
             self.publish_event("mission_loaded", f"Misión {msg.mission_id} cargada.")
         elif msg.state in ("EMERGENCY_STOP", "FAULT"):
             self.return_requested = True
+            if msg.state == "EMERGENCY_STOP" and not self.emergency_stop_announced:
+                self.emergency_stop_announced = True
+                self.publish_event("emergency_stop_received", "Parada de emergencia recibida desde maestra.")
 
     def handle_mission_target(self, msg: LineTarget) -> None:
         self.pending_targets.append(msg)
@@ -93,6 +102,8 @@ class SlaveStateManagerNode(Node):
 
     def handle_master_heartbeat(self, _msg: Heartbeat) -> None:
         self.last_master_heartbeat = self.get_clock().now().nanoseconds / 1e9
+        if not self.link_ok:
+            self.publish_event("link_restored", "Heartbeat de maestra recuperado.")
         self.link_ok = True
 
     def handle_vertical_event(self, msg: MissionEvent) -> None:
@@ -125,7 +136,7 @@ class SlaveStateManagerNode(Node):
 
     def publish_status(self) -> None:
         now_sec = self.get_clock().now().nanoseconds / 1e9
-        if self.last_master_heartbeat > 0.0 and (now_sec - self.last_master_heartbeat) > 5.0:
+        if self.last_master_heartbeat > 0.0 and (now_sec - self.last_master_heartbeat) > self.master_heartbeat_timeout:
             self.link_ok = False
 
         msg = SlaveStatus()
@@ -142,6 +153,15 @@ class SlaveStateManagerNode(Node):
     def control_loop(self) -> None:
         if self.action_in_progress:
             return
+
+        if self.mission_loaded and not self.link_ok and not self.at_base and not self.return_requested:
+            self.return_requested = True
+            if not self.link_loss_return_announced:
+                self.link_loss_return_announced = True
+                self.publish_event(
+                    "link_degraded",
+                    "Heartbeat de maestra perdido; retorno autonomo a base solicitado.",
+                )
 
         if self.return_requested and not self.at_base:
             self.start_return()
@@ -331,6 +351,8 @@ class SlaveStateManagerNode(Node):
     def finish_mission(self) -> None:
         self.mission_loaded = False
         self.return_requested = False
+        self.link_loss_return_announced = False
+        self.emergency_stop_announced = False
         self.active_target = None
         self.pending_targets.clear()
         self.active_target_retry_count = 0

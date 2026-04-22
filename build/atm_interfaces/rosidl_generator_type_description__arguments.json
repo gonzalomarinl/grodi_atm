@@ -12,6 +12,7 @@
     "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:msg/SlaveStatus.idl",
     "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:msg/SprayReport.idl",
     "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/ArmSystem.idl",
+    "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/EmergencyStop.idl",
     "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/ResetFault.idl",
     "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/StartPump.idl",
     "/home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_adapter/atm_interfaces:srv/StopPump.idl",

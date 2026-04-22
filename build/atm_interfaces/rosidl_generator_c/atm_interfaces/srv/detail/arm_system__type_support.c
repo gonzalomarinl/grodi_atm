@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "atm_interfaces/srv/detail/arm_system__functions.h"
-#include "atm_interfaces/srv/detail/arm_system__type_support.h"
 #include "atm_interfaces/srv/detail/arm_system__struct.h"
+#include "atm_interfaces/srv/detail/arm_system__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "atm_interfaces/srv/detail/arm_system__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

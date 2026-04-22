@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
-#include "atm_interfaces/msg/detail/line_target__type_support.h"
-#include "atm_interfaces/msg/detail/line_target__struct.h"
 #include "atm_interfaces/msg/detail/line_target__functions.h"
+#include "atm_interfaces/msg/detail/line_target__struct.h"
+#include "atm_interfaces/msg/detail/line_target__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

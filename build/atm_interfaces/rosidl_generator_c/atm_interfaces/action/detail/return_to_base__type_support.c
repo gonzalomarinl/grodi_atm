@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
+#include "atm_interfaces/action/detail/return_to_base__struct.h"
 #include "atm_interfaces/action/detail/return_to_base__functions.h"
 #include "atm_interfaces/action/detail/return_to_base__type_support.h"
-#include "atm_interfaces/action/detail/return_to_base__struct.h"
 
 #ifdef __cplusplus
 extern "C"

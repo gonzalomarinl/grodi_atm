@@ -98,6 +98,7 @@ rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interface
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/msg/SlaveStatus.idl
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/msg/SprayReport.idl
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/srv/ArmSystem.idl
+rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/srv/EmergencyStop.idl
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/srv/ResetFault.idl
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/srv/StartPump.idl
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/srv/StopPump.idl
@@ -119,6 +120,7 @@ rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interface
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/msg/SlaveStatus.idl
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/msg/SprayReport.idl
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/srv/ArmSystem.idl
+rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/srv/EmergencyStop.idl
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/srv/ResetFault.idl
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/srv/StartPump.idl
 rosidl_generator_rs/atm_interfaces/rust/src/lib.rs: rosidl_adapter/atm_interfaces/srv/StopPump.idl

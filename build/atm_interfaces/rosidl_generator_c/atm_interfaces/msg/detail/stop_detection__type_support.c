@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
-#include "atm_interfaces/msg/detail/stop_detection__struct.h"
-#include "atm_interfaces/msg/detail/stop_detection__type_support.h"
 #include "atm_interfaces/msg/detail/stop_detection__functions.h"
+#include "atm_interfaces/msg/detail/stop_detection__type_support.h"
+#include "atm_interfaces/msg/detail/stop_detection__struct.h"
 
 #ifdef __cplusplus
 extern "C"

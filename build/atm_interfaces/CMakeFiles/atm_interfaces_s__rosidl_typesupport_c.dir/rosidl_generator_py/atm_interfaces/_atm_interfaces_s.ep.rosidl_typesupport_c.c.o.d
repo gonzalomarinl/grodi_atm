@@ -262,6 +262,9 @@ CMakeFiles/atm_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/atm_in
  /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_c/atm_interfaces/srv/detail/arm_system__struct.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
  /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_c/atm_interfaces/srv/detail/arm_system__functions.h \
+ /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_c/atm_interfaces/srv/detail/emergency_stop__type_support.h \
+ /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_c/atm_interfaces/srv/detail/emergency_stop__struct.h \
+ /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_c/atm_interfaces/srv/detail/emergency_stop__functions.h \
  /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_c/atm_interfaces/srv/detail/reset_fault__type_support.h \
  /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_c/atm_interfaces/srv/detail/reset_fault__struct.h \
  /home/gonzalo/grodi_atm/build/atm_interfaces/rosidl_generator_c/atm_interfaces/srv/detail/reset_fault__functions.h \

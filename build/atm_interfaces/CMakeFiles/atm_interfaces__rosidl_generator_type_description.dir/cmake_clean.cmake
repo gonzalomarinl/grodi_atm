@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "rosidl_generator_type_description/atm_interfaces/msg/SprayReport.json"
   "rosidl_generator_type_description/atm_interfaces/msg/StopDetection.json"
   "rosidl_generator_type_description/atm_interfaces/srv/ArmSystem.json"
+  "rosidl_generator_type_description/atm_interfaces/srv/EmergencyStop.json"
   "rosidl_generator_type_description/atm_interfaces/srv/GetSystemState.json"
   "rosidl_generator_type_description/atm_interfaces/srv/ResetFault.json"
   "rosidl_generator_type_description/atm_interfaces/srv/SetAdmissionReelMode.json"

@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "atm_interfaces/msg/detail/mission_event__functions.h"
+#include "atm_interfaces/msg/detail/mission_event__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "atm_interfaces/msg/detail/mission_event__struct.h"
-#include "atm_interfaces/msg/detail/mission_event__type_support.h"
-#include "atm_interfaces/msg/detail/mission_event__functions.h"
 
 #ifdef __cplusplus
 extern "C"
