@@ -1,4 +1,4 @@
-"""Control lógico de subida y bajada del atomizador."""
+"""Control legacy de subida y bajada lógica del atomizador."""
 
 from __future__ import annotations
 

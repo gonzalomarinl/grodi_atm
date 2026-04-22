@@ -9,13 +9,11 @@ setup.py
 ../../build/atm_master/atm_master.egg-info/top_level.txt
 ../../build/atm_master/atm_master.egg-info/zip-safe
 atm_master/__init__.py
-atm_master/admission_reel_controller_node.py
 atm_master/common.py
 atm_master/ground_reel_motor_node.py
 atm_master/hose_guide_controller_node.py
 atm_master/master_health_publisher_node.py
 atm_master/master_watchdog_node.py
-atm_master/mission_event_logger_node.py
 atm_master/mission_manager_node.py
 atm_master/pump_controller_node.py
 atm_master/server_mission_loader_node.py
@@ -26,6 +24,9 @@ atm_master.egg-info/entry_points.txt
 atm_master.egg-info/requires.txt
 atm_master.egg-info/top_level.txt
 atm_master.egg-info/zip-safe
+atm_master/legacy/__init__.py
+atm_master/legacy/admission_reel_controller_node.py
+atm_master/legacy/mission_event_logger_node.py
 config/master_params.yaml
 launch/master.launch.py
 resource/atm_master

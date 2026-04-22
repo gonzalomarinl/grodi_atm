@@ -1,4 +1,4 @@
-"""Logger base de eventos de misión."""
+"""Logger legacy de eventos de misión en texto plano."""
 
 from pathlib import Path
 

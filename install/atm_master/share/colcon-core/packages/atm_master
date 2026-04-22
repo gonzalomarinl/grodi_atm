@@ -1,1 +1,1 @@
-ament_index_python:atm_interfaces:atm_link:launch:launch_ros:rclpy:std_srvs
+ament_index_python:atm_interfaces:atm_link:atm_logging:launch:launch_ros:rclpy:std_srvs

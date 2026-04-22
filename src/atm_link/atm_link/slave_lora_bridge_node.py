@@ -61,6 +61,7 @@ class SlaveLoraBridgeNode(Node):
         self.mission_state_pub = self.create_publisher(MissionState, "slave/incoming/mission_state", 20)
         self.target_pub = self.create_publisher(LineTarget, "slave/incoming/mission_target", 20)
         self.event_pub = self.create_publisher(MissionEvent, "slave/incoming/mission_event", 20)
+        self.diag_pub = self.create_publisher(MissionEvent, "link/diagnostics", 50)
 
         self.create_subscription(SlaveStatus, "slave/status", self.handle_slave_status, 20)
         self.create_subscription(FaultReport, "system/faults", self.handle_fault_report, 20)
@@ -76,6 +77,14 @@ class SlaveLoraBridgeNode(Node):
         )
 
         self.get_logger().info("Slave LoRa bridge listo.")
+
+    def publish_diag(self, event_type: str, detail: str) -> None:
+        msg = MissionEvent()
+        msg.event_type = event_type
+        msg.source = self.get_name()
+        msg.detail = detail
+        msg.stamp = self.get_clock().now().to_msg()
+        self.diag_pub.publish(msg)
 
     def next_seq(self) -> int:
         self.seq = protocol.next_seq(self.seq)
@@ -94,6 +103,7 @@ class SlaveLoraBridgeNode(Node):
         self.transport.send(full_frame)
         if protocol.requires_ack(full_frame):
             self.pending_acks[seq] = {"frame": full_frame, "sent_at": time.monotonic(), "retries": 0}
+            self.publish_diag("link_tx_critical", f"type={full_frame['msg_type']} seq={seq}")
 
     def publish_local_heartbeat(self) -> None:
         msg = Heartbeat()
@@ -114,6 +124,7 @@ class SlaveLoraBridgeNode(Node):
                 critical=False,
             )
         )
+        self.publish_diag("link_tx_heartbeat", f"seq={msg.seq}")
 
     def handle_slave_status(self, msg: SlaveStatus) -> None:
         self.send_frame(slave_status_to_frame(msg))
@@ -140,14 +151,16 @@ class SlaveLoraBridgeNode(Node):
             self.send_frame(mission_event_to_frame(msg))
 
     def send_ack(self, received_frame: dict) -> None:
+        ack_seq = int(received_frame.get("seq", 0))
         self.transport.send(
             protocol.build_ack(
                 seq=self.next_seq(),
-                ack_seq=int(received_frame.get("seq", 0)),
+                ack_seq=ack_seq,
                 source_id=protocol.SLAVE_ID,
                 target_id=protocol.MASTER_ID,
             )
         )
+        self.publish_diag("link_ack_tx", f"ack_seq={ack_seq}")
 
     def mark_duplicate(self, frame: dict) -> bool:
         seq = int(frame.get("seq", 0))
@@ -157,7 +170,9 @@ class SlaveLoraBridgeNode(Node):
         return False
 
     def handle_ack(self, frame: dict) -> None:
-        self.pending_acks.pop(int(frame.get("ack_seq", 0)), None)
+        ack_seq = int(frame.get("ack_seq", 0))
+        if self.pending_acks.pop(ack_seq, None) is not None:
+            self.publish_diag("link_ack_received", f"ack_seq={ack_seq}")
 
     def retry_pending(self) -> None:
         now = time.monotonic()
@@ -169,11 +184,16 @@ class SlaveLoraBridgeNode(Node):
                 self.get_logger().warning(
                     f"ACK agotado para seq={seq}, tipo={entry['frame'].get('msg_type', '')}"
                 )
+                self.publish_diag("link_ack_timeout", f"type={entry['frame'].get('msg_type', '')} seq={seq}")
                 expired.append(seq)
                 continue
             entry["retries"] += 1
             entry["sent_at"] = now
             self.transport.send(entry["frame"])
+            self.publish_diag(
+                "link_retry",
+                f"type={entry['frame'].get('msg_type', '')} seq={seq} retries={entry['retries']}",
+            )
             self.get_logger().warning(
                 f"Reintentando seq={seq}, tipo={entry['frame'].get('msg_type', '')}, "
                 f"intento={entry['retries']}/{self.max_retries}"
@@ -207,8 +227,11 @@ class SlaveLoraBridgeNode(Node):
             if parsed_flags["ack_required"]:
                 self.send_ack(frame)
             if is_duplicate:
+                self.publish_diag("link_duplicate_rx", f"type={frame.get('msg_type', '')} seq={frame.get('seq', 0)}")
                 continue
 
+            if parsed_flags["ack_required"]:
+                self.publish_diag("link_rx_critical", f"type={frame.get('msg_type', '')} seq={frame.get('seq', 0)}")
             self.publish_received_frame(frame)
 
     def destroy_node(self):

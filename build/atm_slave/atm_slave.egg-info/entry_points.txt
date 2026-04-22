@@ -1,8 +1,6 @@
 [console_scripts]
-navigation_executor_node = atm_slave.navigation_executor_node:main
 rail_motion_controller_node = atm_slave.rail_motion_controller_node:main
 slave_health_publisher_node = atm_slave.slave_health_publisher_node:main
 slave_state_manager_node = atm_slave.slave_state_manager_node:main
 spray_controller_node = atm_slave.spray_controller_node:main
-vertical_atomizer_controller_node = atm_slave.vertical_atomizer_controller_node:main
 vertical_reel_controller_node = atm_slave.vertical_reel_controller_node:main

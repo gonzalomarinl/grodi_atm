@@ -11,6 +11,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/config', ['config/logging_params.yaml']),
+        ('share/' + package_name + '/launch', ['launch/logging.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -25,6 +26,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'structured_event_logger_node = atm_logging.structured_event_logger_node:main',
+            'link_diagnostics_logger_node = atm_logging.link_diagnostics_logger_node:main',
+            'mission_summary_logger_node = atm_logging.mission_summary_logger_node:main',
         ],
     },
 )

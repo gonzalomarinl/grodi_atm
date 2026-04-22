@@ -6,6 +6,7 @@ from launch_ros.actions import Node
 def generate_launch_description() -> LaunchDescription:
     config_path = get_package_share_directory("atm_master") + "/config/master_params.yaml"
     link_config_path = get_package_share_directory("atm_link") + "/config/link_params.yaml"
+    logging_config_path = get_package_share_directory("atm_logging") + "/config/logging_params.yaml"
 
     return LaunchDescription(
         [
@@ -45,11 +46,25 @@ def generate_launch_description() -> LaunchDescription:
                 parameters=[config_path],
             ),
             Node(
-                package="atm_master",
-                executable="mission_event_logger_node",
-                name="mission_event_logger",
+                package="atm_logging",
+                executable="structured_event_logger_node",
+                name="structured_event_logger",
                 output="screen",
-                parameters=[config_path],
+                parameters=[logging_config_path],
+            ),
+            Node(
+                package="atm_logging",
+                executable="link_diagnostics_logger_node",
+                name="link_diagnostics_logger",
+                output="screen",
+                parameters=[logging_config_path],
+            ),
+            Node(
+                package="atm_logging",
+                executable="mission_summary_logger_node",
+                name="mission_summary_logger",
+                output="screen",
+                parameters=[logging_config_path],
             ),
             Node(
                 package="atm_master",

@@ -1,1 +1,1 @@
-atm_interfaces:rclpy
+ament_index_python:atm_interfaces:launch:launch_ros:rclpy

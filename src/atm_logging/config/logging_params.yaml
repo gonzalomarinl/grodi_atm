@@ -1,2 +1,20 @@
 /**:
   ros__parameters: {}
+
+structured_event_logger:
+  ros__parameters:
+    machine_id: master
+    base_log_dir: /var/log/atm
+    fallback_log_dir: /tmp/atm_logs
+
+link_diagnostics_logger:
+  ros__parameters:
+    machine_id: master
+    base_log_dir: /var/log/atm
+    fallback_log_dir: /tmp/atm_logs
+
+mission_summary_logger:
+  ros__parameters:
+    machine_id: master
+    base_log_dir: /var/log/atm
+    fallback_log_dir: /tmp/atm_logs

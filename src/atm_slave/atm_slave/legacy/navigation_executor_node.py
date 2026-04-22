@@ -1,4 +1,4 @@
-"""Servidor de acciones de navegación lógica de la esclava."""
+"""Servidor legacy de acciones de navegación lógica de la esclava."""
 
 from __future__ import annotations
 
