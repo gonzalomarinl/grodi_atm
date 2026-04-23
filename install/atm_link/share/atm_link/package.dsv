@@ -2,5 +2,3 @@ source;share/atm_link/hook/pythonpath.dsv
 source;share/atm_link/hook/pythonpath.sh
 source;share/atm_link/hook/ament_prefix_path.dsv
 source;share/atm_link/hook/ament_prefix_path.sh
-source;../../build/atm_link/share/atm_link/hook/pythonpath_develop.dsv
-source;../../build/atm_link/share/atm_link/hook/pythonpath_develop.sh

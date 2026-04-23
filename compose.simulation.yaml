@@ -1,0 +1,42 @@
+services:
+  atm_sim_headless:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.simulation
+    image: grodi-atm-simulation:jazzy
+    container_name: grodi-atm-simulation-headless
+    stdin_open: true
+    tty: true
+    environment:
+      ROS_DOMAIN_ID: ${ROS_DOMAIN_ID:-30}
+      RMW_IMPLEMENTATION: rmw_fastrtps_cpp
+    command:
+      - ros2
+      - launch
+      - atm_simulation
+      - atomizer_real_stack.launch.py
+
+  atm_sim_gui:
+    image: grodi-atm-simulation:jazzy
+    container_name: grodi-atm-simulation-gui
+    profiles: ["gui"]
+    stdin_open: true
+    tty: true
+    environment:
+      ROS_DOMAIN_ID: ${ROS_DOMAIN_ID:-30}
+      RMW_IMPLEMENTATION: rmw_fastrtps_cpp
+      DISPLAY: ${DISPLAY:-}
+      WAYLAND_DISPLAY: ${WAYLAND_DISPLAY:-}
+      XDG_RUNTIME_DIR: ${XDG_RUNTIME_DIR:-}
+      PULSE_SERVER: ${PULSE_SERVER:-}
+      QT_X11_NO_MITSHM: "1"
+    volumes:
+      - /mnt/wslg:/mnt/wslg
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev/dri:/dev/dri
+    command:
+      - bash
+      - -lc
+      - |
+        WORLD="$$(ros2 pkg prefix atm_simulation)/share/atm_simulation/worlds/atomizer_greenhouse.sdf"
+        ros2 launch atm_simulation atomizer_real_stack.launch.py gz_args:="-r $$WORLD"

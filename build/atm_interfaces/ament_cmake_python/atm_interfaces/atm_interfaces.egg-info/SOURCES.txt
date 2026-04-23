@@ -22,6 +22,7 @@ atm_interfaces/msg/_spray_report.py
 atm_interfaces/msg/_stop_detection.py
 atm_interfaces/srv/__init__.py
 atm_interfaces/srv/_arm_system.py
+atm_interfaces/srv/_emergency_stop.py
 atm_interfaces/srv/_get_system_state.py
 atm_interfaces/srv/_reset_fault.py
 atm_interfaces/srv/_set_admission_reel_mode.py

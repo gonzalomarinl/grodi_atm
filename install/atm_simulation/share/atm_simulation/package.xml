@@ -1,1 +1,32 @@
-/home/gonzalo/grodi_atm/build/atm_simulation/package.xml
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>atm_simulation</name>
+  <version>0.0.0</version>
+  <description>Entorno de simulacion Gazebo para el robot atomizador sobre rail.</description>
+  <maintainer email="gonzalo@todo.todo">gonzalo</maintainer>
+  <license>MIT</license>
+
+  <depend>ament_index_python</depend>
+  <depend>atm_interfaces</depend>
+  <depend>atm_link</depend>
+  <depend>atm_master</depend>
+  <depend>atm_slave</depend>
+  <depend>geometry_msgs</depend>
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+  <depend>rclpy</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+    <gazebo_ros gazebo_model_path="${prefix}/worlds"/>
+  </export>
+</package>

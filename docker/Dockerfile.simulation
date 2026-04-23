@@ -1,0 +1,33 @@
+FROM osrf/ros:jazzy-desktop-full
+
+SHELL ["/bin/bash", "-c"]
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV ROS_DISTRO=jazzy
+ENV ATM_WS=/workspace/grodi_atm
+
+WORKDIR ${ATM_WS}
+
+RUN apt-get update && apt-get install -y \
+    python3-colcon-common-extensions \
+    python3-rosdep \
+    python3-vcstool \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN rosdep init 2>/dev/null || true
+
+COPY . ${ATM_WS}
+
+RUN source /opt/ros/${ROS_DISTRO}/setup.bash \
+    && rosdep update \
+    && rosdep install --from-paths src --ignore-src -r -y --rosdistro ${ROS_DISTRO}
+
+RUN source /opt/ros/${ROS_DISTRO}/setup.bash \
+    && colcon build --symlink-install \
+       --packages-select atm_interfaces atm_link atm_logging atm_master atm_slave atm_simulation
+
+COPY docker/ros_entrypoint_sim.sh /ros_entrypoint_sim.sh
+RUN chmod +x /ros_entrypoint_sim.sh
+
+ENTRYPOINT ["/ros_entrypoint_sim.sh"]
+CMD ["ros2", "launch", "atm_simulation", "atomizer_real_stack.launch.py"]

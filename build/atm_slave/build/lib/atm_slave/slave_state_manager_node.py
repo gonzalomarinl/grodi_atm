@@ -22,6 +22,9 @@ class SlaveStateManagerNode(Node):
         self.declare_parameter("status_period_sec", 0.5)
         self.declare_parameter("control_period_sec", 0.2)
         self.declare_parameter("startup_state", "AT_BASE")
+        self.declare_parameter("max_stop_retries", 3)
+        self.declare_parameter("max_skipped_waypoints", 3)
+        self.declare_parameter("master_heartbeat_timeout_sec", 5.0)
 
         self.machine_id = self.get_parameter("machine_id").value
         self.state = self.get_parameter("startup_state").value
@@ -35,6 +38,9 @@ class SlaveStateManagerNode(Node):
         self.atomizer_down = False
         self.link_ok = False
         self.last_master_heartbeat = 0.0
+        self.master_heartbeat_timeout = float(self.get_parameter("master_heartbeat_timeout_sec").value)
+        self.max_stop_retries = int(self.get_parameter("max_stop_retries").value)
+        self.max_skipped_waypoints = int(self.get_parameter("max_skipped_waypoints").value)
 
         self.mission_loaded = False
         self.return_requested = False
@@ -42,6 +48,10 @@ class SlaveStateManagerNode(Node):
         self.current_phase = "IDLE"
         self.active_target: LineTarget | None = None
         self.pending_targets: deque[LineTarget] = deque()
+        self.active_target_retry_count = 0
+        self.skipped_target_count = 0
+        self.link_loss_return_announced = False
+        self.emergency_stop_announced = False
 
         self.status_pub = self.create_publisher(SlaveStatus, "slave/status", 20)
         self.event_pub = self.create_publisher(MissionEvent, "mission/events", 20)
@@ -68,13 +78,22 @@ class SlaveStateManagerNode(Node):
         self.mission_type = msg.mission_type
         if msg.state == "MISSION_LOADED":
             self.mission_loaded = True
+            self.return_requested = False
+            self.link_loss_return_announced = False
+            self.emergency_stop_announced = False
+            self.active_target_retry_count = 0
+            self.skipped_target_count = 0
             self.publish_event("mission_loaded", f"Misión {msg.mission_id} cargada.")
         elif msg.state in ("EMERGENCY_STOP", "FAULT"):
             self.return_requested = True
+            if msg.state == "EMERGENCY_STOP" and not self.emergency_stop_announced:
+                self.emergency_stop_announced = True
+                self.publish_event("emergency_stop_received", "Parada de emergencia recibida desde maestra.")
 
     def handle_mission_target(self, msg: LineTarget) -> None:
         self.pending_targets.append(msg)
-        self.publish_event("target_received", f"Objetivo {msg.line_id}:{msg.stop_index} en cola.")
+        gap_id = msg.gap_id or msg.line_id
+        self.publish_event("target_received", f"Objetivo {gap_id}:{msg.stop_index} en cola.")
 
     def handle_mission_event(self, msg: MissionEvent) -> None:
         if msg.event_type in {"return_home", "cancel_mission", "mission_cancelled"}:
@@ -83,6 +102,8 @@ class SlaveStateManagerNode(Node):
 
     def handle_master_heartbeat(self, _msg: Heartbeat) -> None:
         self.last_master_heartbeat = self.get_clock().now().nanoseconds / 1e9
+        if not self.link_ok:
+            self.publish_event("link_restored", "Heartbeat de maestra recuperado.")
         self.link_ok = True
 
     def handle_vertical_event(self, msg: MissionEvent) -> None:
@@ -115,7 +136,7 @@ class SlaveStateManagerNode(Node):
 
     def publish_status(self) -> None:
         now_sec = self.get_clock().now().nanoseconds / 1e9
-        if self.last_master_heartbeat > 0.0 and (now_sec - self.last_master_heartbeat) > 5.0:
+        if self.last_master_heartbeat > 0.0 and (now_sec - self.last_master_heartbeat) > self.master_heartbeat_timeout:
             self.link_ok = False
 
         msg = SlaveStatus()
@@ -133,6 +154,15 @@ class SlaveStateManagerNode(Node):
         if self.action_in_progress:
             return
 
+        if self.mission_loaded and not self.link_ok and not self.at_base and not self.return_requested:
+            self.return_requested = True
+            if not self.link_loss_return_announced:
+                self.link_loss_return_announced = True
+                self.publish_event(
+                    "link_degraded",
+                    "Heartbeat de maestra perdido; retorno autonomo a base solicitado.",
+                )
+
         if self.return_requested and not self.at_base:
             self.start_return()
             return
@@ -143,7 +173,8 @@ class SlaveStateManagerNode(Node):
 
         if self.mission_loaded and self.active_target is None and self.pending_targets:
             self.active_target = self.pending_targets.popleft()
-            self.current_line_id = self.active_target.line_id
+            self.active_target_retry_count = 0
+            self.current_line_id = self.active_target.gap_id or self.active_target.line_id
             self.current_stop_index = self.active_target.stop_index
             self.start_navigation(self.active_target)
             return
@@ -159,7 +190,7 @@ class SlaveStateManagerNode(Node):
 
         goal = NavigateToStop.Goal()
         goal.mission_id = self.mission_id
-        goal.line_id = target.line_id
+        goal.line_id = target.gap_id or target.line_id
         goal.stop_index = target.stop_index
 
         self.state = "MOVING"
@@ -167,7 +198,7 @@ class SlaveStateManagerNode(Node):
         self.moving = True
         self.action_in_progress = True
         self.current_phase = "NAVIGATING"
-        self.publish_event("navigation_started", f"Hacia {target.line_id}:{target.stop_index}")
+        self.publish_event("navigation_started", f"Hacia {goal.line_id}:{target.stop_index}")
 
         future = self.navigate_client.send_goal_async(goal, feedback_callback=self.on_navigation_feedback)
         future.add_done_callback(self.on_navigation_goal_response)
@@ -191,11 +222,36 @@ class SlaveStateManagerNode(Node):
         self.moving = False
         result = future.result().result
         if not result.success or not result.stop_found:
-            self.publish_fault("NAV_FAILED", result.message)
-            self.return_requested = True
+            self.active_target_retry_count += 1
+            if self.active_target_retry_count < self.max_stop_retries and self.active_target is not None:
+                self.publish_event(
+                    "stop_retry",
+                    (
+                        f"Reintento {self.active_target_retry_count}/{self.max_stop_retries} "
+                        f"para {self.current_line_id}:{self.current_stop_index}"
+                    ),
+                )
+                self.start_navigation(self.active_target)
+                return
+
+            self.skipped_target_count += 1
+            self.publish_event(
+                "target_skipped",
+                (
+                    f"Objetivo {self.current_line_id}:{self.current_stop_index} omitido tras "
+                    f"{self.max_stop_retries} intentos."
+                ),
+            )
+            self.active_target = None
+            self.active_target_retry_count = 0
+            self.state = "AT_BASE" if self.at_base else "STOP_CONFIRMED"
+            if self.skipped_target_count >= self.max_skipped_waypoints or not self.pending_targets:
+                self.publish_fault("NAV_FAILED", result.message)
+                self.return_requested = True
             return
 
         self.state = "STOP_CONFIRMED"
+        self.active_target_retry_count = 0
         self.publish_event("stop_confirmed", f"Parada confirmada en {self.current_line_id}:{self.current_stop_index}")
         self.start_spray()
 
@@ -245,6 +301,7 @@ class SlaveStateManagerNode(Node):
 
         self.publish_event("spray_completed", f"Fumigación completada en {self.current_line_id}:{self.current_stop_index}")
         self.active_target = None
+        self.active_target_retry_count = 0
         self.state = "AT_BASE" if not self.pending_targets and self.at_base else "STOP_CONFIRMED"
 
         if not self.pending_targets:
@@ -294,8 +351,12 @@ class SlaveStateManagerNode(Node):
     def finish_mission(self) -> None:
         self.mission_loaded = False
         self.return_requested = False
+        self.link_loss_return_announced = False
+        self.emergency_stop_announced = False
         self.active_target = None
         self.pending_targets.clear()
+        self.active_target_retry_count = 0
+        self.skipped_target_count = 0
         self.current_phase = "IDLE"
         self.current_line_id = ""
         self.current_stop_index = 0

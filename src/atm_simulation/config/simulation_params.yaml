@@ -1,0 +1,66 @@
+/gazebo_atomizer_controller:
+  ros__parameters:
+    world_name: atomizer_greenhouse
+    update_period_sec: 0.1
+    robot_y: 0.0
+    robot_z: 3.78
+    tube_y: 0.0
+    tube_upper_z: 2.55
+    led_visible_z: 0.12
+    led_hidden_z: -2.0
+    indicator_visible_z: 0.18
+    indicator_hidden_z: -2.0
+    led_red_x: 4.9
+    led_yellow_x: 5.25
+    led_green_x: 5.6
+    led_blue_x: 5.95
+    led_y: -6.0
+    indicator_ready_x: 4.85
+    indicator_degraded_x: 5.35
+    indicator_alert_x: 5.85
+    indicator_y: -5.2
+    reel_x: 6.4
+    reel_y: -4.2
+    reel_z: 0.0
+
+/atomizer_demo_sequence:
+  ros__parameters:
+    autostart_general: false
+    update_period_sec: 0.1
+    base_x: 5.5
+    gap_positions: [-3.0, -1.0, 1.0, 3.0]
+    travel_speed_mps: 0.8
+    tube_upper_z: 2.55
+    tube_lower_z: 1.55
+    lower_speed_mps: 0.55
+    raise_speed_mps: 0.55
+    lora_send_pulse_sec: 0.35
+    lora_receive_pulse_sec: 0.25
+    command_delay_sec: 0.2
+    complete_pause_sec: 0.5
+    pump_shutdown_margin_sec: 1.0
+    retry_backoff_sec: 0.7
+    degraded_hold_sec: 1.2
+    fault_hold_sec: 1.0
+    emergency_visual_sec: 1.0
+
+/atomizer_operator_console:
+  ros__parameters:
+    gap_count: 4
+
+/real_stack_visualizer:
+  ros__parameters:
+    update_period_sec: 0.1
+    base_x: 5.5
+    gap_positions: [-3.0, -1.0, 1.0, 3.0]
+    robot_speed_mps: 0.9
+    tube_upper_z: 2.55
+    tube_lower_z: 1.55
+    tube_speed_mps: 0.7
+    lora_pulse_sec: 0.3
+    degraded_indicator_sec: 0.8
+    reel_angular_speed: 0.35
+
+/real_stack_operator_console:
+  ros__parameters:
+    gap_count: 4

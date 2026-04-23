@@ -1,1 +1,32 @@
-/home/gonzalo/grodi_atm/build/atm_link/config/link_params.yaml
+/**:
+  ros__parameters: {}
+
+master_lora_bridge:
+  ros__parameters:
+    machine_id: master
+    transport_type: jsonl
+    tx_path: /tmp/atm_lora_master_to_slave.jsonl
+    rx_path: /tmp/atm_lora_slave_to_master.jsonl
+    uart_port: /dev/serial0
+    uart_baudrate: 9600
+    uart_timeout_sec: 0.05
+    poll_period_sec: 0.1
+    heartbeat_period_sec: 1.0
+    ack_timeout_sec: 0.4
+    max_retries: 3
+    dedupe_window_size: 64
+
+slave_lora_bridge:
+  ros__parameters:
+    machine_id: slave
+    transport_type: jsonl
+    tx_path: /tmp/atm_lora_slave_to_master.jsonl
+    rx_path: /tmp/atm_lora_master_to_slave.jsonl
+    uart_port: /dev/serial0
+    uart_baudrate: 9600
+    uart_timeout_sec: 0.05
+    poll_period_sec: 0.1
+    heartbeat_period_sec: 1.0
+    ack_timeout_sec: 0.4
+    max_retries: 3
+    dedupe_window_size: 64

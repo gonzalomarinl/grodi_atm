@@ -14,13 +14,6 @@ atm_slave/slave_health_publisher_node.py
 atm_slave/slave_state_manager_node.py
 atm_slave/spray_controller_node.py
 atm_slave/vertical_reel_controller_node.py
-atm_slave.egg-info/PKG-INFO
-atm_slave.egg-info/SOURCES.txt
-atm_slave.egg-info/dependency_links.txt
-atm_slave.egg-info/entry_points.txt
-atm_slave.egg-info/requires.txt
-atm_slave.egg-info/top_level.txt
-atm_slave.egg-info/zip-safe
 atm_slave/hardware/__init__.py
 atm_slave/hardware/moving_vega11.py
 atm_slave/hardware/vegaio.py
@@ -30,3 +23,6 @@ atm_slave/legacy/vertical_atomizer_controller_node.py
 config/slave_params.yaml
 launch/slave.launch.py
 resource/atm_slave
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

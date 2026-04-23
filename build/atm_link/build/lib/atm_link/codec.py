@@ -62,6 +62,7 @@ def line_target_to_frame(msg: LineTarget) -> dict:
         "msg_type": protocol.MISSION_TARGET,
         "payload": {
             "mission_id": msg.mission_id,
+            "gap_id": msg.gap_id,
             "line_id": msg.line_id,
             "stop_index": int(msg.stop_index),
             "mode": msg.mode,
@@ -75,6 +76,7 @@ def frame_to_line_target(frame: dict) -> LineTarget:
     payload = frame.get("payload", {})
     msg = LineTarget()
     msg.mission_id = payload.get("mission_id", "")
+    msg.gap_id = payload.get("gap_id", "")
     msg.line_id = payload.get("line_id", "")
     msg.stop_index = int(payload.get("stop_index", 0))
     msg.mode = payload.get("mode", "")

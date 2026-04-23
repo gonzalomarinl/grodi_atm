@@ -1,4 +1,4 @@
-"""Consola interactiva por teclado para controlar la simulación del atomizador."""
+"""Consola interactiva de la simulacion con seleccion de mision y modo de prueba."""
 
 from __future__ import annotations
 
@@ -12,202 +12,237 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 
+MODE_ALIASES = {
+    "n": "NORMAL",
+    "normal": "NORMAL",
+    "r": "RETRY_LORA",
+    "retry": "RETRY_LORA",
+    "retry_lora": "RETRY_LORA",
+    "d": "LINK_DEGRADED",
+    "degraded": "LINK_DEGRADED",
+    "link_degraded": "LINK_DEGRADED",
+    "x": "EMERGENCY_STOP",
+    "emergency": "EMERGENCY_STOP",
+    "emergency_stop": "EMERGENCY_STOP",
+    "f": "ACTUATION_FAULT",
+    "fault": "ACTUATION_FAULT",
+    "actuation_fault": "ACTUATION_FAULT",
+}
+
+
 class AtomizerOperatorConsoleNode(Node):
-    """Permite lanzar misiones simuladas desde teclado como si fuera el agricultor."""
+    """Permite lanzar la simulacion como mision general o selectiva con distintos casos."""
 
     def __init__(self) -> None:
         super().__init__("atomizer_operator_console")
 
-        self.declare_parameter("line_count", 5)
         self.declare_parameter("gap_count", 4)
 
-        self.line_count = int(self.get_parameter("line_count").value)
         self.gap_count = int(self.get_parameter("gap_count").value)
         self.input_queue: Queue[str] = Queue()
-        self.latest_phase = "IDLE"
-        self.latest_summary = "IDLE"
-        self.latest_state = {}
+        self.latest_state: dict[str, object] = {}
+        self.mission_running = False
         self._stop_requested = False
 
-        self.command_pub = self.create_publisher(String, "sim/demo/command", 10)
-        self.create_subscription(String, "sim/demo/phase", self.handle_phase, 20)
-        self.create_subscription(String, "sim/status/summary", self.handle_summary, 20)
-        self.create_subscription(String, "sim/demo/state", self.handle_state, 20)
+        self.awaiting_selective_targets = False
+        self.awaiting_test_mode = False
+        self.pending_request: dict[str, object] | None = None
+
+        self.request_pub = self.create_publisher(String, "sim/mission/request", 10)
+        self.create_subscription(String, "sim/mission/state", self.handle_state, 20)
+        self.create_subscription(String, "sim/mission/event", self.handle_event, 20)
 
         self.create_timer(0.2, self.process_input_queue)
 
         self.input_thread = threading.Thread(target=self.console_loop, daemon=True)
         self.input_thread.start()
+
+        self.print_banner()
         self.print_menu()
-        self.get_logger().info("Consola interactiva lista.")
-
-    def handle_phase(self, msg: String) -> None:
-        if msg.data != self.latest_phase:
-            self.latest_phase = msg.data
-            print(f"\n[FASE] {self.latest_phase}")
-
-    def handle_summary(self, msg: String) -> None:
-        if msg.data != self.latest_summary:
-            self.latest_summary = msg.data
-            print(f"[SIM] {self.latest_summary}")
+        self.get_logger().info("Consola de simulacion preparada para casos nominales y de prueba.")
 
     def handle_state(self, msg: String) -> None:
         try:
             self.latest_state = json.loads(msg.data)
         except json.JSONDecodeError:
             self.latest_state = {}
+            return
+        self.mission_running = bool(self.latest_state.get("running", False))
+
+    def handle_event(self, msg: String) -> None:
+        print(f"\n[SIM] {msg.data}")
+        if not self._stop_requested:
+            self.print_prompt()
 
     def console_loop(self) -> None:
         while not self._stop_requested:
             try:
-                user_input = input("\nSelecciona opción: ").strip()
+                user_input = input().strip()
             except EOFError:
-                self.input_queue.put("0")
+                self.input_queue.put("q")
                 return
             self.input_queue.put(user_input)
 
     def process_input_queue(self) -> None:
         try:
             while True:
-                user_input = self.input_queue.get_nowait()
-                self.handle_menu_option(user_input)
+                option = self.input_queue.get_nowait()
+                self.handle_option(option)
         except Empty:
             return
 
-    def handle_menu_option(self, option: str) -> None:
-        if option == "1":
-            self.launch_general_mission()
-        elif option == "2":
-            self.launch_selective_gap_mission()
-        elif option == "3":
-            self.launch_selective_line_mission()
-        elif option == "4":
-            self.publish_command({"command": "return_home"})
-            print("Retorno a base solicitado.")
-        elif option == "5":
-            self.publish_command({"command": "status"})
+    def handle_option(self, option: str) -> None:
+        if self.awaiting_selective_targets:
+            self.consume_selective_targets(option)
+            return
+
+        if self.awaiting_test_mode:
+            self.consume_test_mode(option)
+            return
+
+        lowered = option.lower()
+        if lowered in {"g", "general", "1"}:
+            self.start_general_mission()
+        elif lowered in {"s", "selectiva", "2"}:
+            self.start_selective_mission()
+        elif lowered in {"e", "estado", "3"}:
             self.print_status()
-        elif option == "6":
-            self.publish_command({"command": "reset_idle"})
-            print("Reset manual a IDLE solicitado.")
-        elif option == "0":
-            self._stop_requested = True
-            print("Saliendo de la consola interactiva.")
-            self.destroy_node()
-            if rclpy.ok():
-                rclpy.shutdown()
+        elif lowered in {"q", "salir", "0"}:
+            self.shutdown_console()
+            return
         else:
-            print("Opción no válida.")
+            print("Opcion no valida. Usa g, s, e o q.")
+
         if not self._stop_requested:
             self.print_menu()
 
-    def launch_general_mission(self) -> None:
-        confirm = input("¿Deseas actuar en todos los huecos? (s/n): ").strip().lower()
-        if confirm != "s":
-            print("Misión descartada por el operador.")
+    def start_general_mission(self) -> None:
+        if self.mission_running:
+            print("Ya hay una mision en curso.")
             return
 
-        mission_id = f"general_{uuid.uuid4().hex[:8]}"
-        targets = list(range(1, self.gap_count + 1))
-        self.publish_command(
-            {
-                "command": "run_mission",
-                "mission_id": mission_id,
-                "mission_mode": "GENERAL",
-                "targets": targets,
-            }
-        )
-        print(f"Misión general {mission_id} enviada con objetivos {targets}.")
+        self.pending_request = {
+            "command": "start",
+            "mission_id": f"general_{uuid.uuid4().hex[:8]}",
+            "mission_mode": "GENERAL",
+            "targets": list(range(1, self.gap_count + 1)),
+        }
+        self.awaiting_test_mode = True
+        print("Has elegido mision general.")
+        self.print_test_mode_prompt()
 
-    def launch_selective_gap_mission(self) -> None:
-        confirm = input("¿Deseas actuar de forma selectiva por hueco? (s/n): ").strip().lower()
-        if confirm != "s":
-            print("Misión selectiva cancelada.")
+    def start_selective_mission(self) -> None:
+        if self.mission_running:
+            print("Ya hay una mision en curso.")
             return
 
-        gap_id = input(f"Indica el hueco objetivo [1-{self.gap_count}]: ").strip()
-        try:
-            gap_value = int(gap_id)
-        except ValueError:
-            print("Hueco no válido.")
-            return
-        if not 1 <= gap_value <= self.gap_count:
-            print("Hueco fuera de rango.")
+        self.awaiting_selective_targets = True
+        print(f"Indica ahora los huecos objetivo separados por comas [1-{self.gap_count}]:")
+        self.print_prompt()
+
+    def consume_selective_targets(self, raw: str) -> None:
+        self.awaiting_selective_targets = False
+
+        targets: list[int] = []
+        for chunk in raw.split(","):
+            item = chunk.strip()
+            if not item:
+                continue
+            try:
+                gap_value = int(item)
+            except ValueError:
+                continue
+            if 1 <= gap_value <= self.gap_count and gap_value not in targets:
+                targets.append(gap_value)
+
+        if not targets:
+            print("No se ha indicado ningun hueco valido.")
             return
 
-        mission_id = f"selective_gap_{uuid.uuid4().hex[:8]}"
-        self.publish_command(
-            {
-                "command": "run_mission",
-                "mission_id": mission_id,
-                "mission_mode": "SELECTIVE_GAP",
-                "targets": [gap_value],
-            }
-        )
-        print(f"Misión selectiva {mission_id} enviada al hueco {gap_value}.")
+        self.pending_request = {
+            "command": "start",
+            "mission_id": f"selective_{uuid.uuid4().hex[:8]}",
+            "mission_mode": "SELECTIVE",
+            "targets": targets,
+        }
+        self.awaiting_test_mode = True
+        print(f"Has elegido mision selectiva para los huecos {targets}.")
+        self.print_test_mode_prompt()
 
-    def launch_selective_line_mission(self) -> None:
-        confirm = input("¿Deseas actuar por anomalía en un líneo concreto? (s/n): ").strip().lower()
-        if confirm != "s":
-            print("Misión por líneo cancelada.")
+    def consume_test_mode(self, raw: str) -> None:
+        self.awaiting_test_mode = False
+        selected = MODE_ALIASES.get(raw.strip().lower(), "NORMAL")
+
+        if self.pending_request is None:
+            print("No habia ninguna peticion pendiente.")
             return
 
-        line_id = input(f"Indica el líneo objetivo [1-{self.line_count}]: ").strip()
-        try:
-            line_value = int(line_id)
-        except ValueError:
-            print("Líneo no válido.")
-            return
-        if not 1 <= line_value <= self.line_count:
-            print("Líneo fuera de rango.")
-            return
-
-        gap_value = max(1, min(self.gap_count, line_value - 1))
-        mission_id = f"selective_line_{uuid.uuid4().hex[:8]}"
-        self.publish_command(
-            {
-                "command": "run_mission",
-                "mission_id": mission_id,
-                "mission_mode": "SELECTIVE_LINE",
-                "targets": [gap_value],
-            }
-        )
+        payload = dict(self.pending_request)
+        payload["test_mode"] = selected
+        self.pending_request = None
+        self.publish_request(payload)
         print(
-            f"Misión selectiva {mission_id} enviada para el líneo {line_value}. "
-            f"Se actuará en el hueco {gap_value}."
+            f"Mision enviada: modo {payload['mission_mode']} con prueba {selected} "
+            f"y huecos {payload['targets']}."
         )
 
     def print_status(self) -> None:
         if not self.latest_state:
-            print("Todavía no hay estado publicado por la simulación.")
+            print("Todavia no hay estado publicado por la simulacion.")
             return
 
-        print("Estado actual de la simulación:")
-        print(f"  misión: {self.latest_state.get('mission_id', '')}")
+        print("Estado actual:")
+        print(f"  mision: {self.latest_state.get('mission_id', '')}")
         print(f"  modo: {self.latest_state.get('mission_mode', '')}")
+        print(f"  prueba: {self.latest_state.get('test_mode', '')}")
         print(f"  fase: {self.latest_state.get('phase', '')}")
         print(f"  activo: {self.latest_state.get('running', False)}")
+        print(f"  maestra: {self.latest_state.get('master_state', '')}")
+        print(f"  esclava: {self.latest_state.get('slave_state', '')}")
         print(f"  hueco activo: {self.latest_state.get('active_gap', 0)}")
         print(f"  pendientes: {self.latest_state.get('pending_targets', [])}")
         print(f"  completados: {self.latest_state.get('completed_targets', [])}")
         print(f"  robot_x: {self.latest_state.get('robot_x', 0.0)}")
-        print(f"  head_z: {self.latest_state.get('head_z', 0.0)}")
-        print(f"  retorno solicitado: {self.latest_state.get('return_requested', False)}")
+        print(f"  tube_z: {self.latest_state.get('tube_z', 0.0)}")
+        print(f"  electovalvula: {self.latest_state.get('valve_active', False)}")
+        print(f"  bomba: {self.latest_state.get('pump_active', False)}")
 
-    def publish_command(self, payload: dict) -> None:
+    def publish_request(self, payload: dict[str, object]) -> None:
         msg = String()
         msg.data = json.dumps(payload, ensure_ascii=True)
-        self.command_pub.publish(msg)
+        self.request_pub.publish(msg)
+
+    def print_banner(self) -> None:
+        print("\n=== Simulacion del atomizador ===")
+        print("La secuencia sigue la logica maestra-esclava y permite forzar casos de prueba.")
 
     def print_menu(self) -> None:
-        print("\n=== Consola de simulación del atomizador ===")
-        print("1. Lanzar misión general (todos los huecos)")
-        print("2. Lanzar misión selectiva por hueco")
-        print("3. Lanzar misión selectiva por líneo")
-        print("4. Solicitar vuelta a base")
-        print("5. Mostrar estado actual")
-        print("6. Reset manual a IDLE")
-        print("0. Salir")
+        print("\nOpciones disponibles:")
+        print("  g  -> mision general")
+        print("  s  -> mision selectiva")
+        print("  e  -> mostrar estado")
+        print("  q  -> salir")
+        self.print_prompt()
+
+    def print_test_mode_prompt(self) -> None:
+        print("Elige caso de prueba:")
+        print("  n  -> normal")
+        print("  r  -> retry_lora")
+        print("  d  -> link_degraded")
+        print("  x  -> emergency_stop")
+        print("  f  -> actuation_fault")
+        self.print_prompt()
+
+    @staticmethod
+    def print_prompt() -> None:
+        print("> ", end="", flush=True)
+
+    def shutdown_console(self) -> None:
+        self._stop_requested = True
+        print("Cerrando consola de simulacion.")
+        self.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 def main() -> None:

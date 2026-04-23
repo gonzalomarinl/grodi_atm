@@ -17,13 +17,9 @@ atm_link/slave_lora_bridge_node.py
 atm_link/transport.py
 atm_link/transport_jsonl.py
 atm_link/transport_lora_uart.py
-atm_link.egg-info/PKG-INFO
-atm_link.egg-info/SOURCES.txt
-atm_link.egg-info/dependency_links.txt
-atm_link.egg-info/entry_points.txt
-atm_link.egg-info/requires.txt
-atm_link.egg-info/top_level.txt
-atm_link.egg-info/zip-safe
 config/link_params.yaml
 launch/link.launch.py
 resource/atm_link
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

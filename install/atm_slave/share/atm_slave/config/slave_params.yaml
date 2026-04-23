@@ -1,1 +1,45 @@
-/home/gonzalo/grodi_atm/build/atm_slave/config/slave_params.yaml
+/**:
+  ros__parameters: {}
+
+slave_state_manager:
+  ros__parameters:
+    machine_id: slave
+    status_period_sec: 0.5
+    control_period_sec: 0.2
+    startup_state: AT_BASE
+    max_stop_retries: 3
+    max_skipped_waypoints: 3
+    master_heartbeat_timeout_sec: 5.0
+
+rail_motion_controller:
+  ros__parameters:
+    use_mock_backend: true
+    navigate_duration_sec: 2.0
+    return_duration_sec: 2.5
+    feedback_period_sec: 0.2
+    stop_detection_timeout_sec: 20.0
+    simulate_stop_detection: true
+    motion_frequency: 200
+    base_en_inicio: false
+    dir_enable: true
+
+vertical_reel_controller:
+  ros__parameters:
+    use_mock_backend: true
+    lower_duration_sec: 1.5
+    raise_duration_sec: 2.0
+    startup_position: UP
+
+spray_controller:
+  ros__parameters:
+    spray_duration_sec: 2.0
+    wait_timeout_sec: 5.0
+    pump_ack_timeout_sec: 3.0
+    pump_off_ratio: 0.8
+
+slave_health_publisher:
+  ros__parameters:
+    machine_id: slave
+    health_path: /run/atm/slave_health.json
+    write_period_sec: 0.5
+    startup_state: AT_BASE

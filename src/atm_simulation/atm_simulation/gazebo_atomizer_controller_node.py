@@ -1,193 +1,139 @@
-"""Controlador visual del atomizador dentro de Gazebo."""
+"""Controlador visual ligero para la simulacion del atomizador en Gazebo."""
 
 from __future__ import annotations
 
+import json
 import math
 import shutil
 import subprocess
 from dataclasses import dataclass
 
 import rclpy
-from geometry_msgs.msg import Pose
-from geometry_msgs.msg import Twist
 from rclpy.node import Node
-from std_msgs.msg import Bool, Float32, String
+from std_msgs.msg import String
 
 
 @dataclass
-class SimState:
-    robot_x: float = -4.8
-    robot_y: float = 0.0
-    robot_z: float = 4.0
-    robot_vx: float = 0.0
-    head_z: float = 2.05
-    head_vz: float = 0.0
+class SceneState:
+    robot_x: float = 5.5
+    tube_z: float = 2.55
     reel_angle: float = 0.0
-    reel_velocity: float = 0.0
-    pump_enabled: bool = False
-    spray_enabled: bool = False
+    red_on: bool = False
+    yellow_on: bool = False
+    green_on: bool = False
+    blue_on: bool = False
+    ready_on: bool = False
+    degraded_on: bool = False
+    alert_on: bool = False
 
 
 class GazeboAtomizerControllerNode(Node):
-    """Actualiza las entidades del mundo SDF para simular la secuencia del atomizador."""
+    """Aplica el estado visual calculado por la simulacion sobre las entidades del world."""
 
     def __init__(self) -> None:
         super().__init__("gazebo_atomizer_controller")
 
         self.declare_parameter("world_name", "atomizer_greenhouse")
         self.declare_parameter("update_period_sec", 0.1)
-        self.declare_parameter("robot_min_x", -4.8)
-        self.declare_parameter("robot_max_x", 4.8)
-        self.declare_parameter("robot_speed_limit", 1.2)
-        self.declare_parameter("head_upper_z", 2.05)
-        self.declare_parameter("head_lower_z", 1.15)
-        self.declare_parameter("vertical_speed_limit", 0.8)
+        self.declare_parameter("robot_y", 0.0)
+        self.declare_parameter("robot_z", 3.78)
+        self.declare_parameter("tube_y", 0.0)
+        self.declare_parameter("tube_upper_z", 2.55)
+        self.declare_parameter("led_visible_z", 0.12)
+        self.declare_parameter("led_hidden_z", -2.0)
+        self.declare_parameter("indicator_visible_z", 0.18)
+        self.declare_parameter("indicator_hidden_z", -2.0)
+        self.declare_parameter("led_red_x", 4.9)
+        self.declare_parameter("led_yellow_x", 5.25)
+        self.declare_parameter("led_green_x", 5.6)
+        self.declare_parameter("led_blue_x", 5.95)
+        self.declare_parameter("led_y", -6.0)
+        self.declare_parameter("indicator_ready_x", 4.85)
+        self.declare_parameter("indicator_degraded_x", 5.35)
+        self.declare_parameter("indicator_alert_x", 5.85)
+        self.declare_parameter("indicator_y", -5.2)
+        self.declare_parameter("reel_x", 6.4)
+        self.declare_parameter("reel_y", -4.2)
+        self.declare_parameter("reel_z", 0.0)
 
         self.world_name = str(self.get_parameter("world_name").value)
         self.update_period = float(self.get_parameter("update_period_sec").value)
-        self.robot_min_x = float(self.get_parameter("robot_min_x").value)
-        self.robot_max_x = float(self.get_parameter("robot_max_x").value)
-        self.robot_speed_limit = float(self.get_parameter("robot_speed_limit").value)
-        self.head_upper_z = float(self.get_parameter("head_upper_z").value)
-        self.head_lower_z = float(self.get_parameter("head_lower_z").value)
-        self.vertical_speed_limit = float(self.get_parameter("vertical_speed_limit").value)
+        self.robot_y = float(self.get_parameter("robot_y").value)
+        self.robot_z = float(self.get_parameter("robot_z").value)
+        self.tube_y = float(self.get_parameter("tube_y").value)
+        self.tube_upper_z = float(self.get_parameter("tube_upper_z").value)
+        self.led_visible_z = float(self.get_parameter("led_visible_z").value)
+        self.led_hidden_z = float(self.get_parameter("led_hidden_z").value)
+        self.indicator_visible_z = float(self.get_parameter("indicator_visible_z").value)
+        self.indicator_hidden_z = float(self.get_parameter("indicator_hidden_z").value)
+        self.led_y = float(self.get_parameter("led_y").value)
+        self.indicator_y = float(self.get_parameter("indicator_y").value)
+        self.led_positions = {
+            "red": float(self.get_parameter("led_red_x").value),
+            "yellow": float(self.get_parameter("led_yellow_x").value),
+            "green": float(self.get_parameter("led_green_x").value),
+            "blue": float(self.get_parameter("led_blue_x").value),
+        }
+        self.indicator_positions = {
+            "ready": float(self.get_parameter("indicator_ready_x").value),
+            "degraded": float(self.get_parameter("indicator_degraded_x").value),
+            "alert": float(self.get_parameter("indicator_alert_x").value),
+        }
+        self.reel_x = float(self.get_parameter("reel_x").value)
+        self.reel_y = float(self.get_parameter("reel_y").value)
+        self.reel_z = float(self.get_parameter("reel_z").value)
+
+        self.state = SceneState(tube_z=self.tube_upper_z)
+        self.previous_pose_cache: dict[str, tuple[float, float, float, float, float, float]] = {}
 
         self.gz_bin = shutil.which("gz") or "/opt/ros/jazzy/opt/gz_tools_vendor/bin/gz"
         self.set_pose_service = f"/world/{self.world_name}/set_pose"
-        self.state = SimState(head_z=self.head_upper_z)
-        self.last_stage = ""
 
-        self.robot_pose_pub = self.create_publisher(Pose, "sim/status/robot_pose", 10)
-        self.head_pose_pub = self.create_publisher(Pose, "sim/status/head_pose", 10)
-        self.reel_angle_pub = self.create_publisher(Float32, "sim/status/reel_angle", 10)
-        self.pump_state_pub = self.create_publisher(Bool, "sim/status/pump_enabled", 10)
-        self.summary_pub = self.create_publisher(String, "sim/status/summary", 10)
+        self.create_subscription(String, "sim/scene/state", self.handle_scene_state, 20)
+        self.create_timer(self.update_period, self.apply_scene)
 
-        self.create_subscription(Twist, "sim/robot/cmd_vel", self.handle_robot_cmd, 10)
-        self.create_subscription(Float32, "sim/reel/cmd_vel", self.handle_reel_cmd, 10)
-        self.create_subscription(Float32, "sim/vertical/cmd_vel", self.handle_vertical_cmd, 10)
-        self.create_subscription(Bool, "sim/pump/enable", self.handle_pump_cmd, 10)
-        self.create_subscription(Bool, "sim/spray/enable", self.handle_spray_cmd, 10)
+        self.get_logger().info("Controlador visual de Gazebo listo para la nueva simulacion.")
 
-        self.create_timer(self.update_period, self.update_simulation)
-        self.create_timer(0.5, self.publish_status)
+    def handle_scene_state(self, msg: String) -> None:
+        try:
+            payload = json.loads(msg.data)
+        except json.JSONDecodeError as exc:
+            self.get_logger().warning(f"Estado visual invalido: {exc}")
+            return
 
-        self.initialize_scene()
-        self.get_logger().info("Gazebo atomizer controller listo.")
+        self.state.robot_x = float(payload.get("robot_x", self.state.robot_x))
+        self.state.tube_z = float(payload.get("tube_z", self.state.tube_z))
+        self.state.reel_angle = float(payload.get("reel_angle", self.state.reel_angle))
+        self.state.red_on = bool(payload.get("red_on", False))
+        self.state.yellow_on = bool(payload.get("yellow_on", False))
+        self.state.green_on = bool(payload.get("green_on", False))
+        self.state.blue_on = bool(payload.get("blue_on", False))
+        self.state.ready_on = bool(payload.get("ready_on", False))
+        self.state.degraded_on = bool(payload.get("degraded_on", False))
+        self.state.alert_on = bool(payload.get("alert_on", False))
 
-    def initialize_scene(self) -> None:
-        self.apply_robot_pose()
-        self.apply_head_pose()
-        self.apply_reel_pose()
-        self.apply_hose_pose()
-        self.apply_spray_pose()
+    def apply_scene(self) -> None:
+        self.set_entity_pose("atomizer_robot", self.state.robot_x, self.robot_y, self.robot_z)
+        self.set_entity_pose("atomizer_t_tube", self.state.robot_x, self.tube_y, self.state.tube_z)
+        self.set_entity_pose("ground_reel", self.reel_x, self.reel_y, self.reel_z, 0.0, 0.0, self.state.reel_angle)
 
-    def handle_robot_cmd(self, msg: Twist) -> None:
-        self.state.robot_vx = max(-self.robot_speed_limit, min(self.robot_speed_limit, msg.linear.x))
+        self.apply_led_state("red", self.state.red_on)
+        self.apply_led_state("yellow", self.state.yellow_on)
+        self.apply_led_state("green", self.state.green_on)
+        self.apply_led_state("blue", self.state.blue_on)
+        self.apply_indicator_state("ready", self.state.ready_on)
+        self.apply_indicator_state("degraded", self.state.degraded_on)
+        self.apply_indicator_state("alert", self.state.alert_on)
 
-    def handle_reel_cmd(self, msg: Float32) -> None:
-        self.state.reel_velocity = msg.data
+    def apply_led_state(self, color: str, enabled: bool) -> None:
+        model_name = f"status_led_{color}_active"
+        z_value = self.led_visible_z if enabled else self.led_hidden_z
+        self.set_entity_pose(model_name, self.led_positions[color], self.led_y, z_value)
 
-    def handle_vertical_cmd(self, msg: Float32) -> None:
-        self.state.head_vz = max(-self.vertical_speed_limit, min(self.vertical_speed_limit, msg.data))
-
-    def handle_pump_cmd(self, msg: Bool) -> None:
-        self.state.pump_enabled = bool(msg.data)
-
-    def handle_spray_cmd(self, msg: Bool) -> None:
-        self.state.spray_enabled = bool(msg.data)
-
-    def update_simulation(self) -> None:
-        dt = self.update_period
-        self.state.robot_x = max(
-            self.robot_min_x,
-            min(self.robot_max_x, self.state.robot_x + self.state.robot_vx * dt),
-        )
-        self.state.head_z = max(
-            self.head_lower_z,
-            min(self.head_upper_z, self.state.head_z + self.state.head_vz * dt),
-        )
-        self.state.reel_angle += self.state.reel_velocity * dt
-
-        self.apply_robot_pose()
-        self.apply_head_pose()
-        self.apply_reel_pose()
-        self.apply_hose_pose()
-        self.apply_spray_pose()
-
-    def apply_robot_pose(self) -> None:
-        self.set_entity_pose("atomizer_robot", self.state.robot_x, self.state.robot_y, self.state.robot_z)
-
-    def apply_head_pose(self) -> None:
-        self.set_entity_pose("atomizer_head", self.state.robot_x, self.state.robot_y, self.state.head_z)
-
-    def apply_reel_pose(self) -> None:
-        self.set_entity_pose("ground_reel", -6.3, -6.0, 0.0, 0.0, 0.0, self.state.reel_angle)
-
-    def apply_hose_pose(self) -> None:
-        reel_anchor = (-6.3, -6.0, 1.25)
-        robot_anchor = (self.state.robot_x, self.state.robot_y, 3.85)
-        dx = robot_anchor[0] - reel_anchor[0]
-        dy = robot_anchor[1] - reel_anchor[1]
-        dz = robot_anchor[2] - reel_anchor[2]
-        yaw = math.atan2(dy, dx)
-        horizontal = math.sqrt(dx * dx + dy * dy)
-        pitch = -math.atan2(dz, horizontal if horizontal > 1e-6 else 1e-6)
-        mid_x = (reel_anchor[0] + robot_anchor[0]) * 0.5
-        mid_y = (reel_anchor[1] + robot_anchor[1]) * 0.5
-        mid_z = (reel_anchor[2] + robot_anchor[2]) * 0.5
-        self.set_entity_pose("feed_hose_visual", mid_x, mid_y, mid_z, 0.0, pitch, yaw)
-
-    def apply_spray_pose(self) -> None:
-        if self.state.spray_enabled and self.state.pump_enabled:
-            self.set_entity_pose("spray_plume", self.state.robot_x, self.state.robot_y, self.state.head_z - 0.08)
-        else:
-            self.set_entity_pose("spray_plume", self.state.robot_x, self.state.robot_y, -3.0)
-
-    def publish_status(self) -> None:
-        robot_pose = Pose()
-        robot_pose.position.x = float(self.state.robot_x)
-        robot_pose.position.y = float(self.state.robot_y)
-        robot_pose.position.z = float(self.state.robot_z)
-        robot_pose.orientation.w = 1.0
-        self.robot_pose_pub.publish(robot_pose)
-
-        head_pose = Pose()
-        head_pose.position.x = float(self.state.robot_x)
-        head_pose.position.y = float(self.state.robot_y)
-        head_pose.position.z = float(self.state.head_z)
-        head_pose.orientation.w = 1.0
-        self.head_pose_pub.publish(head_pose)
-
-        reel_msg = Float32()
-        reel_msg.data = float(self.state.reel_angle)
-        self.reel_angle_pub.publish(reel_msg)
-
-        pump_msg = Bool()
-        pump_msg.data = bool(self.state.pump_enabled)
-        self.pump_state_pub.publish(pump_msg)
-
-        stage = self.current_summary()
-        if stage != self.last_stage:
-            summary = String()
-            summary.data = stage
-            self.summary_pub.publish(summary)
-            self.last_stage = stage
-
-    def current_summary(self) -> str:
-        if self.state.spray_enabled and self.state.pump_enabled:
-            return "SPRAYING"
-        if self.state.head_vz < -1e-3:
-            return "LOWERING"
-        if self.state.head_vz > 1e-3:
-            return "RAISING"
-        if abs(self.state.robot_vx) > 1e-3 and self.state.robot_vx > 0:
-            return "MOVING_FORWARD"
-        if abs(self.state.robot_vx) > 1e-3 and self.state.robot_vx < 0:
-            return "RETURNING"
-        if abs(self.state.reel_velocity) > 1e-3:
-            return "REEL_ACTIVE"
-        return "IDLE"
+    def apply_indicator_state(self, name: str, enabled: bool) -> None:
+        model_name = f"indicator_{name}_active"
+        z_value = self.indicator_visible_z if enabled else self.indicator_hidden_z
+        self.set_entity_pose(model_name, self.indicator_positions[name], self.indicator_y, z_value)
 
     def set_entity_pose(
         self,
@@ -199,6 +145,17 @@ class GazeboAtomizerControllerNode(Node):
         pitch: float = 0.0,
         yaw: float = 0.0,
     ) -> None:
+        pose_key = (
+            round(x, 4),
+            round(y, 4),
+            round(z, 4),
+            round(roll, 4),
+            round(pitch, 4),
+            round(yaw, 4),
+        )
+        if self.previous_pose_cache.get(name) == pose_key:
+            return
+
         qx, qy, qz, qw = self.euler_to_quaternion(roll, pitch, yaw)
         request = (
             f'name: "{name}" '
@@ -225,6 +182,7 @@ class GazeboAtomizerControllerNode(Node):
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
             )
+            self.previous_pose_cache[name] = pose_key
         except Exception as exc:
             self.get_logger().warning(f"No se pudo actualizar la entidad {name}: {exc}")
 

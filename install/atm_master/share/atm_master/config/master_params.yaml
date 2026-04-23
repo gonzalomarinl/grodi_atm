@@ -1,1 +1,58 @@
-/home/gonzalo/grodi_atm/build/atm_master/config/master_params.yaml
+mission_manager:
+  ros__parameters:
+    machine_id: master
+    default_mission_type: GENERAL_STOP_MISSION
+    startup_state: IDLE
+    execute_feedback_period_sec: 0.5
+    reel_unroll_speed: 1.0
+    reel_roll_speed: 1.0
+    heartbeat_timeout_sec: 5.0
+    link_check_period_sec: 0.5
+
+pump_controller:
+  ros__parameters:
+    startup_enabled: false
+
+ground_reel_motor:
+  ros__parameters:
+    use_mock_backend: true
+    startup_mode: STOP
+    startup_speed: 0.0
+    status_period_sec: 0.5
+    max_speed: 1.0
+
+hose_guide_controller:
+  ros__parameters:
+    use_mock_backend: true
+    startup_mode: STOP
+    startup_speed: 0.0
+    status_period_sec: 0.5
+    step_period_sec: 0.1
+    travel_min: 0.0
+    travel_max: 1.0
+    travel_increment: 0.02
+    max_speed: 1.0
+
+master_watchdog:
+  ros__parameters:
+    machine_id: master
+    publish_period_sec: 1.0
+    timeout_sec: 5.0
+
+mission_event_logger:
+  ros__parameters:
+    log_path: /tmp/atm_mission_events.log
+
+master_health_publisher:
+  ros__parameters:
+    machine_id: master
+    health_path: /run/atm/master_health.json
+    write_period_sec: 0.5
+
+server_mission_loader:
+  ros__parameters:
+    zone_id: zone_a
+    robot_id: atm_001
+    mission_source_path: /tmp/atm_pending_mission.json
+    poll_period_sec: 10.0
+    auto_poll: true

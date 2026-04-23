@@ -8,12 +8,6 @@ setup.py
 ../../build/atm_bringup/atm_bringup.egg-info/top_level.txt
 ../../build/atm_bringup/atm_bringup.egg-info/zip-safe
 atm_bringup/__init__.py
-atm_bringup.egg-info/PKG-INFO
-atm_bringup.egg-info/SOURCES.txt
-atm_bringup.egg-info/dependency_links.txt
-atm_bringup.egg-info/requires.txt
-atm_bringup.egg-info/top_level.txt
-atm_bringup.egg-info/zip-safe
 config/system_params.yaml
 launch/system.launch.py
 resource/atm_bringup
@@ -21,3 +15,6 @@ scripts/atm_master_sentinel.py
 scripts/atm_slave_sentinel.py
 systemd/atm-master-sentinel.service
 systemd/atm-slave-sentinel.service
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

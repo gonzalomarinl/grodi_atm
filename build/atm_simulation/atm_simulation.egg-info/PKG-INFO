@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: atm-simulation
 Version: 0.0.0
-Summary: Simulación Gazebo del atomizador sobre raíl.
+Summary: Simulacion Gazebo ligera del atomizador sobre rail.
 Maintainer: gonzalo
 Maintainer-email: gonzalo@todo.todo
 License: MIT
