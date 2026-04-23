@@ -29,20 +29,20 @@
     update_period_sec: 0.1
     base_x: 5.5
     gap_positions: [-3.0, -1.0, 1.0, 3.0]
-    travel_speed_mps: 0.8
+    travel_speed_mps: 0.45
     tube_upper_z: 2.55
     tube_lower_z: 1.55
-    lower_speed_mps: 0.55
-    raise_speed_mps: 0.55
-    lora_send_pulse_sec: 0.35
-    lora_receive_pulse_sec: 0.25
-    command_delay_sec: 0.2
-    complete_pause_sec: 0.5
+    lower_speed_mps: 0.32
+    raise_speed_mps: 0.32
+    lora_send_pulse_sec: 0.55
+    lora_receive_pulse_sec: 0.4
+    command_delay_sec: 0.35
+    complete_pause_sec: 0.8
     pump_shutdown_margin_sec: 1.0
-    retry_backoff_sec: 0.7
-    degraded_hold_sec: 1.2
-    fault_hold_sec: 1.0
-    emergency_visual_sec: 1.0
+    retry_backoff_sec: 1.0
+    degraded_hold_sec: 1.6
+    fault_hold_sec: 1.4
+    emergency_visual_sec: 1.4
 
 /atomizer_operator_console:
   ros__parameters:
@@ -53,13 +53,13 @@
     update_period_sec: 0.1
     base_x: 5.5
     gap_positions: [-3.0, -1.0, 1.0, 3.0]
-    robot_speed_mps: 0.9
+    robot_speed_mps: 0.45
     tube_upper_z: 2.55
     tube_lower_z: 1.55
-    tube_speed_mps: 0.7
-    lora_pulse_sec: 0.3
-    degraded_indicator_sec: 0.8
-    reel_angular_speed: 0.35
+    tube_speed_mps: 0.35
+    lora_pulse_sec: 0.5
+    degraded_indicator_sec: 1.2
+    reel_angular_speed: 0.2
 
 /real_stack_operator_console:
   ros__parameters:
