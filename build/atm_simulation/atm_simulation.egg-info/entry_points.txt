@@ -4,3 +4,4 @@ atomizer_operator_console_node = atm_simulation.atomizer_operator_console_node:m
 gazebo_atomizer_controller_node = atm_simulation.gazebo_atomizer_controller_node:main
 real_stack_operator_console_node = atm_simulation.real_stack_operator_console_node:main
 real_stack_visualizer_node = atm_simulation.real_stack_visualizer_node:main
+sim_command_cli = atm_simulation.sim_command_cli:main
