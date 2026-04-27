@@ -20,6 +20,22 @@ ground_reel_motor:
     startup_speed: 0.0
     status_period_sec: 0.5
     max_speed: 1.0
+    min_frequency_hz: 5.0
+    max_frequency_hz: 50.0
+    default_unroll_frequency_hz: 35.0
+    default_roll_frequency_hz: 35.0
+    serial_port: /dev/ttyUSB0
+    baudrate: 9600
+    bytesize: 8
+    parity: N
+    stopbits: 1
+    slave_id: 1
+    modbus_timeout_sec: 0.3
+    command_settle_sec: 0.05
+    direction_change_stop_sec: 0.2
+    stop_before_reverse: true
+    unroll_direction: FWD
+    roll_direction: REV
 
 hose_guide_controller:
   ros__parameters:
