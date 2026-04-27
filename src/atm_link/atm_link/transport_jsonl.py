@@ -16,7 +16,9 @@ class JsonlTransport:
         self.rx_path.parent.mkdir(parents=True, exist_ok=True)
         self.tx_path.touch(exist_ok=True)
         self.rx_path.touch(exist_ok=True)
-        self._rx_offset = 0
+        # Ignora backlog de sesiones anteriores para que cada arranque del stack
+        # procese solo tramas nuevas y no degrade el enlace por histórico viejo.
+        self._rx_offset = self.rx_path.stat().st_size
 
     def send(self, frame: dict) -> None:
         with self.tx_path.open("a", encoding="utf-8") as handle:

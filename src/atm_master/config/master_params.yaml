@@ -23,7 +23,7 @@ ground_reel_motor:
     serial_port: /dev/ttyUSB0
     baudrate: 9600
     bytesize: 8
-    parity: N
+    parity: "N"
     stopbits: 1
     slave_id: 1
     modbus_timeout_sec: 0.3

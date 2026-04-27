@@ -52,6 +52,9 @@ class SlaveStateManagerNode(Node):
         self.skipped_target_count = 0
         self.link_loss_return_announced = False
         self.emergency_stop_announced = False
+        self.last_mission_state = ""
+        self.seen_target_keys: set[tuple[str, str, int]] = set()
+        self.seen_control_events: set[tuple[str, str]] = set()
 
         self.status_pub = self.create_publisher(SlaveStatus, "slave/status", 20)
         self.event_pub = self.create_publisher(MissionEvent, "mission/events", 20)
@@ -74,29 +77,45 @@ class SlaveStateManagerNode(Node):
         self.get_logger().info("Slave state manager listo.")
 
     def handle_mission_state(self, msg: MissionState) -> None:
+        previous_mission_id = self.mission_id
         self.mission_id = msg.mission_id
         self.mission_type = msg.mission_type
+        is_new_mission = bool(msg.mission_id) and msg.mission_id != previous_mission_id
+
         if msg.state == "MISSION_LOADED":
+            if is_new_mission:
+                self.reset_mission_tracking()
             self.mission_loaded = True
             self.return_requested = False
             self.link_loss_return_announced = False
             self.emergency_stop_announced = False
             self.active_target_retry_count = 0
             self.skipped_target_count = 0
-            self.publish_event("mission_loaded", f"Misión {msg.mission_id} cargada.")
+            if self.last_mission_state != "MISSION_LOADED" or is_new_mission:
+                self.publish_event("mission_loaded", f"Misión {msg.mission_id} cargada.")
         elif msg.state in ("EMERGENCY_STOP", "FAULT"):
             self.return_requested = True
             if msg.state == "EMERGENCY_STOP" and not self.emergency_stop_announced:
                 self.emergency_stop_announced = True
                 self.publish_event("emergency_stop_received", "Parada de emergencia recibida desde maestra.")
 
+        self.last_mission_state = msg.state
+
     def handle_mission_target(self, msg: LineTarget) -> None:
+        target_id = msg.gap_id or msg.line_id
+        target_key = (msg.mission_id, target_id, int(msg.stop_index))
+        if target_key in self.seen_target_keys:
+            return
+        self.seen_target_keys.add(target_key)
         self.pending_targets.append(msg)
-        gap_id = msg.gap_id or msg.line_id
-        self.publish_event("target_received", f"Objetivo {gap_id}:{msg.stop_index} en cola.")
+        self.publish_event("target_received", f"Objetivo {target_id}:{msg.stop_index} en cola.")
 
     def handle_mission_event(self, msg: MissionEvent) -> None:
         if msg.event_type in {"return_home", "cancel_mission", "mission_cancelled"}:
+            event_key = (msg.mission_id, msg.event_type)
+            if event_key in self.seen_control_events:
+                return
+            self.seen_control_events.add(event_key)
             self.return_requested = True
             self.publish_event("return_requested", f"Solicitud recibida: {msg.event_type}")
 
@@ -353,6 +372,7 @@ class SlaveStateManagerNode(Node):
         self.return_requested = False
         self.link_loss_return_announced = False
         self.emergency_stop_announced = False
+        self.last_mission_state = ""
         self.active_target = None
         self.pending_targets.clear()
         self.active_target_retry_count = 0
@@ -360,6 +380,11 @@ class SlaveStateManagerNode(Node):
         self.current_phase = "IDLE"
         self.current_line_id = ""
         self.current_stop_index = 0
+        self.reset_mission_tracking()
+
+    def reset_mission_tracking(self) -> None:
+        self.seen_target_keys.clear()
+        self.seen_control_events.clear()
 
 
 def main() -> None:
